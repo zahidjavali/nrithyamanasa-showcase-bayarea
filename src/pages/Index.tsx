@@ -22,7 +22,7 @@ const Index = () => {
             <div className="hidden md:flex items-center space-x-8">
               <a href="#home" className="text-gray-700 hover:text-purple-600 transition-colors">HOME</a>
               <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors">ABOUT MANASA</Link>
-              <a href="#performances" className="text-gray-700 hover:text-purple-600 transition-colors">PERFORMANCES</a>
+              <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-colors">PERFORMANCES</Link>
               <a href="#showcase" className="text-gray-700 hover:text-purple-600 transition-colors">SHOWCASE</a>
               <a href="#classes" className="text-gray-700 hover:text-purple-600 transition-colors">CLASSES</a>
               <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-colors">CONTACT</a>
@@ -334,7 +334,7 @@ const Index = () => {
               <ul className="space-y-2 text-gray-400">
                 <li><a href="#home" className="hover:text-white transition-colors">Home</a></li>
                 <li><Link to="/about-manasa" className="hover:text-white transition-colors">About Manasa</Link></li>
-                <li><a href="#classes" className="hover:text-white transition-colors">Classes</a></li>
+                <li><Link to="/performances" className="hover:text-white transition-colors">Performances</Link></li>
                 <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
               </ul>
             </div>
