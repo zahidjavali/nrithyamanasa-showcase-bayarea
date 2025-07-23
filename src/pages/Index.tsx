@@ -1,9 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Star, MapPin, Phone, Mail, Clock, Users, Award, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -21,7 +21,7 @@ const Index = () => {
             
             <div className="hidden md:flex items-center space-x-8">
               <a href="#home" className="text-gray-700 hover:text-purple-600 transition-colors">HOME</a>
-              <a href="#about" className="text-gray-700 hover:text-purple-600 transition-colors">ABOUT MANASA</a>
+              <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors">ABOUT MANASA</Link>
               <a href="#performances" className="text-gray-700 hover:text-purple-600 transition-colors">PERFORMANCES</a>
               <a href="#showcase" className="text-gray-700 hover:text-purple-600 transition-colors">SHOWCASE</a>
               <a href="#classes" className="text-gray-700 hover:text-purple-600 transition-colors">CLASSES</a>
@@ -101,8 +101,8 @@ const Index = () => {
                 </div>
                 <span className="text-sm text-gray-500">Highly rated instructor</span>
               </div>
-              <Button className="bg-purple-600 hover:bg-purple-700">
-                Read More about Manasa
+              <Button asChild className="bg-purple-600 hover:bg-purple-700">
+                <Link to="/about-manasa">Read More about Manasa</Link>
               </Button>
             </div>
             <div className="bg-gradient-to-br from-purple-100 to-amber-100 rounded-2xl p-8">
@@ -333,7 +333,7 @@ const Index = () => {
               <h3 className="font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2 text-gray-400">
                 <li><a href="#home" className="hover:text-white transition-colors">Home</a></li>
-                <li><a href="#about" className="hover:text-white transition-colors">About Manasa</a></li>
+                <li><Link to="/about-manasa" className="hover:text-white transition-colors">About Manasa</Link></li>
                 <li><a href="#classes" className="hover:text-white transition-colors">Classes</a></li>
                 <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
               </ul>
