@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Star, MapPin, Phone, Mail, Clock, Users, Award, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -251,6 +252,165 @@ const Index = () => {
               <span>"Dancing like a swan" - Prajavani</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Here are some common questions about Nrithyamanasa Performing Arts Center.
+            </p>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            <AccordionItem value="item-1" className="bg-white rounded-lg border border-purple-100 shadow-sm">
+              <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                <span className="text-lg font-semibold text-gray-900">What is Bharatanatyam?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4">
+                <p className="text-gray-600">
+                  Bharatanatyam is the name given in the early twentieth century to the dances known as Dasi-attam and Sadir-attam, which evolved over centuries in the temples and royal courts of Southern India. It highlights the beauty of strong lines leading out from the dancer's body and is embellished with intricately expressive hand gestures and elaborate storytelling through exquisite facial expressions.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2" className="bg-white rounded-lg border border-purple-100 shadow-sm">
+              <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                <span className="text-lg font-semibold text-gray-900">How long and how many times a week are the classes?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4">
+                <p className="text-gray-600">
+                  For an hour each, these classes take place twice or once a week depending on the student preference. Check the Classes page for the schedule.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3" className="bg-white rounded-lg border border-purple-100 shadow-sm">
+              <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                <span className="text-lg font-semibold text-gray-900">What is the minimum age to start learning Bharatanatyam?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4">
+                <p className="text-gray-600">
+                  While each child's development is different, the ideal age is 5 years and older. Classes are taught using child-friendly methods to introduce your little dancer to the rhythms, music, and movement of Bharatanatyam.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4" className="bg-white rounded-lg border border-purple-100 shadow-sm">
+              <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                <span className="text-lg font-semibold text-gray-900">What are the dress requirements?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4">
+                <div className="text-gray-600 space-y-2">
+                  <p><strong>Females:</strong> Should wear a dance practice sari or suitably tailored salwar kameez.</p>
+                  <p><strong>Males:</strong> Should wear a dhoti or a suitably tailored kurta pajama.</p>
+                  <p><strong>All students:</strong> Should have their waist firmly bound.</p>
+                  <p><strong>Hair:</strong> Should be pinned away from the face and, if necessary, drawn back in a single plait or bun. A long plait should be secured at the back to prevent its movement from distracting from the dance.</p>
+                  <p><strong>Note:</strong> No dance costume, jewelry, or ankle bells should be worn.</p>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5" className="bg-white rounded-lg border border-purple-100 shadow-sm">
+              <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                <span className="text-lg font-semibold text-gray-900">Why does each level vary?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4">
+                <p className="text-gray-600">
+                  Each level will progress according to each student's ability level, class participation, and regularity/intensity of home practice. Each level builds on the curriculum and training from the previous levels. So mastery of each level is ABSOLUTELY ESSENTIAL in order to attain full-fledged confidence in all aspects of Nritta, Nritya, and Natya.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-6" className="bg-white rounded-lg border border-purple-100 shadow-sm">
+              <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                <span className="text-lg font-semibold text-gray-900">How do I register?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4">
+                <p className="text-gray-600">
+                  Click on the Signup | Register link to create an account and pay registration fees. After your first class, we will set up an autopay membership and it's charged every month on the same calendar day.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-7" className="bg-white rounded-lg border border-purple-100 shadow-sm">
+              <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                <span className="text-lg font-semibold text-gray-900">How do I cancel?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4">
+                <div className="text-gray-600 space-y-2">
+                  <p>AUTO-PAYS require a 30-day written notice to discontinue. For cancellations, holds, and/or changes to memberships for any reason, the member must notify Nrithyamanasa Performing Arts Center via email at manasanrithya@gmail.com at least 30 days prior to the next auto-draft, putting "membership cancellation, membership hold, or membership change" as subject heading of the email.</p>
+                  <p>In turn, Nrithyamanasa Performing Arts Center will send a confirmation via email after the changes have been made to the account.</p>
+                  <p>$15 per month would be charged from your account per month as hold charges. Member agrees that Nrithyamanasa Performing Arts Center could take up to 7 business days to respond.</p>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-8" className="bg-white rounded-lg border border-purple-100 shadow-sm">
+              <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                <span className="text-lg font-semibold text-gray-900">Do you offer 1 class or 2 per week?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4">
+                <p className="text-gray-600">
+                  We offer 2 classes per week but students can choose 1 or 2 classes depending on their availability.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-9" className="bg-white rounded-lg border border-purple-100 shadow-sm">
+              <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                <span className="text-lg font-semibold text-gray-900">Are classes held during summer and winter breaks?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4">
+                <p className="text-gray-600">
+                  Yes, classes will be held during the summer and winter breaks.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-10" className="bg-white rounded-lg border border-purple-100 shadow-sm">
+              <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                <span className="text-lg font-semibold text-gray-900">Do you offer trial classes?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4">
+                <p className="text-gray-600">
+                  No, the student needs to register and pay the $50 registration fee. The registration fee is non-refundable. Autopay would start only after the first class. If a student doesn't like the trial class then autopay doesn't start.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-11" className="bg-white rounded-lg border border-purple-100 shadow-sm">
+              <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                <span className="text-lg font-semibold text-gray-900">What if I/my child misses a class?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4">
+                <p className="text-gray-600">
+                  There will be no makeup class. If the teacher misses a class then we will provide a makeup class.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-12" className="bg-white rounded-lg border border-purple-100 shadow-sm">
+              <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                <span className="text-lg font-semibold text-gray-900">What is the Dancer Code of Conduct?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4">
+                <div className="text-gray-600 space-y-2">
+                  <ul className="list-disc list-inside space-y-1">
+                    <li>All dancers are expected to attend classes regularly.</li>
+                    <li>It is expected that all dancers will be punctual. Warm-up is performed at the beginning of each class and it is imperative that all dancers take part in warm-up to make sure their body is ready for physical activity.</li>
+                    <li>All dancers are expected to demonstrate respect for the teacher and will not challenge authority with inappropriate behavior.</li>
+                    <li>All dancers understand that NPAC requires them to adhere to the Dress Code. Dancers that do not adhere to the dress code will not participate in the class.</li>
+                    <li>All dancers will be friendly, warm and welcoming to the other dancers at the studio and in their classes.</li>
+                    <li>All dancers will attend every class and participate to the best of their ability and put forth 100% effort, energy and smiles.</li>
+                  </ul>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
