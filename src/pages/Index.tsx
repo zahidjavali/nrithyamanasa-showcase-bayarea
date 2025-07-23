@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -133,6 +134,13 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-2 border-purple-100 hover:border-purple-300 transition-colors">
               <CardHeader>
+                <div className="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                  <img 
+                    src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-143858.jpg" 
+                    alt="Kids/Adult Beginner Class" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <CardTitle className="text-purple-700">Kids/Adult Beginner</CardTitle>
                 <CardDescription>Foundation Building (Years 1-3)</CardDescription>
               </CardHeader>
@@ -151,6 +159,13 @@ const Index = () => {
 
             <Card className="border-2 border-amber-100 hover:border-amber-300 transition-colors">
               <CardHeader>
+                <div className="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                  <img 
+                    src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-144620.png" 
+                    alt="Kids/Adult Intermediate Class" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <CardTitle className="text-amber-700">Kids/Adult Intermediate</CardTitle>
                 <CardDescription>Expressive Development</CardDescription>
               </CardHeader>
@@ -169,6 +184,13 @@ const Index = () => {
 
             <Card className="border-2 border-purple-100 hover:border-purple-300 transition-colors">
               <CardHeader>
+                <div className="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                  <img 
+                    src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-151857.png" 
+                    alt="Advanced/Pre-Arangetram Class" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <CardTitle className="text-purple-700">Advanced/Pre-Arangetram</CardTitle>
                 <CardDescription>Master Level Training</CardDescription>
               </CardHeader>
@@ -188,8 +210,32 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Video Showcase Section */}
+      <section id="showcase" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Performance Showcase</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Watch our students and instructor perform beautiful Bharatanatyam pieces
+            </p>
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-50 to-amber-50 rounded-2xl p-8">
+            <div className="aspect-video w-full max-w-4xl mx-auto">
+              <iframe
+                className="w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/videoseries?list=UUjHetu8d3HAn6D3NViNLNjA"
+                title="Bharatanatyam Performance Showcase"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Happy Students & Reviews</h2>
           
@@ -256,7 +302,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
