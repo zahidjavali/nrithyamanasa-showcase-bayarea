@@ -24,9 +24,9 @@ const Index = () => {
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-purple-600 transition-colors">HOME</a>
+              <Link to="/" className="text-gray-700 hover:text-purple-600 transition-colors">HOME</Link>
               <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors">ABOUT MANASA</Link>
-              <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-colors">PERFORMANCES</a>
+              <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-colors">PERFORMANCES</Link>
               <a href="#showcase" className="text-gray-700 hover:text-purple-600 transition-colors">SHOWCASE</a>
               <a href="#classes" className="text-gray-700 hover:text-purple-600 transition-colors">CLASSES</a>
               <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-colors">CONTACT</a>
@@ -558,7 +558,7 @@ const Index = () => {
             <div>
               <h3 className="font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#home" className="hover:text-white transition-colors">Home</a></li>
+                <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
                 <li><Link to="/about-manasa" className="hover:text-white transition-colors">About Manasa</Link></li>
                 <li><Link to="/performances" className="hover:text-white transition-colors">Performances</Link></li>
                 <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
