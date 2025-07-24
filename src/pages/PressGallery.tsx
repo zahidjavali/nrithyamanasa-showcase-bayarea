@@ -1,74 +1,23 @@
+
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const PressGallery = () => {
   const pressImages = [
-    {
-      url: "https://manasanagaraj.com/wp-content/uploads/2019/04/dance-like-swan-prajavani-e1448583120986.png",
-      alt: "Prajavani newspaper article about Manasa's dance performance",
-      title: "Dancing like a swan - Prajavani"
-    },
-    {
-      url: "https://manasanagaraj.com/wp-content/uploads/2019/04/DH-1.png",
-      alt: "Deccan Herald newspaper coverage of Manasa's performance",
-      title: "Deccan Herald Coverage"
-    },
-    {
-      url: "https://manasanagaraj.com/wp-content/uploads/2019/04/hindu-1-e1448582811410.jpg",
-      alt: "The Hindu newspaper article about Manasa's Bharatanatyam performance",
-      title: "The Hindu Article"
-    },
-    {
-      url: "https://manasanagaraj.com/wp-content/uploads/2019/04/hindu2-2-e1448582889114.png",
-      alt: "The Hindu newspaper feature on Manasa's dance",
-      title: "The Hindu Feature"
-    },
-    {
-      url: "https://manasanagaraj.com/wp-content/uploads/2019/04/hindu-2-e1448582838742.jpg",
-      alt: "The Hindu newspaper review of Manasa's performance",
-      title: "The Hindu Review"
-    },
-    {
-      url: "https://manasanagaraj.com/wp-content/uploads/2019/04/IE-e1448583067987.png",
-      alt: "Indian Express newspaper coverage of Manasa's dance",
-      title: "Indian Express Coverage"
-    },
-    {
-      url: "https://manasanagaraj.com/wp-content/uploads/2019/04/Kp-1.png",
-      alt: "Newspaper article about Manasa's Bharatanatyam performance",
-      title: "Press Coverage"
-    },
-    {
-      url: "https://manasanagaraj.com/wp-content/uploads/2019/04/mysoremitra1.png",
-      alt: "Mysore Mitra newspaper article about Manasa's dance",
-      title: "Mysore Mitra Article"
-    },
-    {
-      url: "https://manasanagaraj.com/wp-content/uploads/2019/04/nritya-prathibe-e1448583165333.png",
-      alt: "Nritya Prathibe newspaper feature on Manasa",
-      title: "Nritya Prathibe Feature"
-    },
-    {
-      url: "https://manasanagaraj.com/wp-content/uploads/2019/04/prajanudi-400x516.png",
-      alt: "Praja Nudi newspaper article about Manasa's performance",
-      title: "Praja Nudi Article"
-    },
-    {
-      url: "https://manasanagaraj.com/wp-content/uploads/2019/04/SOM-PAllaotsava-photo..png",
-      alt: "Star of Mysore newspaper coverage of Pallotsava event",
-      title: "Star of Mysore - Pallotsava"
-    },
-    {
-      url: "https://manasanagaraj.com/wp-content/uploads/2019/04/som-pallotsava-1-e1448582932181.png",
-      alt: "Star of Mysore newspaper article about Pallotsava performance",
-      title: "Star of Mysore - Pallotsava Coverage"
-    },
-    {
-      url: "https://manasanagaraj.com/wp-content/uploads/2019/04/SOM-Rangapravesha-e1448582992873.png",
-      alt: "Star of Mysore newspaper coverage of Manasa's Rangapravesha",
-      title: "Star of Mysore - Rangapravesha"
-    }
+    "https://manasanagaraj.com/wp-content/uploads/2019/04/dance-like-swan-prajavani-e1448583120986.png",
+    "https://manasanagaraj.com/wp-content/uploads/2019/04/DH-1.png",
+    "https://manasanagaraj.com/wp-content/uploads/2019/04/hindu-1-e1448582811410.jpg",
+    "https://manasanagaraj.com/wp-content/uploads/2019/04/hindu2-2-e1448582889114.png",
+    "https://manasanagaraj.com/wp-content/uploads/2019/04/hindu-2-e1448582838742.jpg",
+    "https://manasanagaraj.com/wp-content/uploads/2019/04/IE-e1448583067987.png",
+    "https://manasanagaraj.com/wp-content/uploads/2019/04/Kp-1.png",
+    "https://manasanagaraj.com/wp-content/uploads/2019/04/mysoremitra1.png",
+    "https://manasanagaraj.com/wp-content/uploads/2019/04/nritya-prathibe-e1448583165333.png",
+    "https://manasanagaraj.com/wp-content/uploads/2019/04/prajanudi.png",
+    "https://manasanagaraj.com/wp-content/uploads/2019/04/SOM-PAllaotsava-photo..png",
+    "https://manasanagaraj.com/wp-content/uploads/2019/04/som-pallotsava-1-e1448582932181.png",
+    "https://manasanagaraj.com/wp-content/uploads/2019/04/SOM-Rangapravesha-e1448582992873.png"
   ];
 
   return (
@@ -80,7 +29,7 @@ const PressGallery = () => {
             <div className="flex items-center">
               <img 
                 src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
-                alt="Nrithyamanasa Logo" 
+                alt="Logo" 
                 className="h-10 w-auto"
               />
             </div>
@@ -103,66 +52,63 @@ const PressGallery = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">IN THE NEWS</h1>
           <p className="text-xl mb-8 max-w-4xl mx-auto">
-            In October 2012, her Ranga Pravesh or Arangetram enthralled the art aficionados and media alike. Several national and regional publications reported the event in glowing terms.
+            Discover the media coverage and press reviews of Manasa's exceptional performances and contributions to Bharatanatyam.
           </p>
         </div>
       </section>
 
-      {/* Press Reviews Section */}
+      {/* Introduction Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div>
-              <h2 className="text-3xl font-bold text-purple-900 mb-6">Moving with Felicity</h2>
-              <p className="text-lg text-gray-600 mb-4">
-                V. Nagaraj from <em>The Hindu</em>, a leading Indian newspaper, commented:
-              </p>
-              <blockquote className="text-lg text-gray-700 italic mb-4 pl-4 border-l-4 border-purple-500">
-                "T.L. Manasa's performance was exemplary: one could distinctly mark neatness in presenting the numbers at all levels of the progressions of the concert."
-              </blockquote>
-              <p className="text-lg text-gray-600 mb-4">
-                Impressed with her liquid grace, he further commented:
-              </p>
-              <blockquote className="text-lg text-gray-700 italic mb-4 pl-4 border-l-4 border-purple-500">
-                "The young danseuse assumes postures with remarkable felicity and maintains stability for the required duration; vinyasas are complete and crisp gracefully culminating in the sprightly cadences."
-              </blockquote>
-            </div>
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <p className="text-lg text-gray-600 mb-8">
+              In October 2012, her Ranga Pravesh or Arangetram enthralled the art aficionados and media alike. Several national and regional publications reported the event in glowing terms.
+            </p>
             
-            <div>
-              <h2 className="text-3xl font-bold text-purple-900 mb-6">Dancing like a Swan</h2>
-              <p className="text-lg text-gray-600 mb-4">
-                <em>Prajavani</em>, a leading Kannada-language newspaper from Karnataka, reported on her Arangetram:
-              </p>
-              <blockquote className="text-lg text-gray-700 italic mb-4 pl-4 border-l-4 border-amber-500">
-                "Manasa entered the stage and enacted the meaning of beauty without depending on words, just with her physical movements, foot designs, and hand movements. She made her body the medium and enacted various aspects of dance like Drushti-Mandala-Chari-Bhramari in a very attractive way."
-              </blockquote>
-              <p className="text-lg text-gray-600 mb-4">
-                Praising her expertise in the dance form, it was further remarked:
-              </p>
-              <blockquote className="text-lg text-gray-700 italic pl-4 border-l-4 border-amber-500">
-                "She showed mastery in various forms of dance and maintained body balance in revolving movements, expressed radiantly through her eyes and did not show tiredness of body, which indicated commitment to her craft."
-              </blockquote>
+            <div className="text-left space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold text-purple-900 mb-4">Moving with felicity</h3>
+                <p className="text-gray-600 mb-4">
+                  <em>V. Nagaraj</em> from <em>The Hindu</em>, a leading Indian newspaper, commented, "<em>T.L. Manasa's performance was exemplary: one could distinctly mark neatness in presenting the numbers at all levels of the progressions of the concert</em>."
+                </p>
+                <p className="text-gray-600 mb-4">
+                  Impressed with her liquid grace, he further commented, "<em>The young danseuse assumes postures with remarkable felicity and maintains stability for the required duration; vinyasas are complete and crisp gracefully culminating in the sprightly cadences.</em>"
+                </p>
+                <p className="text-gray-600 mb-8">
+                  Comparing her vivacious debut with a consummate performer he added, "<em>She materialised every imagination and vision her Guru had conceived while choreographing the padavarna; whether it was nrutha or the nrithya section, the artiste's fluency and ease, combined with her expressions, elevated the sequences to such degree of accomplishment, which would exclusively be an outcome of an extempore of an accomplished dancer.</em>"
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="text-2xl font-bold text-purple-900 mb-4">Dancing like a swan</h3>
+                <p className="text-gray-600 mb-4">
+                  <em>Prajavani</em>, a leading Kannada-language newspaper from Karnataka, reported on her Arangetram: "<em>Manasa entered the stage and enacted the meaning of beauty without depending on words, just with her physical movements, foot designs, and hand movements. She made her body the medium and enacted various aspects of dance like Drushti-Mandala-Chari-Bhramari in a very attractive way. The special attraction was that she entwined dance and acting together in her expressions.</em>"
+                </p>
+                <p className="text-gray-600 mb-4">
+                  Praising her expertise in the dance form, it was further remarked, "<em>She showed mastery in various forms of dance and maintained body balance in revolving movements, expressed radiantly through her eyes and did not show tiredness of body, which indicated commitment to her craft.</em>"
+                </p>
+                <p className="text-gray-600">
+                  <em>Prajavani</em> also carried an exclusive piece on Manasa and her progress in Bharatanatyam.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Press Gallery Grid */}
+      {/* Press Gallery Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-purple-900 mb-12">Press Coverage Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pressImages.map((image, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img 
-                  src={image.url} 
-                  alt={image.alt}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-opacity duration-300 flex items-center justify-center">
-                  <p className="text-white text-center font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4">
-                    {image.title}
-                  </p>
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="p-4">
+                  <img 
+                    src={image} 
+                    alt={`Press coverage ${index + 1}`}
+                    className="w-full h-auto object-contain rounded"
+                  />
                 </div>
               </div>
             ))}
@@ -178,7 +124,7 @@ const PressGallery = () => {
               <div className="flex items-center mb-4">
                 <img 
                   src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
-                  alt="Nrithyamanasa Logo" 
+                  alt="Logo" 
                   className="h-8 w-auto"
                 />
               </div>

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Star, MapPin, Phone, Mail, Award, Calendar, Users, Facebook, Instagram, Youtube } from "lucide-react";
+import { Star, MapPin, Phone, Mail, Award, Calendar, Users, Facebook, Instagram, Youtube, Clock, Music } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -16,7 +16,7 @@ const Index = () => {
             <div className="flex items-center">
               <img 
                 src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
-                alt="Nrithyamanasa Logo" 
+                alt="Logo" 
                 className="h-10 w-auto"
               />
             </div>
@@ -72,8 +72,61 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Taranga Details Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Nrithya Taranga 2024</h2>
+            <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Join us for an enchanting evening of Bharatanatyam performances featuring talented students and special guests.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="text-center h-full">
+              <CardHeader>
+                <div className="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+                  <Calendar className="h-8 w-8 text-purple-600" />
+                </div>
+                <CardTitle className="text-purple-700">Date & Time</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-2">September 22nd, 2024</p>
+                <p className="text-gray-600">4:00 PM - 6:00 PM</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center h-full">
+              <CardHeader>
+                <div className="w-16 h-16 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
+                  <MapPin className="h-8 w-8 text-amber-600" />
+                </div>
+                <CardTitle className="text-amber-700">Venue</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">Mission City Center For Performing Arts</p>
+                <p className="text-gray-600 text-sm">Santa Clara, CA</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center h-full">
+              <CardHeader>
+                <div className="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+                  <Music className="h-8 w-8 text-purple-600" />
+                </div>
+                <CardTitle className="text-purple-700">Performances</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">Classical Bharatanatyam recitals, thematic productions, and student showcases</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
-      <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Welcome</h2>
@@ -118,7 +171,7 @@ const Index = () => {
       </section>
 
       {/* Classes Section */}
-      <section id="classes" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
+      <section id="classes" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Classes of All Levels</h2>
@@ -181,7 +234,7 @@ const Index = () => {
       </section>
 
       {/* Performance Showcase Section */}
-      <section id="showcase" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="showcase" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Performance Showcase</h2>
@@ -202,89 +255,130 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-600 to-amber-600 text-white">
+      {/* FAQ Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Happy Students</h2>
-            <Separator className="w-24 mx-auto bg-white h-1 mb-6" />
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <p className="text-lg mb-4">
-                "Nrithyamanasa is an inspiring place to learn Bharatanatyam. I look forward every week for this class. Manasa is an excellent dancer and a dedicated and passionate teacher."
-              </p>
-              <p className="font-semibold">- G.G/Krupa</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <p className="text-lg mb-4">
-                "My kid has been learning dance here from the past one year and I can see significant progress in her dance skills. Ms Manasa is an excellent bharatnatyam dancer."
-              </p>
-              <p className="font-semibold">- Gokul R</p>
-            </div>
+          <div className="max-w-3xl mx-auto space-y-6">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-purple-700">What age groups do you teach?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  We offer classes for all ages, from young children (starting at age 5) to adults. Our programs are structured to accommodate different skill levels and learning paces.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-amber-700">How long does it take to learn Bharatanatyam?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  The journey varies for each student. Basic foundation (Adavus) typically takes 2-3 years, while preparing for Arangetram (debut performance) usually requires 7-10 years of dedicated practice.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-purple-700">What should I bring to class?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Comfortable practice clothes, a water bottle, and dedication to learn. We'll provide guidance on acquiring traditional dance attire as you progress.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-amber-700">Do you offer performance opportunities?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Yes! We organize annual recitals like Nrithya Taranga, and students regularly perform at cultural events, festivals, and community gatherings.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-600 to-amber-600 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
-            <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
+            <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
+            <Separator className="w-24 mx-auto bg-white h-1 mb-6" />
           </div>
           
-          <div className="grid md:grid-cols-4 gap-8 items-center">
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
-                <MapPin className="h-8 w-8 text-purple-600" />
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center">
+                  <div className="w-20 h-20 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center">
+                    <MapPin className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Address</h3>
+                  <p className="text-amber-100">
+                    1078 Monroe St,<br />
+                    Santa Clara,<br />
+                    CA 95050
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-20 h-20 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center">
+                    <Phone className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Call Us</h3>
+                  <p className="text-amber-100">
+                    858 880 4577<br />
+                    858 880 4576
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-20 h-20 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center">
+                    <Mail className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Email Us</h3>
+                  <p className="text-amber-100">
+                    manasanrithya@gmail.com
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-20 h-20 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center">
+                    <Users className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Join Us</h3>
+                  <p className="text-amber-100">
+                    Classes in Bay Area
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-purple-900 mb-2">Address</h3>
-              <p className="text-gray-600">
-                1078 Monroe St,<br />
-                Santa Clara,<br />
-                CA 95050
-              </p>
             </div>
             
             <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
-                <Phone className="h-8 w-8 text-amber-600" />
+              <div className="w-80 h-80 mx-auto mb-6 overflow-hidden rounded-full border-4 border-white/20">
+                <img 
+                  src="https://manasanagaraj.com/wp-content/uploads/2019/04/5D4_7134.jpg" 
+                  alt="Contact Image"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-xl font-bold text-purple-900 mb-2">Call Us</h3>
-              <p className="text-gray-600">
-                858 880 4577<br />
-                858 880 4576
+              <p className="text-amber-100 max-w-md mx-auto">
+                If you are interested in learning Bharatanatyam and stay in the Bay Area, drop by for a consultation. We have classes tailored to suit you.
               </p>
             </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
-                <Mail className="h-8 w-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-purple-900 mb-2">Email Us</h3>
-              <p className="text-gray-600">
-                manasanrithya@gmail.com
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
-                <Users className="h-8 w-8 text-amber-600" />
-              </div>
-              <h3 className="text-xl font-bold text-purple-900 mb-2">Join Us</h3>
-              <p className="text-gray-600">
-                Classes in Sunnyvale, Santa Clara, Cupertino, San Jose, Milpitas, Fremont, Palo Alto
-              </p>
-            </div>
-          </div>
-          
-          <div className="mt-12 text-center">
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              If you are sufficiently interested to learn Bharatanatyam and stay in Sunnyvale, Santa Clara, Cupertino, and San Jose, Milpitas, Fremont, Palo Alto drop by <a href="http://www.manasanagaraj.com" className="text-purple-600 hover:text-purple-700">Nrithyamanasa</a>. We have Bharatanatyam classes tailormade to suit you.
-            </p>
           </div>
         </div>
       </section>
@@ -297,7 +391,7 @@ const Index = () => {
               <div className="flex items-center mb-4">
                 <img 
                   src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
-                  alt="Nrithyamanasa Logo" 
+                  alt="Logo" 
                   className="h-8 w-auto"
                 />
               </div>
