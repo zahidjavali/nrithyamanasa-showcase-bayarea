@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Star, MapPin, Phone, Mail, Clock, Users, Award, Calendar } from "lucide-react";
+import { Star, MapPin, Phone, Mail, Clock, Users, Award, Calendar, Facebook, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -15,55 +15,63 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-amber-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">N</span>
-              </div>
+              <img 
+                src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
+                alt="Nrithyamanasa Logo" 
+                className="h-10 w-auto"
+              />
               <span className="text-xl font-bold text-purple-900">Nrithyamanasa</span>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
               <a href="#home" className="text-gray-700 hover:text-purple-600 transition-colors">HOME</a>
               <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors">ABOUT MANASA</Link>
-              <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-colors">PERFORMANCES</Link>
+              <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-colors">PERFORMANCES</a>
               <a href="#showcase" className="text-gray-700 hover:text-purple-600 transition-colors">SHOWCASE</a>
               <a href="#classes" className="text-gray-700 hover:text-purple-600 transition-colors">CLASSES</a>
               <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-colors">CONTACT</a>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <Button variant="outline" size="sm">Login</Button>
-              <Button size="sm" className="bg-purple-600 hover:bg-purple-700">Register</Button>
             </div>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="home" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* Hero Section with Image Slider */}
+      <section id="home" className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="relative w-full h-full">
+            <img 
+              src="https://manasanagaraj.com/wp-content/uploads/2019/05/s2.jpg" 
+              alt="Bharatanatyam"
+              className="absolute inset-0 w-full h-full object-cover opacity-30"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-900/70 to-amber-900/70"></div>
+          </div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-4 bg-purple-100 text-purple-800">
+            <Badge variant="secondary" className="mb-4 bg-white/20 text-white border-white/30">
               Premier Bharatanatyam Academy in Bay Area
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-6">
               Sharing our passion, love, and knowledge of{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-amber-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-400">
                 Bharatanatyam
               </span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto">
               Experience the divine art of classical Indian dance at Santa Clara's highest-rated Bharatanatyam studio. 
               From beginners to advanced practitioners, we nurture artistic excellence and cultural heritage.
             </p>
           </div>
 
           {/* Featured Event */}
-          <div className="bg-gradient-to-r from-purple-600 to-amber-600 rounded-2xl p-8 text-white text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Nritya Taranga 2024</h2>
-            <p className="text-lg mb-6">
+          <div className="bg-gradient-to-r from-purple-600 to-amber-600 rounded-2xl p-6 md:p-8 text-white text-center mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Nritya Taranga 2024</h2>
+            <p className="text-base md:text-lg mb-6">
               Join us for an extraordinary evening of classical dance at Mission City Center For Performing Arts, Santa Clara
             </p>
-            <div className="flex items-center justify-center space-x-6 mb-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-6">
               <div className="flex items-center space-x-2">
                 <Calendar className="h-5 w-5" />
                 <span>September 22nd</span>
@@ -77,8 +85,14 @@ const Index = () => {
                 <span>Mission City Center</span>
               </div>
             </div>
-            <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 font-semibold">
-              Reserve Tickets
+            <Button 
+              asChild 
+              size="lg" 
+              className="bg-white text-purple-600 hover:bg-gray-100 font-semibold w-full sm:w-auto"
+            >
+              <a href="https://www.eventbrite.com/e/nrithya-taranga-2024-tickets-938834267567?aff=oddtdtcreator">
+                Reserve Tickets
+              </a>
             </Button>
           </div>
         </div>
@@ -109,8 +123,12 @@ const Index = () => {
             </div>
             <div className="bg-gradient-to-br from-purple-100 to-amber-100 rounded-2xl p-8">
               <div className="text-center">
-                <div className="w-32 h-32 bg-gradient-to-r from-purple-600 to-amber-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white text-4xl font-bold">M</span>
+                <div className="w-48 h-48 mx-auto mb-4 overflow-hidden rounded-full">
+                  <img 
+                    src="https://manasanagaraj.com/wp-content/uploads/2019/04/5D4_7134.jpg" 
+                    alt="Manasa Nagaraj"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Manasa Nagaraj</h3>
                 <p className="text-gray-600">Artistic Director & Master Instructor</p>
@@ -137,7 +155,7 @@ const Index = () => {
                 <div className="w-full h-48 mb-4 overflow-hidden rounded-lg">
                   <img 
                     src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-143858.jpg" 
-                    alt="Kids/Adult Beginner Class" 
+                    alt="Bharatanatyam students of Manasa Nagaraj" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -162,7 +180,7 @@ const Index = () => {
                 <div className="w-full h-48 mb-4 overflow-hidden rounded-lg">
                   <img 
                     src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-144620.png" 
-                    alt="Kids/Adult Intermediate Class" 
+                    alt="Bharatanatyam students of Manasa Nagaraj" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -187,7 +205,7 @@ const Index = () => {
                 <div className="w-full h-48 mb-4 overflow-hidden rounded-lg">
                   <img 
                     src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-151857.png" 
-                    alt="Advanced/Pre-Arangetram Class" 
+                    alt="Bharatanatyam students of Manasa Nagaraj" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -293,7 +311,7 @@ const Index = () => {
 
           <div className="mt-12 text-center">
             <p className="text-lg text-gray-600 mb-2">Featured in:</p>
-            <div className="flex justify-center space-x-8 text-sm text-gray-500">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 text-sm text-gray-500">
               <span>"Moving with felicity" - The Hindu</span>
               <span>"Dancing like a swan" - Prajavani</span>
             </div>
@@ -525,9 +543,11 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-amber-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">N</span>
-                </div>
+                <img 
+                  src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
+                  alt="Nrithyamanasa Logo" 
+                  className="h-8 w-auto"
+                />
                 <span className="text-xl font-bold">Nrithyamanasa</span>
               </div>
               <p className="text-gray-400">
@@ -556,7 +576,25 @@ const Index = () => {
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4">Contact Info</h3>
+              <h3 className="font-semibold mb-4">Connect with me on Social Media</h3>
+              <div className="flex space-x-4 mb-4">
+                <a 
+                  href="https://www.facebook.com/nrithyamanasa/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <Facebook className="h-6 w-6" />
+                </a>
+                <a 
+                  href="https://www.instagram.com/nrithyamanasa/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <Instagram className="h-6 w-6" />
+                </a>
+              </div>
               <div className="space-y-2 text-gray-400">
                 <p>1078 Monroe St, Santa Clara, CA 95050</p>
                 <p>858 880 4577</p>

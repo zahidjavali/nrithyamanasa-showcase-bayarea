@@ -1,9 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Star, MapPin, Calendar, Clock } from "lucide-react";
+import { Star, MapPin, Calendar, Clock, Facebook, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Performances = () => {
@@ -63,32 +62,36 @@ const Performances = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-amber-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">N</span>
-              </div>
+              <img 
+                src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
+                alt="Nrithyamanasa Logo" 
+                className="h-10 w-auto"
+              />
               <span className="text-xl font-bold text-purple-900">Nrithyamanasa</span>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-gray-700 hover:text-purple-600 transition-colors">HOME</Link>
               <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors">ABOUT MANASA</Link>
-              <a href="#performances" className="text-purple-600 font-semibold">PERFORMANCES</a>
-              <a href="#showcase" className="text-gray-700 hover:text-purple-600 transition-colors">SHOWCASE</a>
-              <a href="#classes" className="text-gray-700 hover:text-purple-600 transition-colors">CLASSES</a>
-              <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-colors">CONTACT</a>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <Button variant="outline" size="sm">Login</Button>
-              <Button size="sm" className="bg-purple-600 hover:bg-purple-700">Register</Button>
+              <span className="text-purple-600 font-semibold">PERFORMANCES</span>
+              <Link to="/#showcase" className="text-gray-700 hover:text-purple-600 transition-colors">SHOWCASE</Link>
+              <Link to="/#classes" className="text-gray-700 hover:text-purple-600 transition-colors">CLASSES</Link>
+              <Link to="/#contact" className="text-gray-700 hover:text-purple-600 transition-colors">CONTACT</Link>
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-amber-600 text-white">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-amber-600 text-white">
+        <div className="absolute inset-0 overflow-hidden">
+          <img 
+            src="https://manasanagaraj.com/wp-content/uploads/2019/04/Nritya-Manasa-98.jpg" 
+            alt="Bharatanatyam"
+            className="w-full h-full object-cover opacity-30"
+          />
+        </div>
+        <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">PERFORMANCES</h1>
           <p className="text-xl mb-8 max-w-4xl mx-auto">
             Manasa is blessed to showcase her performance in prestigious dance and cultural festivals. 
@@ -106,20 +109,106 @@ const Performances = () => {
               <p className="text-lg text-gray-600 mb-8">
                 Latest performances showcasing the beauty and grace of Bharatanatyam across the Bay Area and beyond.
               </p>
+              <div className="w-full h-64 overflow-hidden rounded-lg mb-6">
+                <img 
+                  src="https://manasanagaraj.com/wp-content/uploads/2019/04/Nritya-Manasa-82-1.jpg" 
+                  alt="Bharatanatyam"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
             
             <div className="lg:col-span-2">
               <div className="space-y-4">
-                {recentPerformances.map((performance, index) => (
-                  <Card key={index} className="border-l-4 border-purple-600">
-                    <CardContent className="p-6">
-                      <div className="flex items-start space-x-3">
-                        <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
-                        <p className="text-gray-700">{performance}</p>
+                <Card className="border-l-4 border-purple-600">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-3">
+                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="text-gray-700 font-semibold">Deepotsava from Renowned Bay area Artists – November 16th 2019</p>
+                        <div className="w-full h-48 mt-4 overflow-hidden rounded-lg">
+                          <img 
+                            src="https://manasanagaraj.com/wp-content/uploads/2019/11/Deepotsava-683x1024.jpg" 
+                            alt="Deepotsava Bharatanatyam performance"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
                       </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card key={1} className="border-l-4 border-purple-600">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-3">
+                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">endaro mahanubhavulu performance for Sapthathi @ Mysore, India – November 1st and 2nd 2019</p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card key={2} className="border-l-4 border-purple-600">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-3">
+                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">Samarpanam – Divine offering to the Guru at Mission city center for performing arts center, Santa Clara on 8/25/2019, 4 pm – 6 pm</p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card key={3} className="border-l-4 border-purple-600">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-3">
+                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">Global Beats Stage, sponsored by World Heritage Cultural Center – 3/23/2019</p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card key={4} className="border-l-4 border-purple-600">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-3">
+                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">Sri Krishnaleela Taranga – 09/12/2018</p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card key={5} className="border-l-4 border-purple-600">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-3">
+                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">Maha Shivaratri 2018 celebration @ SVCC, Fremont – 2/13/2018, 8:00 pm</p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card key={6} className="border-l-4 border-purple-600">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-3">
+                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">Sankranti Sambaralu, San Ramon – 1/13/2018</p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card key={7} className="border-l-4 border-purple-600">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-3">
+                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">Nrithya Taranga 2017, Sunnyvale – 11/26/27</p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card key={8} className="border-l-4 border-purple-600">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-3">
+                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
+                      <p className="text-gray-700">Performances on the occasion of Maha Shivaratri – 2/24/2017</p>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
@@ -224,9 +313,11 @@ const Performances = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-amber-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">N</span>
-                </div>
+                <img 
+                  src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
+                  alt="Nrithyamanasa Logo" 
+                  className="h-8 w-auto"
+                />
                 <span className="text-xl font-bold">Nrithyamanasa</span>
               </div>
               <p className="text-gray-400">
@@ -240,7 +331,7 @@ const Performances = () => {
                 <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
                 <li><Link to="/about-manasa" className="hover:text-white transition-colors">About Manasa</Link></li>
                 <li><a href="#performances" className="hover:text-white transition-colors">Performances</a></li>
-                <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+                <li><Link to="/#contact" className="hover:text-white transition-colors">Contact</Link></li>
               </ul>
             </div>
             
@@ -255,7 +346,25 @@ const Performances = () => {
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4">Contact Info</h3>
+              <h3 className="font-semibold mb-4">Connect with me on Social Media</h3>
+              <div className="flex space-x-4 mb-4">
+                <a 
+                  href="https://www.facebook.com/nrithyamanasa/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <Facebook className="h-6 w-6" />
+                </a>
+                <a 
+                  href="https://www.instagram.com/nrithyamanasa/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <Instagram className="h-6 w-6" />
+                </a>
+              </div>
               <div className="space-y-2 text-gray-400">
                 <p>1078 Monroe St, Santa Clara, CA 95050</p>
                 <p>858 880 4577</p>
