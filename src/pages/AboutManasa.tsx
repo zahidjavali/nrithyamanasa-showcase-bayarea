@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -35,7 +36,7 @@ const AboutManasa = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">ABOUT MANASA</h1>
           <p className="text-xl mb-8 max-w-4xl mx-auto">
-            Manasa Nagaraj is the Artistic Director of Nrithyamanasa Performing Arts Center. She is even the Director of Esha Yoga which is a highly rated studio in Santa Clara.
+            The sprightly soul
           </p>
         </div>
       </section>
@@ -45,15 +46,14 @@ const AboutManasa = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-purple-900 mb-6">Meet Manasa Nagaraj</h2>
               <p className="text-lg text-gray-600 mb-6">
-                With decades of experience in classical dance and wellness, Manasa brings unparalleled expertise to her students. Her dedication to preserving traditional Bharatanatyam while making it accessible to modern students has made her one of the most respected instructors in the Bay Area.
+                Every time she steps on the stage, Manasa leaves her audience spellbound with her fluidity of movements, elegant poses and exceptionally emotive expressions. The happiness that emanates from her personality is palpable as she performs what has been her passion all her life—Bharatanatyam.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Manasa's journey in dance began at a young age, and she has since become a leading exponent of Bharatanatyam. Her performances have captivated audiences worldwide, and her innovative choreography has earned her critical acclaim.
+                Manasa took to stage at the tender age of five to perform with the wondrous mind of a keen child. As an ardent disciple of the ancient Indian classical dance form, she trained formally, from the age of five, under the auspices of Karnataka Kalatilaka Dr. Vasundhara Doraswamy, a proficient Bharatanatyam Dancer and well-qualified trainer.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                As a teacher, Manasa is committed to nurturing the next generation of dancers. She provides a supportive and challenging learning environment where students can develop their skills and explore their creativity.
+                Along with Masters in Dance-Bharatanatyam from Mysore University, she also finished Vidwat conducted by Karnataka Secondary Education Examination Board for Dance (KSEEBD).
               </p>
             </div>
             
@@ -68,72 +68,88 @@ const AboutManasa = () => {
         </div>
       </section>
 
-      {/* Yoga and Wellness Section */}
+      {/* The skillful compassionate teacher */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-center">
               <img 
-                src="https://manasanagaraj.com/wp-content/uploads/2019/04/yoga.jpg" 
-                alt="Esha Yoga Studio"
+                src="https://manasanagaraj.com/wp-content/uploads/2019/04/5D4_7134.jpg" 
+                alt="Manasa Nagaraj"
                 className="w-full rounded-lg shadow-lg"
               />
             </div>
             
             <div>
-              <h2 className="text-3xl font-bold text-purple-900 mb-6">Esha Yoga Studio</h2>
+              <h2 className="text-3xl font-bold text-purple-900 mb-6">The skillful compassionate teacher</h2>
               <p className="text-lg text-gray-600 mb-6">
-                In addition to her work in dance, Manasa is also a certified yoga instructor. She is the director of Esha Yoga Studio, where she offers a variety of yoga classes for all levels.
+                With a Ranga Pravesha performance, that garnered accolades from media and the art society and numerous on-stage national performances, she has displayed her comprehensive understanding of the intricacies of this ancient dance form. This qualifies her not only as a trainer but also as a learned judge of others' performances.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Manasa's approach to yoga is rooted in the ancient traditions of India. She emphasizes the importance of breath, alignment, and mindfulness in her classes.
-              </p>
-              <p className="text-lg text-gray-600 mb-6">
-                Whether you are a beginner or an experienced yogi, you will find a class that is right for you at Esha Yoga Studio. Manasa's warm and welcoming personality will make you feel right at home.
+                Serving as an expert Bharatanatyam trainer, she worked for two years at Vasundhara Performing Arts Center, Mysore, Karnataka. She also tutored the hearing impaired disciples at Rotary West and Parent's Association of Deaf Children Trust.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Achievements and Recognition Section */}
+      {/* Continuing to mesmerise audiences */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-purple-900 mb-6 text-center">Achievements and Recognition</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <img 
-                src="https://manasanagaraj.com/wp-content/uploads/2019/04/award1.jpg" 
-                alt="Award"
-                className="w-full rounded-lg shadow-md mb-4"
-              />
-              <p className="text-lg text-gray-600">
-                Received the prestigious "Natya Ratna" award for excellence in Bharatanatyam.
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-purple-900 mb-6">Continuing to mesmerise audiences</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Having presented exemplary performances in several highly acclaimed dance festivals across India, Manasa has received rave reviews from the leading newspapers, both national and regional, and art aficionados.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                Her performances have been extensively covered by top Indian English publications such as, The Hindu, The New Indian Express and Deccan Herald. The regional newspapers, such as Prajavani, Praja Nudi, Star of Mysore and Metro Mysore, have also carried flattering articles on Manasa.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                She performed twice at Mysore Dasara, a renowned cultural and dance festival held every year in Mysore, Karnataka, once in group and again in 2012.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                In 2010, she performed at Lokrang, the famous cultural festival that is a part of "Incredible India" tourism campaign. She performed in Pravah Festivals at Jodhpur and Goa in 2014.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                After moving to US, she has been touring the country presenting her riveting dance concerts apart from serving as a Bharatanatyam trainer.
               </p>
             </div>
             
             <div className="text-center">
               <img 
-                src="https://manasanagaraj.com/wp-content/uploads/2019/04/award2.jpg" 
-                alt="Recognition"
-                className="w-full rounded-lg shadow-md mb-4"
+                src="https://manasanagaraj.com/wp-content/uploads/2019/04/Nritya-Manasa-48.jpg" 
+                alt="Manasa Nagaraj Performance"
+                className="w-full rounded-lg shadow-lg"
               />
-              <p className="text-lg text-gray-600">
-                Honored by the Mayor of Santa Clara for contributions to the arts community.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <img 
-                src="https://manasanagaraj.com/wp-content/uploads/2019/04/award3.jpg" 
-                alt="Scholarship"
-                className="w-full rounded-lg shadow-md mb-4"
-              />
-              <p className="text-lg text-gray-600">
-                Awarded a scholarship to study advanced Bharatanatyam at the Kalakshetra Foundation.
-              </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* The Doer */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-purple-900 mb-6">The Doer</h2>
+          <p className="text-lg text-gray-600 mb-6 max-w-4xl mx-auto">
+            Currently located in Bay Area, she aspires to utilize the knowledge she has gained, through her perseverance and hard-work, numerous commendable on-stage performances, several years of teaching and judging, to promote this complex sophisticated dance form.
+          </p>
+          <p className="text-lg text-gray-600 mb-6 max-w-4xl mx-auto">
+            She has started Nrithyamanasa Performing Arts Center to hold professional classes for people wishing to make it as a career.
+          </p>
+          <p className="text-lg text-gray-600 mb-6 max-w-4xl mx-auto">
+            She wants to organise workshops to generate more interest in this ancient Indian classical dance. She plans to arrange dance contests to showcase and encourage the budding young dancers.
+          </p>
+        </div>
+      </section>
+
+      {/* The journey continues */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-purple-900 mb-6">The journey continues…</h2>
+          <p className="text-lg text-gray-600 mb-6 max-w-4xl mx-auto">
+            With her passion and dedication, Manasa Nagaraj has become an excellent Bharatanatyam dancer. Now all she desires is to spread, share and utilise her knowledge about the dance form in all plausible ways to benefit others.
+          </p>
         </div>
       </section>
 
@@ -145,7 +161,7 @@ const AboutManasa = () => {
               <div className="flex items-center mb-4">
                 <img 
                   src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
-                  alt="Nrithyamanasa Logo" 
+                  alt="Logo" 
                   className="h-8 w-auto"
                 />
               </div>

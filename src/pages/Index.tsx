@@ -1,8 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Star, MapPin, Phone, Mail, Award, Calendar, Users, Facebook, Instagram, Youtube, Clock, Music } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -263,50 +263,151 @@ const Index = () => {
             <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
           </div>
           
-          <div className="max-w-3xl mx-auto space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-purple-700">What age groups do you teach?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  We offer classes for all ages, from young children (starting at age 5) to adults. Our programs are structured to accommodate different skill levels and learning paces.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="text-purple-700 font-semibold">
+                  What is Bharatanatyam?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-gray-600">
+                    <strong>Bharatanatyam</strong> is the name given in the early twentieth century to the dances known as Dasi-attam and Sadir-attam, which evolved over centuries in the temples and royal courts of Southern India. It highlights the beauty of strong lines leading out from the dancer's body and is embellished with intricately expressive hand gestures and elaborate storytelling through exquisite facial expressions.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-amber-700">How long does it take to learn Bharatanatyam?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  The journey varies for each student. Basic foundation (Adavus) typically takes 2-3 years, while preparing for Arangetram (debut performance) usually requires 7-10 years of dedicated practice.
-                </p>
-              </CardContent>
-            </Card>
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="text-amber-700 font-semibold">
+                  How long and how many times a week are the classes?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-gray-600">
+                    For an hour each, these classes take place twice or once a week depending on the student preference. Check the Classes page for the schedule.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-purple-700">What should I bring to class?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  Comfortable practice clothes, a water bottle, and dedication to learn. We'll provide guidance on acquiring traditional dance attire as you progress.
-                </p>
-              </CardContent>
-            </Card>
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="text-purple-700 font-semibold">
+                  What is the minimum age to start learning Bharatanatyam?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-gray-600">
+                    While each child's development is different, the ideal age is 5 years and older. Classes are taught using child-friendly methods to introduce your little dancer to the rhythms, music, and movement of Bharatanatyam.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-amber-700">Do you offer performance opportunities?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">
-                  Yes! We organize annual recitals like Nrithya Taranga, and students regularly perform at cultural events, festivals, and community gatherings.
-                </p>
-              </CardContent>
-            </Card>
+              <AccordionItem value="item-4">
+                <AccordionTrigger className="text-amber-700 font-semibold">
+                  Dress Requirements?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ul className="text-gray-600 space-y-2">
+                    <li>• Females should wear a dance practice sāri or suitably tailored salwār kamīz.</li>
+                    <li>• Males should wear a dhoti or a suitably tailored kurtā pyjāma.</li>
+                    <li>• All students should have their waist firmly bound.</li>
+                    <li>• Hair should be pinned away from the face and, if necessary, drawn back in a single plait or bun. A long plait should be secured at the back to prevent its movement distracting from the dance.</li>
+                    <li>• No dance costume or jewellery should be worn.</li>
+                    <li>• No ankle bells should be worn</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5">
+                <AccordionTrigger className="text-purple-700 font-semibold">
+                  Why each level varies?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-gray-600">
+                    Each level will progress according to each students' ability level, class participation, and regularity/intensity of home practice. Each level builds on the curriculum and training from the previous levels. So mastery of each level is ABSOLUTELY ESSENTIAL in order to attain full-fledged confidence in all aspects of Nritta, Nritya, and Natya.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6">
+                <AccordionTrigger className="text-amber-700 font-semibold">
+                  How do I register?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-gray-600">
+                    Click on the Signup | Register link to create an account and pay registration fees. After your first class, we will set up an autopay membership and it's charged every month on the same calendar day.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-7">
+                <AccordionTrigger className="text-purple-700 font-semibold">
+                  How do I cancel?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-gray-600">
+                    AUTO-PAYS require a 30 day written notice to discontinue. For cancellations, holds, and/or changes to memberships for any reason, the member must notify Nrithyamanasa Performing Arts center via email at manasanrithya@gmail.com at least 30 days prior to the next auto-draft, putting "membership cancellation, membership hold, or membership change" as subject heading of the email. In turn, Nrithyamanasa Performing Arts center will send a confirmation via email after the changes have been made to the account.<br />
+                    $15 per month would be charged from your account per month as hold charges. Member agrees that Nrithyamanasa Performing Arts center could take up to 7 business days to respond.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-8">
+                <AccordionTrigger className="text-amber-700 font-semibold">
+                  Do you offer 1 class or 2 per week?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-gray-600">
+                    We offer 2 classes per week but students can choose 1 or 2 class depending on their availability.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-9">
+                <AccordionTrigger className="text-purple-700 font-semibold">
+                  Are classes held during summer and winter breaks?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-gray-600">
+                    Yes, classes will be held during the summer and winter breaks.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-10">
+                <AccordionTrigger className="text-amber-700 font-semibold">
+                  Do you offer trial class?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-gray-600">
+                    No, the Student needs to register and pay the $50 registration fee. The registration fee is nonrefundable. Autopay would start only after the first class. If a student doesn't like the trial class then autopay doesn't start.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-11">
+                <AccordionTrigger className="text-purple-700 font-semibold">
+                  What if I/child misses a class?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-gray-600">
+                    There will be no makeup class. If the teacher misses a class then will provide makeup class.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-12">
+                <AccordionTrigger className="text-amber-700 font-semibold">
+                  DANCER CODE OF CONDUCT
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ul className="text-gray-600 space-y-2">
+                    <li>• All dancers are expected to attend classes regularly.</li>
+                    <li>• It is expected that all dancers will be punctual. Warm-up is performed at the beginning of each class and it is imperative that all dancers take part in warm-up to make sure their body is ready for physical activity. If a dancer misses warm-up, an unnecessary injury could result, so please make every effort to arrive on time.</li>
+                    <li>• All dancers are expected to demonstrate respect for the teacher and will not challenge authority with inappropriate behavior such as talking back, disobeying the teacher, giving an attitude, or acting disrespectfully in a way that is intended to provoke hostility.</li>
+                    <li>• All dancers understand that NPAC requires them to adhere to the Dress Code. Dancers that do not adhere to the dress code will not participate in the class.</li>
+                    <li>• All dancers will be friendly, warm and welcoming to the other dancers at the studio and in their classes. At NPAC we encourage dancers to establish new friendships with the dancers in their classes and we enforce teamwork and fairness.</li>
+                    <li>• All dancers will attend every class and participate to the best of their ability and put forth 100% effort, energy and smiles.</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
