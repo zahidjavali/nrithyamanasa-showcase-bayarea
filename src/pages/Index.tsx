@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,19 +13,19 @@ const Index = () => {
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-purple-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center">
               <img 
                 src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
                 alt="Nrithyamanasa Logo" 
                 className="h-10 w-auto"
               />
-              <span className="text-xl font-bold text-purple-900">Nrithyamanasa</span>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-purple-600 transition-colors">HOME</Link>
+              <Link to="/" className="text-purple-600 font-semibold">HOME</Link>
               <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors">ABOUT MANASA</Link>
               <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-colors">PERFORMANCES</Link>
+              <Link to="/press-gallery" className="text-gray-700 hover:text-purple-600 transition-colors">PRESS GALLERY</Link>
               <a href="#showcase" className="text-gray-700 hover:text-purple-600 transition-colors">SHOWCASE</a>
               <a href="#classes" className="text-gray-700 hover:text-purple-600 transition-colors">CLASSES</a>
               <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-colors">CONTACT</a>
@@ -230,9 +231,17 @@ const Index = () => {
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+            <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8 items-center">
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-purple-900 mb-4">Address</h3>
+              <div className="w-20 h-20 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+                <MapPin className="h-8 w-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-purple-900 mb-2">Address</h3>
               <p className="text-gray-600">
                 1078 Monroe St,<br />
                 Santa Clara,<br />
@@ -241,22 +250,41 @@ const Index = () => {
             </div>
             
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-purple-900 mb-4">Call Us</h3>
+              <div className="w-20 h-20 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
+                <Phone className="h-8 w-8 text-amber-600" />
+              </div>
+              <h3 className="text-xl font-bold text-purple-900 mb-2">Call Us</h3>
               <p className="text-gray-600">
                 858 880 4577<br />
                 858 880 4576
               </p>
-              <p className="text-gray-600 mt-4">
-                If you are sufficiently interested to learn Bharatanatyam and stay in Sunnyvale, Santa Clara, Cupertino, and San Jose, Milpitas, Fremont, Palo Alto drop by <a href="http://www.manasanagaraj.com" className="text-purple-600 hover:text-purple-700">Nrithyamanasa</a>. We have Bharatanatyam classes tailormade to suit you.
-              </p>
             </div>
             
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-purple-900 mb-4">Email Us</h3>
+              <div className="w-20 h-20 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+                <Mail className="h-8 w-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-purple-900 mb-2">Email Us</h3>
               <p className="text-gray-600">
                 manasanrithya@gmail.com
               </p>
             </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
+                <Users className="h-8 w-8 text-amber-600" />
+              </div>
+              <h3 className="text-xl font-bold text-purple-900 mb-2">Join Us</h3>
+              <p className="text-gray-600">
+                Classes in Sunnyvale, Santa Clara, Cupertino, San Jose, Milpitas, Fremont, Palo Alto
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              If you are sufficiently interested to learn Bharatanatyam and stay in Sunnyvale, Santa Clara, Cupertino, and San Jose, Milpitas, Fremont, Palo Alto drop by <a href="http://www.manasanagaraj.com" className="text-purple-600 hover:text-purple-700">Nrithyamanasa</a>. We have Bharatanatyam classes tailormade to suit you.
+            </p>
           </div>
         </div>
       </section>
@@ -266,13 +294,12 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
+              <div className="flex items-center mb-4">
                 <img 
                   src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
                   alt="Nrithyamanasa Logo" 
                   className="h-8 w-auto"
                 />
-                <span className="text-xl font-bold">Nrithyamanasa</span>
               </div>
               <p className="text-gray-400">
                 Bay Area's premier Bharatanatyam academy, nurturing classical dance traditions since inception.

@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -78,13 +77,12 @@ const PressGallery = () => {
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-purple-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center">
               <img 
                 src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
                 alt="Nrithyamanasa Logo" 
                 className="h-10 w-auto"
               />
-              <span className="text-xl font-bold text-purple-900">Nrithyamanasa</span>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
@@ -177,13 +175,12 @@ const PressGallery = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
+              <div className="flex items-center mb-4">
                 <img 
                   src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
                   alt="Nrithyamanasa Logo" 
                   className="h-8 w-auto"
                 />
-                <span className="text-xl font-bold">Nrithyamanasa</span>
               </div>
               <p className="text-gray-400">
                 Bay Area's premier Bharatanatyam academy, nurturing classical dance traditions since inception.
