@@ -2,57 +2,35 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Star, MapPin, Calendar, Clock, Facebook, Instagram } from "lucide-react";
+import { Star, MapPin, Phone, Mail, Award, Calendar, Users, Facebook, Instagram, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Performances = () => {
-  const recentPerformances = [
-    "Deepotsava from Renowned Bay area Artists – November 16th 2019",
-    "endaro mahanubhavulu performance for Sapthathi @ Mysore, India – November 1st and 2nd 2019",
-    "Samarpanam – Divine offering to the Guru at Mission city center for performing arts center, Santa Clara on 8/25/2019, 4 pm – 6 pm",
-    "Global Beats Stage, sponsored by World Heritage Cultural Center – 3/23/2019",
-    "Sri Krishnaleela Taranga – 09/12/2018",
-    "Maha Shivaratri 2018 celebration @ SVCC, Fremont – 2/13/2018, 8:00 pm",
-    "Sankranti Sambaralu, San Ramon – 1/13/2018",
-    "Nrithya Taranga 2017, Sunnyvale – 11/26/27",
-    "Performances on the occasion of Maha Shivaratri – 2/24/2017"
-  ];
-
-  const shivaratriPerformances = [
-    "Shivanandam, 17th Maha Shivaratri dance celebration, Palo Alto Arts Center – 7:30 pm",
-    "SVCC, Fremont – 8:30 pm",
-    "Shiva Durga temple – 10 pm"
-  ];
-
-  const usPerformances = [
-    "Performance at Apple on the occasion of Diwali – October 28, 2016",
-    "Sankat Mochan Hanuman Temple, Watsonville, CA – June 25, 2016",
-    "Thyagraja Festival, Cleveland – April 2, 2016",
-    "Natyanjali, Sacramento – March 19, 2016",
-    "SVCC Temple, Fremont – March 6, 2016",
-    "Maha Kaleshwar Temple, Santa Clara – March 5, 2016",
-    "Performance at Bangalore – 2014",
-    "Performance at Mysore – 2013",
-    "Mysore Dasara – 2012",
-    "Pallavothsava, Mysore – 2012",
-    "Ranga Pravesha/Arangetram at Jagan Mohan Palace Auditorium, Mysore – 2012"
-  ];
-
-  const internationalPerformances = [
-    "Pravah Festival, Goa – 2013",
-    "Swathi Thirunal Festival, Chennai, Tamil Nadu – 2013",
-    "Pravah Festival, Jodhpur, Rajasthan – 2011",
-    "Brahmakumari, Mt. Abu, Rajasthan – 2011",
-    "Lokrang Festival, Bhopal, Madhya Pradesh – 2010",
-    "Brahmotsava Festival, ISCKON, Bangalore, Karnataka – 2008 & 2010",
-    "Mantralaya, Andhra Pradesh",
-    "Mahamastakabhisheka, Shravanabelagola, Karnataka",
-    "Kanakajayanti, Mysore, Karnataka",
-    "Lakkundi Utsava, Hubli, Karnataka – 2008",
-    "Hampi Utsav, Hampi, Karnataka – 2007",
-    "Jaatra Mahotsava, Mysore, Karnataka – 2006",
-    "Pallavotsava, Mysore, Karnataka – 2006 to 2013",
-    "Mysore Dasara, Mysore, Karnataka – 2005"
+  const performances = [
+    {
+      title: "Nrithya Taranga 2024",
+      date: "September 22, 2024",
+      venue: "Mission City Center For Performing Arts, Santa Clara",
+      description: "Join us for an enchanting evening of classical Bharatanatyam performances featuring students from all levels of training.",
+      image: "https://manasanagaraj.com/wp-content/uploads/2019/04/Nritya-Manasa-98.jpg",
+      alt: "Bharatanatyam performance"
+    },
+    {
+      title: "Mysore Dasara Festival",
+      date: "October 2012",
+      venue: "Mysore, Karnataka",
+      description: "A prestigious cultural festival where Manasa showcased her exceptional skills in classical dance.",
+      image: "https://manasanagaraj.com/wp-content/uploads/2019/04/Nritya-Manasa-82-1.jpg",
+      alt: "Bharatanatyam performance at Mysore Dasara"
+    },
+    {
+      title: "Deepotsava",
+      date: "Diwali Festival",
+      venue: "Various Locations",
+      description: "Celebrating the festival of lights through the divine art of Bharatanatyam.",
+      image: "https://manasanagaraj.com/wp-content/uploads/2019/11/Deepotsava-683x1024.jpg",
+      alt: "Deepotsava Bharatanatyam performance"
+    }
   ];
 
   return (
@@ -74,234 +52,132 @@ const Performances = () => {
               <Link to="/" className="text-gray-700 hover:text-purple-600 transition-colors">HOME</Link>
               <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors">ABOUT MANASA</Link>
               <span className="text-purple-600 font-semibold">PERFORMANCES</span>
-              <Link to="/#showcase" className="text-gray-700 hover:text-purple-600 transition-colors">SHOWCASE</Link>
-              <Link to="/#classes" className="text-gray-700 hover:text-purple-600 transition-colors">CLASSES</Link>
-              <Link to="/#contact" className="text-gray-700 hover:text-purple-600 transition-colors">CONTACT</Link>
+              <a href="/#showcase" className="text-gray-700 hover:text-purple-600 transition-colors">SHOWCASE</a>
+              <a href="/#classes" className="text-gray-700 hover:text-purple-600 transition-colors">CLASSES</a>
+              <a href="/#contact" className="text-gray-700 hover:text-purple-600 transition-colors">CONTACT</a>
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-amber-600 text-white">
-        <div className="absolute inset-0 overflow-hidden">
-          <img 
-            src="https://manasanagaraj.com/wp-content/uploads/2019/04/Nritya-Manasa-98.jpg" 
-            alt="Bharatanatyam"
-            className="w-full h-full object-cover opacity-30"
-          />
-        </div>
-        <div className="relative max-w-7xl mx-auto text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-amber-600 text-white">
+        <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">PERFORMANCES</h1>
           <p className="text-xl mb-8 max-w-4xl mx-auto">
-            Manasa is blessed to showcase her performance in prestigious dance and cultural festivals. 
-            Here is a list of the events she has been part of to give you a sense of her outings.
+            Experience the divine art of Bharatanatyam through our captivating performances that blend traditional techniques with contemporary expression.
           </p>
         </div>
       </section>
 
-      {/* Recent Performances Section */}
+      {/* Featured Performances */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-1">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Recent Performances</h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Latest performances showcasing the beauty and grace of Bharatanatyam across the Bay Area and beyond.
-              </p>
-              <div className="w-full h-64 overflow-hidden rounded-lg mb-6">
-                <img 
-                  src="https://manasanagaraj.com/wp-content/uploads/2019/04/Nritya-Manasa-82-1.jpg" 
-                  alt="Bharatanatyam"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-            
-            <div className="lg:col-span-2">
-              <div className="space-y-4">
-                <Card className="border-l-4 border-purple-600">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-3">
-                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
-                      <div>
-                        <p className="text-gray-700 font-semibold">Deepotsava from Renowned Bay area Artists – November 16th 2019</p>
-                        <div className="w-full h-48 mt-4 overflow-hidden rounded-lg">
-                          <img 
-                            src="https://manasanagaraj.com/wp-content/uploads/2019/11/Deepotsava-683x1024.jpg" 
-                            alt="Deepotsava Bharatanatyam performance"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card key={1} className="border-l-4 border-purple-600">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-3">
-                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
-                      <p className="text-gray-700">endaro mahanubhavulu performance for Sapthathi @ Mysore, India – November 1st and 2nd 2019</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card key={2} className="border-l-4 border-purple-600">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-3">
-                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
-                      <p className="text-gray-700">Samarpanam – Divine offering to the Guru at Mission city center for performing arts center, Santa Clara on 8/25/2019, 4 pm – 6 pm</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card key={3} className="border-l-4 border-purple-600">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-3">
-                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
-                      <p className="text-gray-700">Global Beats Stage, sponsored by World Heritage Cultural Center – 3/23/2019</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card key={4} className="border-l-4 border-purple-600">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-3">
-                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
-                      <p className="text-gray-700">Sri Krishnaleela Taranga – 09/12/2018</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card key={5} className="border-l-4 border-purple-600">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-3">
-                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
-                      <p className="text-gray-700">Maha Shivaratri 2018 celebration @ SVCC, Fremont – 2/13/2018, 8:00 pm</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card key={6} className="border-l-4 border-purple-600">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-3">
-                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
-                      <p className="text-gray-700">Sankranti Sambaralu, San Ramon – 1/13/2018</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card key={7} className="border-l-4 border-purple-600">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-3">
-                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
-                      <p className="text-gray-700">Nrithya Taranga 2017, Sunnyvale – 11/26/27</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card key={8} className="border-l-4 border-purple-600">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-3">
-                      <Calendar className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
-                      <p className="text-gray-700">Performances on the occasion of Maha Shivaratri – 2/24/2017</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Performances</h2>
+            <Separator className="w-24 mx-auto bg-purple-600 h-1" />
           </div>
-        </div>
-      </section>
-
-      {/* Special Shivaratri Performances */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
-        <div className="max-w-7xl mx-auto">
-          <Card className="bg-white shadow-lg">
-            <CardHeader className="bg-gradient-to-r from-purple-600 to-amber-600 text-white">
-              <CardTitle className="text-2xl">Special Shivaratri Celebrations</CardTitle>
-              <CardDescription className="text-purple-100">
-                Multiple performances in a single day showcasing dedication to the art form
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="grid md:grid-cols-3 gap-6">
-                {shivaratriPerformances.map((performance, index) => (
-                  <div key={index} className="flex items-center space-x-3 p-4 bg-purple-50 rounded-lg">
-                    <Clock className="h-5 w-5 text-purple-600 flex-shrink-0" />
-                    <p className="text-gray-700 text-sm">{performance}</p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* US Performances */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Performances Across the United States
-          </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {usPerformances.map((performance, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-3">
-                    <MapPin className="h-5 w-5 text-amber-600 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700 text-sm">{performance}</p>
+          <div className="grid gap-8">
+            {performances.map((performance, index) => (
+              <Card key={index} className="overflow-hidden">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="p-6">
+                    <CardHeader className="p-0">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <Calendar className="h-5 w-5 text-purple-600" />
+                        <span className="text-sm text-gray-500">{performance.date}</span>
+                      </div>
+                      <CardTitle className="text-2xl text-purple-900 mb-2">{performance.title}</CardTitle>
+                      <div className="flex items-center space-x-2 mb-4">
+                        <MapPin className="h-5 w-5 text-amber-600" />
+                        <span className="text-sm text-gray-600">{performance.venue}</span>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="p-0">
+                      <p className="text-gray-600 mb-4">{performance.description}</p>
+                      {performance.title === "Nrithya Taranga 2024" && (
+                        <Button className="bg-purple-600 hover:bg-purple-700" onClick={() => window.open('https://www.eventbrite.com/e/nrithya-taranga-2024-tickets-938834267567?aff=oddtdtcreator', '_blank')}>
+                          Reserve Tickets
+                        </Button>
+                      )}
+                    </CardContent>
                   </div>
-                </CardContent>
+                  <div className="relative h-64 md:h-full">
+                    <img 
+                      src={performance.image} 
+                      alt={performance.alt}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* International Journey */}
+      {/* Performance Highlights */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              International Performance Journey
-            </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              Manasa has traveled extensively and performed on various platforms with her mentor. 
-              Here are a few notable event highlights of her long and satisfying journey.
-            </p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Performance Highlights</h2>
+            <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {internationalPerformances.map((performance, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow border-2 border-amber-100">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-3">
-                    <Star className="h-5 w-5 text-amber-600 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700 text-sm">{performance}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="text-center">
+              <CardHeader>
+                <Users className="h-12 w-12 text-purple-600 mx-auto mb-4" />
+                <CardTitle className="text-purple-700">Student Showcases</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Regular performances by students at various skill levels, providing opportunities to showcase their progress and build confidence.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <Award className="h-12 w-12 text-amber-600 mx-auto mb-4" />
+                <CardTitle className="text-amber-700">Festival Performances</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Participation in prestigious cultural festivals and events, bringing classical Indian dance to diverse audiences.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <Star className="h-12 w-12 text-purple-600 mx-auto mb-4" />
+                <CardTitle className="text-purple-700">Arangetram Ceremonies</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Debut performances marking the culmination of years of dedicated training and the beginning of an artist's journey.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-amber-600 text-white">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Experience the Magic Live</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Join us at our upcoming performances and witness the divine art of Bharatanatyam firsthand.
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Join Our Next Performance</h2>
+          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+            Experience the magic of Bharatanatyam firsthand. Whether you're a dance enthusiast or curious about classical Indian arts, our performances offer something for everyone.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 font-semibold">
-              View Upcoming Events
+            <Button size="lg" className="bg-purple-600 hover:bg-purple-700" onClick={() => window.open('https://www.eventbrite.com/e/nrithya-taranga-2024-tickets-938834267567?aff=oddtdtcreator', '_blank')}>
+              Get Tickets
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-purple-600">
-              Learn More About Classes
+            <Button size="lg" variant="outline">
+              <Link to="/about-manasa">Learn More</Link>
             </Button>
           </div>
         </div>
@@ -330,8 +206,9 @@ const Performances = () => {
               <ul className="space-y-2 text-gray-400">
                 <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
                 <li><Link to="/about-manasa" className="hover:text-white transition-colors">About Manasa</Link></li>
-                <li><a href="#performances" className="hover:text-white transition-colors">Performances</a></li>
-                <li><Link to="/#contact" className="hover:text-white transition-colors">Contact</Link></li>
+                <li><span className="text-white">Performances</span></li>
+                <li><Link to="/press-gallery" className="hover:text-white transition-colors">Press Gallery</Link></li>
+                <li><a href="/#contact" className="hover:text-white transition-colors">Contact</a></li>
               </ul>
             </div>
             
@@ -363,6 +240,14 @@ const Performances = () => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   <Instagram className="h-6 w-6" />
+                </a>
+                <a 
+                  href="https://www.youtube.com/channel/UCjHetu8d3HAn6D3NViNLNjA/videos" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <Youtube className="h-6 w-6" />
                 </a>
               </div>
               <div className="space-y-2 text-gray-400">
