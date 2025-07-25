@@ -38,7 +38,7 @@ const Performances = () => {
 
       {/* Hero Section */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/95 to-amber-900/95 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 to-amber-900/90 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -47,10 +47,10 @@ const Performances = () => {
         ></div>
         <div className="relative z-20 max-w-7xl mx-auto">
           <div className="text-center mb-8">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-2xl">
               PERFORMANCES
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-amber-100 font-medium leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-white font-medium leading-relaxed drop-shadow-lg">
               Experience the beauty and grace of classical Bharatanatyam through captivating performances and student showcases
             </p>
           </div>
@@ -74,7 +74,6 @@ const Performances = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-purple-900 mb-12">Past Performances</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Example Performance Card */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <img 
                 src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-143858.jpg" 
@@ -110,7 +109,42 @@ const Performances = () => {
                 <p className="text-gray-600">A festive performance celebrating the festival of lights with traditional dances.</p>
               </div>
             </div>
-            {/* Add more performance cards here */}
+
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <img 
+                src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-152456.png" 
+                alt="Performance"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Spring Showcase 2022</h3>
+                <p className="text-gray-600">A beautiful display of seasonal dances and traditional stories.</p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <img 
+                src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-153201.png" 
+                alt="Performance"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Cultural Heritage Event</h3>
+                <p className="text-gray-600">Celebrating Indian culture through classical dance performances.</p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <img 
+                src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-154133.png" 
+                alt="Performance"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Youth Festival 2021</h3>
+                <p className="text-gray-600">Young dancers showcasing their skills and passion for Bharatanatyam.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -120,26 +154,45 @@ const Performances = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-purple-900 mb-12">Upcoming Performances</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Example Upcoming Performance Card */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="p-4">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Nrithya Taranga 2024</h3>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Nrithya Taranga 2024</h3>
                 <p className="text-gray-600 mb-4">
                   Join us for our annual event showcasing the talent and dedication of our students.
                 </p>
-                <p className="text-gray-700">
-                  <strong>Date:</strong> September 22, 2024
-                </p>
-                <p className="text-gray-700">
-                  <strong>Time:</strong> 4:00 PM - 6:00 PM
-                </p>
-                <p className="text-gray-700">
-                  <strong>Venue:</strong> Mission City Center For Performing Arts, Santa Clara, CA
-                </p>
+                <div className="space-y-2">
+                  <p className="text-gray-700">
+                    <strong>Date:</strong> September 22, 2024
+                  </p>
+                  <p className="text-gray-700">
+                    <strong>Time:</strong> 4:00 PM - 6:00 PM
+                  </p>
+                  <p className="text-gray-700">
+                    <strong>Venue:</strong> Mission City Center For Performing Arts, Santa Clara, CA
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Add more upcoming performance cards here */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Summer Recital 2024</h3>
+                <p className="text-gray-600 mb-4">
+                  A special summer presentation featuring intermediate and advanced students.
+                </p>
+                <div className="space-y-2">
+                  <p className="text-gray-700">
+                    <strong>Date:</strong> August 15, 2024
+                  </p>
+                  <p className="text-gray-700">
+                    <strong>Time:</strong> 5:00 PM - 7:00 PM
+                  </p>
+                  <p className="text-gray-700">
+                    <strong>Venue:</strong> Community Hall, Sunnyvale, CA
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
