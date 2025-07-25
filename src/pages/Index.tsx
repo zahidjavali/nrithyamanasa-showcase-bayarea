@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -5,8 +6,13 @@ import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Star, MapPin, Phone, Mail, Award, Calendar, Users, Facebook, Instagram, Youtube, Clock, Music } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-amber-50">
       {/* Navigation */}
@@ -47,16 +53,13 @@ const Index = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
             Nrithya Taranga 2024
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mb-8 text-amber-100">
-            Dancer, Teacher, Choreographer, & Yoga Instructor
-          </p>
           <p className="text-base sm:text-lg md:text-xl mb-8 text-amber-100">
-            The event is scheduled for September 22nd at 4:00 pm and will be held at the Mission City Center For Performing Arts in Santa Clara.
+            The event is scheduled for September 22nd at 4:00 pm and will be held at Mission City Center For Performing Arts in Santa Clara.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 text-lg"
+              className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg w-full sm:w-auto"
               onClick={() => window.open('https://www.eventbrite.com/e/nrithya-taranga-2024-tickets-938834267567?aff=oddtdtcreator', '_blank')}
             >
               Reserve Tickets
@@ -64,9 +67,9 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 text-lg"
+              className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-purple-600 px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg w-full sm:w-auto"
             >
-              <Link to="/about-manasa">Learn More</Link>
+              <Link to="/about-manasa" className="block w-full h-full">Learn More</Link>
             </Button>
           </div>
         </div>
@@ -79,7 +82,7 @@ const Index = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Nrithya Taranga 2024</h2>
             <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Join us for an enchanting evening of Bharatanatyam performances featuring talented students and special guests.
+              Join us for a beautiful evening of Bharatanatyam performances featuring talented students and special guests.
             </p>
           </div>
           
@@ -118,7 +121,7 @@ const Index = () => {
                 <CardTitle className="text-purple-700">Performances</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Classical Bharatanatyam recitals, thematic productions, and student showcases</p>
+                <p className="text-gray-600">Classical Bharatanatyam recitals, themed productions, and student showcases</p>
               </CardContent>
             </Card>
           </div>
@@ -132,7 +135,7 @@ const Index = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Welcome</h2>
             <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Manasa Nagaraj is the Artistic Director of Nrithyamanasa Performing Arts Center. She is even the Director of <a href="http://www.eshayoga.com" className="text-purple-600 hover:text-purple-700">Esha Yoga</a> which is a highly rated studio in Santa Clara.
+              Manasa Nagaraj is the Artistic Director of Nrithyamanasa Performing Arts Center. She is also the Director of <a href="https://www.eshayoga.com/" className="text-purple-600 hover:text-purple-700">Esha Yoga</a>, a highly-rated studio in Santa Clara.
             </p>
           </div>
           
@@ -140,7 +143,7 @@ const Index = () => {
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">Meet Manasa Nagaraj</h3>
               <p className="text-lg text-gray-600 mb-6">
-                With decades of experience in classical dance and wellness, Manasa brings unparalleled expertise to her students. Her dedication to preserving traditional Bharatanatyam while making it accessible to modern students has made her one of the most respected instructors in the Bay Area.
+                With decades of experience in classical dance and wellness, Manasa brings excellent skills to her students. Her commitment to preserving traditional Bharatanatyam while making it accessible to modern students has made her one of the most respected instructors in the Bay Area.
               </p>
               <div className="flex items-center space-x-4 mb-6">
                 <div className="flex items-center space-x-1">
@@ -150,7 +153,7 @@ const Index = () => {
                 </div>
                 <span className="text-sm text-gray-500">Highly rated instructor</span>
               </div>
-              <Button className="bg-purple-600 hover:bg-purple-700">
+              <Button className="bg-purple-600 hover:bg-purple-700 w-full sm:w-auto">
                 <Link to="/about-manasa">Read More about Manasa</Link>
               </Button>
             </div>
@@ -174,10 +177,10 @@ const Index = () => {
       <section id="classes" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Classes of All Levels</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Classes for All Levels</h2>
             <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              NPAC presents dedicated kids/adult instruction in Bharatanatyam for beginners, intermediate and advanced students. Using rhythmic footwork, geometric movement, codified hand gestures, and facial expressions to tell powerful stories and create intricate sequences of dance, the faculties of abhinaya and nritta are shaped and honed.
+              NPAC offers dedicated instruction in Bharatanatyam for beginners, intermediate and advanced students. Using rhythmic footwork, geometric movements, coded hand gestures, and facial expressions to tell powerful stories and create intricate dance sequences, we help students develop their skills in both pure dance (nritta) and expressive dance (nritya).
             </p>
           </div>
           
@@ -189,11 +192,11 @@ const Index = () => {
                   alt="Bharatanatyam students of Manasa Nagaraj"
                   className="w-full h-48 object-cover rounded-t-lg mb-4"
                 />
-                <CardTitle className="text-purple-700">Kids/Adult Beginner</CardTitle>
+                <CardTitle className="text-purple-700">Beginner Classes</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  The students learn the pure dance steps/Adavus during the first three years of learning. In these crucial years, a solid foundation is laid that will help the student achieve perfection in later years of pure dance. For an hour each, these classes take place twice a week.
+                  Students learn the basic dance steps (Adavus) during the first three years. In these important years, a strong foundation is built that helps students achieve perfection in later years. Classes are held twice a week for one hour each.
                 </p>
               </CardContent>
             </Card>
@@ -205,11 +208,11 @@ const Index = () => {
                   alt="Bharatanatyam students of Manasa Nagaraj"
                   className="w-full h-48 object-cover rounded-t-lg mb-4"
                 />
-                <CardTitle className="text-amber-700">Kids/Adult Intermediate</CardTitle>
+                <CardTitle className="text-amber-700">Intermediate Classes</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  For students who have learned adavus. Warm up and adavu class focuses on developing and maintaining posture and core strength. Expressive items are introduced with the primary emotion being that of a deity's devotion or praise. For an hour each, these classes take place twice a week.
+                  For students who have learned adavus. Warm-up and adavu classes focus on developing and maintaining posture and core strength. Expressive items are introduced with devotional themes. Classes are held twice a week for one hour each.
                 </p>
               </CardContent>
             </Card>
@@ -225,7 +228,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  In the three to four years prior to the arangetram, the varnams and other complicated items are taught and practiced.
+                  In the three to four years before the arangetram, complex varnams and other advanced items are taught and practiced.
                 </p>
               </CardContent>
             </Card>
@@ -320,7 +323,7 @@ const Index = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-gray-600">
-                    Each level will progress according to each students' ability level, class participation, and regularity/intensity of home practice. Each level builds on the curriculum and training from the previous levels. So mastery of each level is ABSOLUTELY ESSENTIAL in order to attain full-fledged confidence in all aspects of Nritta, Nritya, and Natya.
+                    Each level will progress according to each student's ability level, class participation, and regularity/intensity of home practice. Each level builds on the curriculum and training from the previous levels. So mastery of each level is ABSOLUTELY ESSENTIAL in order to attain full-fledged confidence in all aspects of Nritta, Nritya, and Natya.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -477,7 +480,7 @@ const Index = () => {
                 />
               </div>
               <p className="text-amber-100 max-w-md mx-auto">
-                If you are interested in learning Bharatanatyam and stay in the Bay Area, drop by for a consultation. We have classes tailored to suit you.
+                If you are interested in learning Bharatanatyam and live in the Bay Area, please visit us for a consultation. We have classes tailored to suit you.
               </p>
             </div>
           </div>
@@ -518,7 +521,7 @@ const Index = () => {
                 <li>Beginner Classes</li>
                 <li>Intermediate Training</li>
                 <li>Advanced/Pre-Arangetram</li>
-                <li>Esha Yoga</li>
+                <li><a href="https://www.eshayoga.com/" className="hover:text-white transition-colors">Esha Yoga</a></li>
               </ul>
             </div>
             

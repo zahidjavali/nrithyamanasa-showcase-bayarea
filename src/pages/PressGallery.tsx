@@ -1,9 +1,13 @@
-
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { useEffect } from "react";
 
 const PressGallery = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const pressImages = [
     "https://manasanagaraj.com/wp-content/uploads/2019/04/dance-like-swan-prajavani-e1448583120986.png",
     "https://manasanagaraj.com/wp-content/uploads/2019/04/DH-1.png",
@@ -48,8 +52,15 @@ const PressGallery = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-amber-600 text-white">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://manasanagaraj.com/wp-content/uploads/2019/04/hindu-1-e1448582811410.jpg')"
+          }}
+        ></div>
+        <div className="relative z-20 max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">IN THE NEWS</h1>
           <p className="text-xl mb-8 max-w-4xl mx-auto">
             Discover the media coverage and press reviews of Manasa's exceptional performances and contributions to Bharatanatyam.
@@ -150,7 +161,7 @@ const PressGallery = () => {
                 <li>Beginner Classes</li>
                 <li>Intermediate Training</li>
                 <li>Advanced/Pre-Arangetram</li>
-                <li>Esha Yoga</li>
+                <li><a href="https://www.eshayoga.com/" className="hover:text-white transition-colors">Esha Yoga</a></li>
               </ul>
             </div>
             
