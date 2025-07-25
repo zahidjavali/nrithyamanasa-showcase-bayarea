@@ -53,7 +53,7 @@ const PressGallery = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/80 to-amber-600/80 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -61,10 +61,21 @@ const PressGallery = () => {
           }}
         ></div>
         <div className="relative z-20 max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">IN THE NEWS</h1>
-          <p className="text-xl mb-8 max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">PRESS GALLERY</h1>
+          <p className="text-xl mb-8 max-w-4xl mx-auto text-amber-100">
             Discover the media coverage and press reviews of Manasa's exceptional performances and contributions to Bharatanatyam.
           </p>
+          <div className="flex justify-center">
+            <div className="bg-white/20 backdrop-blur-sm rounded-full p-1">
+              <div className="w-32 h-32 overflow-hidden rounded-full border-4 border-white/30">
+                <img 
+                  src="https://manasanagaraj.com/wp-content/uploads/2019/04/hindu-1-e1448582811410.jpg" 
+                  alt="Press Coverage"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

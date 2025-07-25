@@ -13,8 +13,123 @@ const Index = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // SEO Schema markup
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Bharatanatyam?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bharatanatyam is a classical dance form from South India that evolved over centuries in temples and royal courts. It uses beautiful body movements, hand gestures, and facial expressions to tell stories."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the minimum age to start learning Bharatanatyam?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The best age to start is 5 years and above. We teach children using fun and easy methods to help them learn the rhythms, music, and movements of Bharatanatyam."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long and how many times a week are the classes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Classes are one hour long and held once or twice a week based on what students prefer. Please check our Classes page for the schedule."
+        }
+      }
+    ]
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "DanceSchool",
+    "name": "Nrithyamanasa Performing Arts Center",
+    "description": "Bay Area's premier Bharatanatyam dance academy offering classes for all age groups",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1078 Monroe St",
+      "addressLocality": "Santa Clara",
+      "addressRegion": "CA",
+      "postalCode": "95050",
+      "addressCountry": "US"
+    },
+    "telephone": "858-880-4577",
+    "email": "manasanrithya@gmail.com",
+    "url": "https://manasanagaraj.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Manasa Nagaraj"
+    },
+    "offers": [
+      {
+        "@type": "Service",
+        "name": "Beginner Bharatanatyam Classes",
+        "description": "Foundation classes for students aged 5 and above"
+      },
+      {
+        "@type": "Service",
+        "name": "Intermediate Bharatanatyam Classes",
+        "description": "Classes for students who have learned basic steps"
+      },
+      {
+        "@type": "Service",
+        "name": "Advanced Bharatanatyam Classes",
+        "description": "Pre-Arangetram training for advanced students"
+      }
+    ]
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Manasa",
+        "item": "/about-manasa"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Performances",
+        "item": "/performances"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Press Gallery",
+        "item": "/press-gallery"
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-amber-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-purple-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +174,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg w-full sm:w-auto"
+              className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-lg w-full sm:w-auto"
               onClick={() => window.open('https://www.eventbrite.com/e/nrithya-taranga-2024-tickets-938834267567?aff=oddtdtcreator', '_blank')}
             >
               Reserve Tickets
@@ -67,9 +182,9 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-purple-600 px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg w-full sm:w-auto"
+              className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-purple-600 px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-lg w-full sm:w-auto flex items-center justify-center"
             >
-              <Link to="/about-manasa" className="block w-full h-full">Learn More</Link>
+              <Link to="/about-manasa" className="flex items-center justify-center w-full h-full">Learn More</Link>
             </Button>
           </div>
         </div>
@@ -274,7 +389,7 @@ const Index = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-gray-600">
-                    <strong>Bharatanatyam</strong> is the name given in the early twentieth century to the dances known as Dasi-attam and Sadir-attam, which evolved over centuries in the temples and royal courts of Southern India. It highlights the beauty of strong lines leading out from the dancer's body and is embellished with intricately expressive hand gestures and elaborate storytelling through exquisite facial expressions.
+                    <strong>Bharatanatyam</strong> is a classical dance form from South India that evolved over centuries in temples and royal courts. It uses beautiful body movements, hand gestures, and facial expressions to tell stories and express emotions.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -285,7 +400,7 @@ const Index = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-gray-600">
-                    For an hour each, these classes take place twice or once a week depending on the student preference. Check the Classes page for the schedule.
+                    Classes are one hour long and held once or twice a week based on what students prefer. Please check our Classes page for the schedule.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -296,34 +411,33 @@ const Index = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-gray-600">
-                    While each child's development is different, the ideal age is 5 years and older. Classes are taught using child-friendly methods to introduce your little dancer to the rhythms, music, and movement of Bharatanatyam.
+                    The best age to start is 5 years and above. We teach children using fun and easy methods to help them learn the rhythms, music, and movements of Bharatanatyam.
                   </p>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-4">
                 <AccordionTrigger className="text-amber-700 font-semibold">
-                  Dress Requirements?
+                  What should students wear for classes?
                 </AccordionTrigger>
                 <AccordionContent>
                   <ul className="text-gray-600 space-y-2">
-                    <li>• Females should wear a dance practice sāri or suitably tailored salwār kamīz.</li>
-                    <li>• Males should wear a dhoti or a suitably tailored kurtā pyjāma.</li>
-                    <li>• All students should have their waist firmly bound.</li>
-                    <li>• Hair should be pinned away from the face and, if necessary, drawn back in a single plait or bun. A long plait should be secured at the back to prevent its movement distracting from the dance.</li>
-                    <li>• No dance costume or jewellery should be worn.</li>
-                    <li>• No ankle bells should be worn</li>
+                    <li>• Girls should wear a dance practice sari or salwar kameez.</li>
+                    <li>• Boys should wear a dhoti or kurta pyjama.</li>
+                    <li>• All students should have their waist firmly tied.</li>
+                    <li>• Hair should be tied back neatly in a bun or plait.</li>
+                    <li>• No dance costume, jewelry, or ankle bells should be worn.</li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-5">
                 <AccordionTrigger className="text-purple-700 font-semibold">
-                  Why each level varies?
+                  Why does each level take different time?
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-gray-600">
-                    Each level will progress according to each student's ability level, class participation, and regularity/intensity of home practice. Each level builds on the curriculum and training from the previous levels. So mastery of each level is ABSOLUTELY ESSENTIAL in order to attain full-fledged confidence in all aspects of Nritta, Nritya, and Natya.
+                    Each level progresses based on the student's ability, class participation, and regular practice at home. Each level builds on what you learned before, so it's very important to master each level completely before moving to the next.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -334,7 +448,7 @@ const Index = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-gray-600">
-                    Click on the Signup | Register link to create an account and pay registration fees. After your first class, we will set up an autopay membership and it's charged every month on the same calendar day.
+                    Click on the Signup | Register link to create an account and pay the registration fee. After your first class, we will set up monthly autopay that charges on the same date each month.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -345,8 +459,7 @@ const Index = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-gray-600">
-                    AUTO-PAYS require a 30 day written notice to discontinue. For cancellations, holds, and/or changes to memberships for any reason, the member must notify Nrithyamanasa Performing Arts center via email at manasanrithya@gmail.com at least 30 days prior to the next auto-draft, putting "membership cancellation, membership hold, or membership change" as subject heading of the email. In turn, Nrithyamanasa Performing Arts center will send a confirmation via email after the changes have been made to the account.<br />
-                    $15 per month would be charged from your account per month as hold charges. Member agrees that Nrithyamanasa Performing Arts center could take up to 7 business days to respond.
+                    You need to give us 30 days written notice to stop autopay. Please email us at manasanrithya@gmail.com with "membership cancellation" in the subject line. We will send you a confirmation email within 7 business days. If you want to pause classes, we charge $15 per month as hold charges.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -357,7 +470,7 @@ const Index = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-gray-600">
-                    We offer 2 classes per week but students can choose 1 or 2 class depending on their availability.
+                    We offer 2 classes per week, but students can choose 1 or 2 classes based on their schedule.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -368,45 +481,45 @@ const Index = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-gray-600">
-                    Yes, classes will be held during the summer and winter breaks.
+                    Yes, classes continue during summer and winter breaks.
                   </p>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-10">
                 <AccordionTrigger className="text-amber-700 font-semibold">
-                  Do you offer trial class?
+                  Do you offer trial classes?
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-gray-600">
-                    No, the Student needs to register and pay the $50 registration fee. The registration fee is nonrefundable. Autopay would start only after the first class. If a student doesn't like the trial class then autopay doesn't start.
+                    No, students need to register and pay the $50 registration fee first. This fee cannot be refunded. Monthly autopay starts only after the first class. If you don't like the first class, autopay will not start.
                   </p>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-11">
                 <AccordionTrigger className="text-purple-700 font-semibold">
-                  What if I/child misses a class?
+                  What if I miss a class?
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-gray-600">
-                    There will be no makeup class. If the teacher misses a class then will provide makeup class.
+                    There are no makeup classes for missed classes. If the teacher misses a class, then we will provide a makeup class.
                   </p>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-12">
                 <AccordionTrigger className="text-amber-700 font-semibold">
-                  DANCER CODE OF CONDUCT
+                  Student Rules and Expectations
                 </AccordionTrigger>
                 <AccordionContent>
                   <ul className="text-gray-600 space-y-2">
-                    <li>• All dancers are expected to attend classes regularly.</li>
-                    <li>• It is expected that all dancers will be punctual. Warm-up is performed at the beginning of each class and it is imperative that all dancers take part in warm-up to make sure their body is ready for physical activity. If a dancer misses warm-up, an unnecessary injury could result, so please make every effort to arrive on time.</li>
-                    <li>• All dancers are expected to demonstrate respect for the teacher and will not challenge authority with inappropriate behavior such as talking back, disobeying the teacher, giving an attitude, or acting disrespectfully in a way that is intended to provoke hostility.</li>
-                    <li>• All dancers understand that NPAC requires them to adhere to the Dress Code. Dancers that do not adhere to the dress code will not participate in the class.</li>
-                    <li>• All dancers will be friendly, warm and welcoming to the other dancers at the studio and in their classes. At NPAC we encourage dancers to establish new friendships with the dancers in their classes and we enforce teamwork and fairness.</li>
-                    <li>• All dancers will attend every class and participate to the best of their ability and put forth 100% effort, energy and smiles.</li>
+                    <li>• All students should attend classes regularly.</li>
+                    <li>• Please arrive on time for warm-up exercises to avoid injury.</li>
+                    <li>• Students should show respect to the teacher and follow instructions.</li>
+                    <li>• Follow the dress code - students not in proper dress cannot participate.</li>
+                    <li>• Be friendly and welcoming to other students in the class.</li>
+                    <li>• Give your 100% effort, energy, and keep a positive attitude in every class.</li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
