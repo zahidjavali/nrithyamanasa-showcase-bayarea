@@ -69,80 +69,220 @@ const Performances = () => {
         </div>
       </section>
 
-      {/* Performance List Section */}
+      {/* Recent Performances Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-purple-900 mb-12">Recent Performances</h2>
+          <div className="space-y-6">
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
+              <h3 className="text-xl font-semibold text-purple-900 mb-2">Deepotsava from Renowned Bay area Artists</h3>
+              <p className="text-gray-700">November 16th 2019</p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
+              <h3 className="text-xl font-semibold text-purple-900 mb-2">Endaro Mahanubhavulu Performance for Sapthathi</h3>
+              <p className="text-gray-700">Mysore, India – November 1st and 2nd 2019</p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
+              <h3 className="text-xl font-semibold text-purple-900 mb-2">Samarpanam – Divine offering to the Guru</h3>
+              <p className="text-gray-700">Mission city center for performing arts center, Santa Clara on 8/25/2019, 4 pm – 6 pm</p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
+              <h3 className="text-xl font-semibold text-purple-900 mb-2">Global Beats Stage</h3>
+              <p className="text-gray-700">Sponsored by World Heritage Cultural Center – 3/23/2019</p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
+              <h3 className="text-xl font-semibold text-purple-900 mb-2">Sri Krishnaleela Taranga</h3>
+              <p className="text-gray-700">09/12/2018</p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
+              <h3 className="text-xl font-semibold text-purple-900 mb-2">Maha Shivaratri 2018 celebration</h3>
+              <p className="text-gray-700">SVCC, Fremont – 2/13/2018, 8:00 pm</p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
+              <h3 className="text-xl font-semibold text-purple-900 mb-2">Sankranti Sambaralu</h3>
+              <p className="text-gray-700">San Ramon – 1/13/2018</p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
+              <h3 className="text-xl font-semibold text-purple-900 mb-2">Nrithya Taranga 2017</h3>
+              <p className="text-gray-700">Sunnyvale – 11/26/27</p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
+              <h3 className="text-xl font-semibold text-purple-900 mb-2">Performances on the occasion of Maha Shivaratri</h3>
+              <p className="text-gray-700">2/24/2017</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Shivanandam Festival Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-purple-900 mb-12">Shivanandam - 17th Maha Shivaratri Dance Celebration</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-lg p-6 shadow-md">
+              <h3 className="text-xl font-semibold text-purple-900 mb-2">Palo Alto Arts Center</h3>
+              <p className="text-gray-700">7:30 pm</p>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 shadow-md">
+              <h3 className="text-xl font-semibold text-purple-900 mb-2">SVCC, Fremont</h3>
+              <p className="text-gray-700">8:30 pm</p>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 shadow-md">
+              <h3 className="text-xl font-semibold text-purple-900 mb-2">Shiva Durga Temple</h3>
+              <p className="text-gray-700">10 pm</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Past Performances Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-purple-900 mb-12">Past Performances</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <img 
-                src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-143858.jpg" 
-                alt="Performance"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Annual Day Performance 2023</h3>
-                <p className="text-gray-600">A showcase of our students' hard work and dedication throughout the year.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-4">
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900">Performance at Apple on the occasion of Diwali</h3>
+                <p className="text-gray-700">October 28, 2016</p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900">Sankat Mochan Hanuman Temple</h3>
+                <p className="text-gray-700">Watsonville, CA – June 25, 2016</p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900">Thyagraja Festival</h3>
+                <p className="text-gray-700">Cleveland – April 2, 2016</p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900">Natyanjali</h3>
+                <p className="text-gray-700">Sacramento – March 19, 2016</p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900">SVCC Temple</h3>
+                <p className="text-gray-700">Fremont – March 6, 2016</p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900">Maha Kaleshwar Temple</h3>
+                <p className="text-gray-700">Santa Clara – March 5, 2016</p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900">Performance at Bangalore</h3>
+                <p className="text-gray-700">2014</p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900">Performance at Mysore</h3>
+                <p className="text-gray-700">2013</p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900">Mysore Dasara</h3>
+                <p className="text-gray-700">2012</p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900">Pallavothsava</h3>
+                <p className="text-gray-700">Mysore – 2012</p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900">Ranga Pravesha / Arangetram</h3>
+                <p className="text-gray-700">Jagan Mohan Palace Auditorium, Mysore – 2012</p>
               </div>
             </div>
-
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <img 
-                src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-144620.png" 
-                alt="Performance"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Nrithya Taranga 2022</h3>
-                <p className="text-gray-600">A grand performance featuring advanced students and guest artists.</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <img 
-                src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-151857.png" 
-                alt="Performance"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Diwali Special Performance</h3>
-                <p className="text-gray-600">A festive performance celebrating the festival of lights with traditional dances.</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <img 
-                src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-152456.png" 
-                alt="Performance"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Spring Showcase 2022</h3>
-                <p className="text-gray-600">A beautiful display of seasonal dances and traditional stories.</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <img 
-                src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-153201.png" 
-                alt="Performance"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Cultural Heritage Event</h3>
-                <p className="text-gray-600">Celebrating Indian culture through classical dance performances.</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <img 
-                src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-154133.png" 
-                alt="Performance"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Youth Festival 2021</h3>
-                <p className="text-gray-600">Young dancers showcasing their skills and passion for Bharatanatyam.</p>
+            
+            <div className="space-y-4">
+              <div className="bg-white rounded-lg p-6 shadow-md border border-purple-100">
+                <h3 className="text-xl font-semibold text-purple-900 mb-4">Festival Journey with Mentor</h3>
+                <p className="text-gray-700 mb-4">Manasa has traveled extensively and performed on various platforms with her mentor. Here are a few notable event highlights of her long and satisfying journey:</p>
+                
+                <div className="space-y-3">
+                  <div className="border-l-4 border-purple-300 pl-4">
+                    <h4 className="font-semibold text-purple-800">Pravah Festival, Goa</h4>
+                    <p className="text-gray-600">2013</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-purple-300 pl-4">
+                    <h4 className="font-semibold text-purple-800">Swathi Thirunal Festival</h4>
+                    <p className="text-gray-600">Chennai, Tamil Nadu – 2013</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-purple-300 pl-4">
+                    <h4 className="font-semibold text-purple-800">Pravah Festival</h4>
+                    <p className="text-gray-600">Jodhpur, Rajasthan – 2011</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-purple-300 pl-4">
+                    <h4 className="font-semibold text-purple-800">Brahmakumari</h4>
+                    <p className="text-gray-600">Mt. Abu, Rajasthan – 2011</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-purple-300 pl-4">
+                    <h4 className="font-semibold text-purple-800">Lokrang Festival</h4>
+                    <p className="text-gray-600">Bhopal, Madhya Pradesh – 2010</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-purple-300 pl-4">
+                    <h4 className="font-semibold text-purple-800">Brahmotsava Festival</h4>
+                    <p className="text-gray-600">ISCKON, Bangalore, Karnataka – 2008 & 2010</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-purple-300 pl-4">
+                    <h4 className="font-semibold text-purple-800">Mantralaya</h4>
+                    <p className="text-gray-600">Andhra Pradesh</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-purple-300 pl-4">
+                    <h4 className="font-semibold text-purple-800">Mahamastakabhisheka</h4>
+                    <p className="text-gray-600">Shravanabelagola, Karnataka</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-purple-300 pl-4">
+                    <h4 className="font-semibold text-purple-800">Kanakajayanti</h4>
+                    <p className="text-gray-600">Mysore, Karnataka</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-purple-300 pl-4">
+                    <h4 className="font-semibold text-purple-800">Lakkundi Utsava</h4>
+                    <p className="text-gray-600">Hubli, Karnataka – 2008</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-purple-300 pl-4">
+                    <h4 className="font-semibold text-purple-800">Hampi Utsav</h4>
+                    <p className="text-gray-600">Hampi, Karnataka – 2007</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-purple-300 pl-4">
+                    <h4 className="font-semibold text-purple-800">Jaatra Mahotsava</h4>
+                    <p className="text-gray-600">Mysore, Karnataka – 2006</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-purple-300 pl-4">
+                    <h4 className="font-semibold text-purple-800">Pallavotsava</h4>
+                    <p className="text-gray-600">Mysore, Karnataka – 2006 to 2013</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-purple-300 pl-4">
+                    <h4 className="font-semibold text-purple-800">Mysore Dasara</h4>
+                    <p className="text-gray-600">Mysore, Karnataka – 2005</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
