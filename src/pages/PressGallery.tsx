@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -52,28 +53,33 @@ const PressGallery = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/80 to-amber-600/80 z-10"></div>
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/95 to-amber-900/95 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('https://manasanagaraj.com/wp-content/uploads/2019/04/hindu-1-e1448582811410.jpg')"
           }}
         ></div>
-        <div className="relative z-20 max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">PRESS GALLERY</h1>
-          <p className="text-xl mb-8 max-w-4xl mx-auto text-amber-100">
-            Discover the media coverage and press reviews of Manasa's exceptional performances and contributions to Bharatanatyam.
-          </p>
+        <div className="relative z-20 max-w-7xl mx-auto">
+          <div className="text-center mb-8">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+              PRESS GALLERY
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-amber-100 font-medium leading-relaxed">
+              Discover the media coverage and press reviews of Manasa's exceptional performances and contributions to Bharatanatyam
+            </p>
+          </div>
           <div className="flex justify-center">
-            <div className="bg-white/20 backdrop-blur-sm rounded-full p-1">
-              <div className="w-32 h-32 overflow-hidden rounded-full border-4 border-white/30">
+            <div className="relative">
+              <div className="w-40 h-40 md:w-48 md:h-48 overflow-hidden rounded-full border-4 border-white shadow-2xl">
                 <img 
                   src="https://manasanagaraj.com/wp-content/uploads/2019/04/hindu-1-e1448582811410.jpg" 
                   alt="Press Coverage"
                   className="w-full h-full object-cover"
                 />
               </div>
+              <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 to-amber-400 rounded-full blur opacity-20"></div>
             </div>
           </div>
         </div>
