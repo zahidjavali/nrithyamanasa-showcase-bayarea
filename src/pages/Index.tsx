@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Star, MapPin, Phone, Mail, Award, Calendar, Users, Facebook, Instagram, Youtube, Clock, Music, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -165,13 +165,54 @@ const Index = () => {
                 </SheetTrigger>
                 <SheetContent side="right" className="w-80">
                   <div className="flex flex-col space-y-6 pt-6">
-                    <Link to="/" className="text-purple-600 font-semibold text-lg">HOME</Link>
-                    <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">ABOUT MANASA</Link>
-                    <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">PERFORMANCES</Link>
-                    <Link to="/press-gallery" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">PRESS GALLERY</Link>
-                    <a href="#showcase" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">SHOWCASE</a>
-                    <a href="#classes" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">CLASSES</a>
-                    <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">CONTACT</a>
+                    <SheetClose asChild>
+                      <Link to="/" className="text-purple-600 font-semibold text-lg">HOME</Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">ABOUT MANASA</Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">PERFORMANCES</Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <Link to="/press-gallery" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">PRESS GALLERY</Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <a 
+                        href="#showcase" 
+                        className="text-gray-700 hover:text-purple-600 transition-colors text-lg"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.getElementById('showcase')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                      >
+                        SHOWCASE
+                      </a>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <a 
+                        href="#classes" 
+                        className="text-gray-700 hover:text-purple-600 transition-colors text-lg"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.getElementById('classes')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                      >
+                        CLASSES
+                      </a>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <a 
+                        href="#contact" 
+                        className="text-gray-700 hover:text-purple-600 transition-colors text-lg"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                      >
+                        CONTACT
+                      </a>
+                    </SheetClose>
                   </div>
                 </SheetContent>
               </Sheet>
