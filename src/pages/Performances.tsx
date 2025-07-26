@@ -1,13 +1,19 @@
 
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Youtube } from "lucide-react";
+import { Facebook, Instagram, Youtube, Menu, X } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Performances = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-amber-50">
@@ -19,25 +25,88 @@ const Performances = () => {
               <img 
                 src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
                 alt="Logo" 
-                className="h-10 w-auto"
+                className="h-8 sm:h-10 w-auto"
               />
             </div>
             
-            <div className="hidden md:flex items-center space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-purple-600 transition-colors">HOME</Link>
-              <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors">ABOUT MANASA</Link>
-              <span className="text-purple-600 font-semibold">PERFORMANCES</span>
-              <Link to="/press-gallery" className="text-gray-700 hover:text-purple-600 transition-colors">PRESS GALLERY</Link>
-              <a href="/#showcase" className="text-gray-700 hover:text-purple-600 transition-colors">SHOWCASE</a>
-              <a href="/#classes" className="text-gray-700 hover:text-purple-600 transition-colors">CLASSES</a>
-              <a href="/#contact" className="text-gray-700 hover:text-purple-600 transition-colors">CONTACT</a>
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+              <Link to="/" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">HOME</Link>
+              <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">ABOUT MANASA</Link>
+              <span className="text-purple-600 font-semibold text-sm lg:text-base">PERFORMANCES</span>
+              <Link to="/press-gallery" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">PRESS GALLERY</Link>
+              <a href="/#showcase" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">SHOWCASE</a>
+              <a href="/#classes" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">CLASSES</a>
+              <a href="/#contact" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">CONTACT</a>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button
+                onClick={toggleMobileMenu}
+                className="text-gray-700 hover:text-purple-600 transition-colors"
+                aria-label="Toggle mobile menu"
+              >
+                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
             </div>
           </div>
+
+          {/* Mobile Navigation Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden">
+              <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-sm border-t border-purple-100">
+                <Link 
+                  to="/" 
+                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  HOME
+                </Link>
+                <Link 
+                  to="/about-manasa" 
+                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  ABOUT MANASA
+                </Link>
+                <span className="block px-3 py-2 text-purple-600 font-semibold">PERFORMANCES</span>
+                <Link 
+                  to="/press-gallery" 
+                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  PRESS GALLERY
+                </Link>
+                <a 
+                  href="/#showcase" 
+                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  SHOWCASE
+                </a>
+                <a 
+                  href="/#classes" 
+                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  CLASSES
+                </a>
+                <a 
+                  href="/#contact" 
+                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  CONTACT
+                </a>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 to-amber-900/90 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -47,16 +116,16 @@ const Performances = () => {
         ></div>
         <div className="relative z-20 max-w-7xl mx-auto">
           <div className="text-center mb-8">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-2xl">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 text-white drop-shadow-2xl">
               PERFORMANCES
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-white font-medium leading-relaxed drop-shadow-lg">
+            <p className="text-base sm:text-xl md:text-2xl mb-6 sm:mb-8 max-w-4xl mx-auto text-white font-medium leading-relaxed drop-shadow-lg">
               Experience the beauty and grace of classical Bharatanatyam through captivating performances and student showcases
             </p>
           </div>
           <div className="flex justify-center">
             <div className="relative">
-              <div className="w-40 h-40 md:w-48 md:h-48 overflow-hidden rounded-full border-4 border-white shadow-2xl">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 overflow-hidden rounded-full border-4 border-white shadow-2xl">
                 <img 
                   src="https://manasanagaraj.com/wp-content/uploads/2019/04/5D4_7134.jpg" 
                   alt="Bharatanatyam Performance"
@@ -70,266 +139,218 @@ const Performances = () => {
       </section>
 
       {/* Recent Performances Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-purple-900 mb-12">Recent Performances</h2>
-          <div className="space-y-6">
-            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
-              <h3 className="text-xl font-semibold text-purple-900 mb-2">Deepotsava from Renowned Bay area Artists</h3>
-              <p className="text-gray-700">November 16th 2019</p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-purple-900 mb-8 sm:mb-12">Recent Performances</h2>
+          <div className="space-y-4 sm:space-y-6">
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 sm:p-6 border border-purple-100">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Deepotsava from Renowned Bay area Artists</h3>
+              <p className="text-gray-700 text-sm sm:text-base">November 16th 2019</p>
             </div>
             
-            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
-              <h3 className="text-xl font-semibold text-purple-900 mb-2">Endaro Mahanubhavulu Performance for Sapthathi</h3>
-              <p className="text-gray-700">Mysore, India – November 1st and 2nd 2019</p>
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 sm:p-6 border border-purple-100">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Endaro Mahanubhavulu Performance for Sapthathi</h3>
+              <p className="text-gray-700 text-sm sm:text-base">Mysore, India – November 1st and 2nd 2019</p>
             </div>
             
-            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
-              <h3 className="text-xl font-semibold text-purple-900 mb-2">Samarpanam – Divine offering to the Guru</h3>
-              <p className="text-gray-700">Mission city center for performing arts center, Santa Clara on 8/25/2019, 4 pm – 6 pm</p>
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 sm:p-6 border border-purple-100">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Samarpanam – Divine offering to the Guru</h3>
+              <p className="text-gray-700 text-sm sm:text-base">Mission city center for performing arts center, Santa Clara on 8/25/2019, 4 pm – 6 pm</p>
             </div>
             
-            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
-              <h3 className="text-xl font-semibold text-purple-900 mb-2">Global Beats Stage</h3>
-              <p className="text-gray-700">Sponsored by World Heritage Cultural Center – 3/23/2019</p>
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 sm:p-6 border border-purple-100">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Global Beats Stage</h3>
+              <p className="text-gray-700 text-sm sm:text-base">Sponsored by World Heritage Cultural Center – 3/23/2019</p>
             </div>
             
-            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
-              <h3 className="text-xl font-semibold text-purple-900 mb-2">Sri Krishnaleela Taranga</h3>
-              <p className="text-gray-700">09/12/2018</p>
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 sm:p-6 border border-purple-100">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Sri Krishnaleela Taranga</h3>
+              <p className="text-gray-700 text-sm sm:text-base">09/12/2018</p>
             </div>
             
-            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
-              <h3 className="text-xl font-semibold text-purple-900 mb-2">Maha Shivaratri 2018 celebration</h3>
-              <p className="text-gray-700">SVCC, Fremont – 2/13/2018, 8:00 pm</p>
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 sm:p-6 border border-purple-100">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Maha Shivaratri 2018 celebration</h3>
+              <p className="text-gray-700 text-sm sm:text-base">SVCC, Fremont – 2/13/2018, 8:00 pm</p>
             </div>
             
-            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
-              <h3 className="text-xl font-semibold text-purple-900 mb-2">Sankranti Sambaralu</h3>
-              <p className="text-gray-700">San Ramon – 1/13/2018</p>
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 sm:p-6 border border-purple-100">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Sankranti Sambaralu</h3>
+              <p className="text-gray-700 text-sm sm:text-base">San Ramon – 1/13/2018</p>
             </div>
             
-            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
-              <h3 className="text-xl font-semibold text-purple-900 mb-2">Nrithya Taranga 2017</h3>
-              <p className="text-gray-700">Sunnyvale – 11/26/27</p>
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 sm:p-6 border border-purple-100">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Nrithya Taranga 2017</h3>
+              <p className="text-gray-700 text-sm sm:text-base">Sunnyvale – 11/26/27</p>
             </div>
             
-            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-6 border border-purple-100">
-              <h3 className="text-xl font-semibold text-purple-900 mb-2">Performances on the occasion of Maha Shivaratri</h3>
-              <p className="text-gray-700">2/24/2017</p>
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 sm:p-6 border border-purple-100">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Performances on the occasion of Maha Shivaratri</h3>
+              <p className="text-gray-700 text-sm sm:text-base">2/24/2017</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Shivanandam Festival Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-purple-900 mb-12">Shivanandam - 17th Maha Shivaratri Dance Celebration</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-semibold text-purple-900 mb-2">Palo Alto Arts Center</h3>
-              <p className="text-gray-700">7:30 pm</p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-purple-900 mb-8 sm:mb-12">Shivanandam - 17th Maha Shivaratri Dance Celebration</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="bg-white rounded-lg p-4 sm:p-6 shadow-md">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Palo Alto Arts Center</h3>
+              <p className="text-gray-700 text-sm sm:text-base">7:30 pm</p>
             </div>
             
-            <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-semibold text-purple-900 mb-2">SVCC, Fremont</h3>
-              <p className="text-gray-700">8:30 pm</p>
+            <div className="bg-white rounded-lg p-4 sm:p-6 shadow-md">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">SVCC, Fremont</h3>
+              <p className="text-gray-700 text-sm sm:text-base">8:30 pm</p>
             </div>
             
-            <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-xl font-semibold text-purple-900 mb-2">Shiva Durga Temple</h3>
-              <p className="text-gray-700">10 pm</p>
+            <div className="bg-white rounded-lg p-4 sm:p-6 shadow-md">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Shiva Durga Temple</h3>
+              <p className="text-gray-700 text-sm sm:text-base">10 pm</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Past Performances Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-purple-900 mb-12">Past Performances</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
-                <h3 className="font-semibold text-purple-900">Performance at Apple on the occasion of Diwali</h3>
-                <p className="text-gray-700">October 28, 2016</p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-purple-900 mb-8 sm:mb-12">Past Performances</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+            <div className="space-y-3 sm:space-y-4">
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-3 sm:p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900 text-sm sm:text-base">Performance at Apple on the occasion of Diwali</h3>
+                <p className="text-gray-700 text-xs sm:text-sm">October 28, 2016</p>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
-                <h3 className="font-semibold text-purple-900">Sankat Mochan Hanuman Temple</h3>
-                <p className="text-gray-700">Watsonville, CA – June 25, 2016</p>
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-3 sm:p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900 text-sm sm:text-base">Sankat Mochan Hanuman Temple</h3>
+                <p className="text-gray-700 text-xs sm:text-sm">Watsonville, CA – June 25, 2016</p>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
-                <h3 className="font-semibold text-purple-900">Thyagraja Festival</h3>
-                <p className="text-gray-700">Cleveland – April 2, 2016</p>
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-3 sm:p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900 text-sm sm:text-base">Thyagraja Festival</h3>
+                <p className="text-gray-700 text-xs sm:text-sm">Cleveland – April 2, 2016</p>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
-                <h3 className="font-semibold text-purple-900">Natyanjali</h3>
-                <p className="text-gray-700">Sacramento – March 19, 2016</p>
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-3 sm:p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900 text-sm sm:text-base">Natyanjali</h3>
+                <p className="text-gray-700 text-xs sm:text-sm">Sacramento – March 19, 2016</p>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
-                <h3 className="font-semibold text-purple-900">SVCC Temple</h3>
-                <p className="text-gray-700">Fremont – March 6, 2016</p>
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-3 sm:p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900 text-sm sm:text-base">SVCC Temple</h3>
+                <p className="text-gray-700 text-xs sm:text-sm">Fremont – March 6, 2016</p>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
-                <h3 className="font-semibold text-purple-900">Maha Kaleshwar Temple</h3>
-                <p className="text-gray-700">Santa Clara – March 5, 2016</p>
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-3 sm:p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900 text-sm sm:text-base">Maha Kaleshwar Temple</h3>
+                <p className="text-gray-700 text-xs sm:text-sm">Santa Clara – March 5, 2016</p>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
-                <h3 className="font-semibold text-purple-900">Performance at Bangalore</h3>
-                <p className="text-gray-700">2014</p>
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-3 sm:p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900 text-sm sm:text-base">Performance at Bangalore</h3>
+                <p className="text-gray-700 text-xs sm:text-sm">2014</p>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
-                <h3 className="font-semibold text-purple-900">Performance at Mysore</h3>
-                <p className="text-gray-700">2013</p>
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-3 sm:p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900 text-sm sm:text-base">Performance at Mysore</h3>
+                <p className="text-gray-700 text-xs sm:text-sm">2013</p>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
-                <h3 className="font-semibold text-purple-900">Mysore Dasara</h3>
-                <p className="text-gray-700">2012</p>
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-3 sm:p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900 text-sm sm:text-base">Mysore Dasara</h3>
+                <p className="text-gray-700 text-xs sm:text-sm">2012</p>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
-                <h3 className="font-semibold text-purple-900">Pallavothsava</h3>
-                <p className="text-gray-700">Mysore – 2012</p>
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-3 sm:p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900 text-sm sm:text-base">Pallavothsava</h3>
+                <p className="text-gray-700 text-xs sm:text-sm">Mysore – 2012</p>
               </div>
               
-              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 border border-purple-100">
-                <h3 className="font-semibold text-purple-900">Ranga Pravesha / Arangetram</h3>
-                <p className="text-gray-700">Jagan Mohan Palace Auditorium, Mysore – 2012</p>
+              <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-3 sm:p-4 border border-purple-100">
+                <h3 className="font-semibold text-purple-900 text-sm sm:text-base">Ranga Pravesha / Arangetram</h3>
+                <p className="text-gray-700 text-xs sm:text-sm">Jagan Mohan Palace Auditorium, Mysore – 2012</p>
               </div>
             </div>
             
-            <div className="space-y-4">
-              <div className="bg-white rounded-lg p-6 shadow-md border border-purple-100">
-                <h3 className="text-xl font-semibold text-purple-900 mb-4">Festival Journey with Mentor</h3>
-                <p className="text-gray-700 mb-4">Manasa has traveled extensively and performed on various platforms with her mentor. Here are a few notable event highlights of her long and satisfying journey:</p>
+            <div className="space-y-3 sm:space-y-4">
+              <div className="bg-white rounded-lg p-4 sm:p-6 shadow-md border border-purple-100">
+                <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-3 sm:mb-4">Festival Journey with Mentor</h3>
+                <p className="text-gray-700 mb-3 sm:mb-4 text-sm sm:text-base">Manasa has traveled extensively and performed on various platforms with her mentor. Here are a few notable event highlights of her long and satisfying journey:</p>
                 
-                <div className="space-y-3">
-                  <div className="border-l-4 border-purple-300 pl-4">
-                    <h4 className="font-semibold text-purple-800">Pravah Festival, Goa</h4>
-                    <p className="text-gray-600">2013</p>
+                <div className="space-y-2 sm:space-y-3">
+                  <div className="border-l-4 border-purple-300 pl-3 sm:pl-4">
+                    <h4 className="font-semibold text-purple-800 text-sm sm:text-base">Pravah Festival, Goa</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">2013</p>
                   </div>
                   
-                  <div className="border-l-4 border-purple-300 pl-4">
-                    <h4 className="font-semibold text-purple-800">Swathi Thirunal Festival</h4>
-                    <p className="text-gray-600">Chennai, Tamil Nadu – 2013</p>
+                  <div className="border-l-4 border-purple-300 pl-3 sm:pl-4">
+                    <h4 className="font-semibold text-purple-800 text-sm sm:text-base">Swathi Thirunal Festival</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">Chennai, Tamil Nadu – 2013</p>
                   </div>
                   
-                  <div className="border-l-4 border-purple-300 pl-4">
-                    <h4 className="font-semibold text-purple-800">Pravah Festival</h4>
-                    <p className="text-gray-600">Jodhpur, Rajasthan – 2011</p>
+                  <div className="border-l-4 border-purple-300 pl-3 sm:pl-4">
+                    <h4 className="font-semibold text-purple-800 text-sm sm:text-base">Pravah Festival</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">Jodhpur, Rajasthan – 2011</p>
                   </div>
                   
-                  <div className="border-l-4 border-purple-300 pl-4">
-                    <h4 className="font-semibold text-purple-800">Brahmakumari</h4>
-                    <p className="text-gray-600">Mt. Abu, Rajasthan – 2011</p>
+                  <div className="border-l-4 border-purple-300 pl-3 sm:pl-4">
+                    <h4 className="font-semibold text-purple-800 text-sm sm:text-base">Brahmakumari</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">Mt. Abu, Rajasthan – 2011</p>
                   </div>
                   
-                  <div className="border-l-4 border-purple-300 pl-4">
-                    <h4 className="font-semibold text-purple-800">Lokrang Festival</h4>
-                    <p className="text-gray-600">Bhopal, Madhya Pradesh – 2010</p>
+                  <div className="border-l-4 border-purple-300 pl-3 sm:pl-4">
+                    <h4 className="font-semibold text-purple-800 text-sm sm:text-base">Lokrang Festival</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">Bhopal, Madhya Pradesh – 2010</p>
                   </div>
                   
-                  <div className="border-l-4 border-purple-300 pl-4">
-                    <h4 className="font-semibold text-purple-800">Brahmotsava Festival</h4>
-                    <p className="text-gray-600">ISCKON, Bangalore, Karnataka – 2008 & 2010</p>
+                  <div className="border-l-4 border-purple-300 pl-3 sm:pl-4">
+                    <h4 className="font-semibold text-purple-800 text-sm sm:text-base">Brahmotsava Festival</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">ISCKON, Bangalore, Karnataka – 2008 & 2010</p>
                   </div>
                   
-                  <div className="border-l-4 border-purple-300 pl-4">
-                    <h4 className="font-semibold text-purple-800">Mantralaya</h4>
-                    <p className="text-gray-600">Andhra Pradesh</p>
+                  <div className="border-l-4 border-purple-300 pl-3 sm:pl-4">
+                    <h4 className="font-semibold text-purple-800 text-sm sm:text-base">Mantralaya</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">Andhra Pradesh</p>
                   </div>
                   
-                  <div className="border-l-4 border-purple-300 pl-4">
-                    <h4 className="font-semibold text-purple-800">Mahamastakabhisheka</h4>
-                    <p className="text-gray-600">Shravanabelagola, Karnataka</p>
+                  <div className="border-l-4 border-purple-300 pl-3 sm:pl-4">
+                    <h4 className="font-semibold text-purple-800 text-sm sm:text-base">Mahamastakabhisheka</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">Shravanabelagola, Karnataka</p>
                   </div>
                   
-                  <div className="border-l-4 border-purple-300 pl-4">
-                    <h4 className="font-semibold text-purple-800">Kanakajayanti</h4>
-                    <p className="text-gray-600">Mysore, Karnataka</p>
+                  <div className="border-l-4 border-purple-300 pl-3 sm:pl-4">
+                    <h4 className="font-semibold text-purple-800 text-sm sm:text-base">Kanakajayanti</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">Mysore, Karnataka</p>
                   </div>
                   
-                  <div className="border-l-4 border-purple-300 pl-4">
-                    <h4 className="font-semibold text-purple-800">Lakkundi Utsava</h4>
-                    <p className="text-gray-600">Hubli, Karnataka – 2008</p>
+                  <div className="border-l-4 border-purple-300 pl-3 sm:pl-4">
+                    <h4 className="font-semibold text-purple-800 text-sm sm:text-base">Lakkundi Utsava</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">Hubli, Karnataka – 2008</p>
                   </div>
                   
-                  <div className="border-l-4 border-purple-300 pl-4">
-                    <h4 className="font-semibold text-purple-800">Hampi Utsav</h4>
-                    <p className="text-gray-600">Hampi, Karnataka – 2007</p>
+                  <div className="border-l-4 border-purple-300 pl-3 sm:pl-4">
+                    <h4 className="font-semibold text-purple-800 text-sm sm:text-base">Hampi Utsav</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">Hampi, Karnataka – 2007</p>
                   </div>
                   
-                  <div className="border-l-4 border-purple-300 pl-4">
-                    <h4 className="font-semibold text-purple-800">Jaatra Mahotsava</h4>
-                    <p className="text-gray-600">Mysore, Karnataka – 2006</p>
+                  <div className="border-l-4 border-purple-300 pl-3 sm:pl-4">
+                    <h4 className="font-semibold text-purple-800 text-sm sm:text-base">Jaatra Mahotsava</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">Mysore, Karnataka – 2006</p>
                   </div>
                   
-                  <div className="border-l-4 border-purple-300 pl-4">
-                    <h4 className="font-semibold text-purple-800">Pallavotsava</h4>
-                    <p className="text-gray-600">Mysore, Karnataka – 2006 to 2013</p>
+                  <div className="border-l-4 border-purple-300 pl-3 sm:pl-4">
+                    <h4 className="font-semibold text-purple-800 text-sm sm:text-base">Pallavotsava</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">Mysore, Karnataka – 2006 to 2013</p>
                   </div>
                   
-                  <div className="border-l-4 border-purple-300 pl-4">
-                    <h4 className="font-semibold text-purple-800">Mysore Dasara</h4>
-                    <p className="text-gray-600">Mysore, Karnataka – 2005</p>
+                  <div className="border-l-4 border-purple-300 pl-3 sm:pl-4">
+                    <h4 className="font-semibold text-purple-800 text-sm sm:text-base">Mysore Dasara</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">Mysore, Karnataka – 2005</p>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Upcoming Performances Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-purple-900 mb-12">Upcoming Performances</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Nrithya Taranga 2024</h3>
-                <p className="text-gray-600 mb-4">
-                  Join us for our annual event showcasing the talent and dedication of our students.
-                </p>
-                <div className="space-y-2">
-                  <p className="text-gray-700">
-                    <strong>Date:</strong> September 22, 2024
-                  </p>
-                  <p className="text-gray-700">
-                    <strong>Time:</strong> 4:00 PM - 6:00 PM
-                  </p>
-                  <p className="text-gray-700">
-                    <strong>Venue:</strong> Mission City Center For Performing Arts, Santa Clara, CA
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Summer Recital 2024</h3>
-                <p className="text-gray-600 mb-4">
-                  A special summer presentation featuring intermediate and advanced students.
-                </p>
-                <div className="space-y-2">
-                  <p className="text-gray-700">
-                    <strong>Date:</strong> August 15, 2024
-                  </p>
-                  <p className="text-gray-700">
-                    <strong>Time:</strong> 5:00 PM - 7:00 PM
-                  </p>
-                  <p className="text-gray-700">
-                    <strong>Venue:</strong> Community Hall, Sunnyvale, CA
-                  </p>
                 </div>
               </div>
             </div>
@@ -338,10 +359,10 @@ const Performances = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-gray-900 text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+            <div className="sm:col-span-2 md:col-span-1">
               <div className="flex items-center mb-4">
                 <img 
                   src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
@@ -349,14 +370,14 @@ const Performances = () => {
                   className="h-8 w-auto"
                 />
               </div>
-              <p className="text-gray-400">
+              <p className="text-gray-400 text-sm sm:text-base">
                 Bay Area's premier Bharatanatyam academy, nurturing classical dance traditions since inception.
               </p>
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-gray-400">
+              <h3 className="font-semibold mb-4 text-sm sm:text-base">Quick Links</h3>
+              <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
                 <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
                 <li><Link to="/about-manasa" className="hover:text-white transition-colors">About Manasa</Link></li>
                 <li><span className="text-white">Performances</span></li>
@@ -366,8 +387,8 @@ const Performances = () => {
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4">Programs</h3>
-              <ul className="space-y-2 text-gray-400">
+              <h3 className="font-semibold mb-4 text-sm sm:text-base">Programs</h3>
+              <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
                 <li>Beginner Classes</li>
                 <li>Intermediate Training</li>
                 <li>Advanced/Pre-Arangetram</li>
@@ -376,7 +397,7 @@ const Performances = () => {
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4">Connect with me on Social Media</h3>
+              <h3 className="font-semibold mb-4 text-sm sm:text-base">Connect with me on Social Media</h3>
               <div className="flex space-x-4 mb-4">
                 <a 
                   href="https://www.facebook.com/nrithyamanasa/" 
@@ -384,7 +405,7 @@ const Performances = () => {
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  <Facebook className="h-6 w-6" />
+                  <Facebook className="h-5 w-5 sm:h-6 sm:w-6" />
                 </a>
                 <a 
                   href="https://www.instagram.com/nrithyamanasa/" 
@@ -392,7 +413,7 @@ const Performances = () => {
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  <Instagram className="h-6 w-6" />
+                  <Instagram className="h-5 w-5 sm:h-6 sm:w-6" />
                 </a>
                 <a 
                   href="https://www.youtube.com/channel/UCjHetu8d3HAn6D3NViNLNjA/videos" 
@@ -400,10 +421,10 @@ const Performances = () => {
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  <Youtube className="h-6 w-6" />
+                  <Youtube className="h-5 w-5 sm:h-6 sm:w-6" />
                 </a>
               </div>
-              <div className="space-y-2 text-gray-400">
+              <div className="space-y-2 text-gray-400 text-sm">
                 <p>1078 Monroe St, Santa Clara, CA 95050</p>
                 <p>858 880 4577</p>
                 <p>manasanrithya@gmail.com</p>
@@ -411,9 +432,9 @@ const Performances = () => {
             </div>
           </div>
           
-          <Separator className="my-8 bg-gray-800" />
+          <Separator className="my-6 sm:my-8 bg-gray-800" />
           
-          <div className="text-center text-gray-400">
+          <div className="text-center text-gray-400 text-sm sm:text-base">
             <p>&copy; 2025 Nrithyamanasa Performing Arts Center. All rights reserved.</p>
           </div>
         </div>
