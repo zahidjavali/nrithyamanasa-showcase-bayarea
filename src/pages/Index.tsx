@@ -4,7 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Star, MapPin, Phone, Mail, Award, Calendar, Users, Facebook, Instagram, Youtube, Clock, Music } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Star, MapPin, Phone, Mail, Award, Calendar, Users, Facebook, Instagram, Youtube, Clock, Music, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -142,6 +143,7 @@ const Index = () => {
               />
             </div>
             
+            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-purple-600 font-semibold">HOME</Link>
               <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors">ABOUT MANASA</Link>
@@ -150,6 +152,29 @@ const Index = () => {
               <a href="#showcase" className="text-gray-700 hover:text-purple-600 transition-colors">SHOWCASE</a>
               <a href="#classes" className="text-gray-700 hover:text-purple-600 transition-colors">CLASSES</a>
               <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-colors">CONTACT</a>
+            </div>
+
+            {/* Mobile Navigation */}
+            <div className="md:hidden">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className="h-10 w-10">
+                    <Menu className="h-6 w-6 text-purple-600" />
+                    <span className="sr-only">Open menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-80">
+                  <div className="flex flex-col space-y-6 pt-6">
+                    <Link to="/" className="text-purple-600 font-semibold text-lg">HOME</Link>
+                    <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">ABOUT MANASA</Link>
+                    <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">PERFORMANCES</Link>
+                    <Link to="/press-gallery" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">PRESS GALLERY</Link>
+                    <a href="#showcase" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">SHOWCASE</a>
+                    <a href="#classes" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">CLASSES</a>
+                    <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">CONTACT</a>
+                  </div>
+                </SheetContent>
+              </Sheet>
             </div>
           </div>
         </div>
