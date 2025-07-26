@@ -22,11 +22,13 @@ const Performances = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <img 
-                src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
-                alt="Logo" 
-                className="h-8 sm:h-10 w-auto"
-              />
+              <Link to="/">
+                <img 
+                  src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
+                  alt="Logo" 
+                  className="h-8 sm:h-10 w-auto cursor-pointer"
+                />
+              </Link>
             </div>
             
             {/* Desktop Navigation */}
@@ -78,27 +80,27 @@ const Performances = () => {
                 >
                   PRESS GALLERY
                 </Link>
-                <a 
-                  href="/#showcase" 
+                <Link 
+                  to="/#showcase" 
                   className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   SHOWCASE
-                </a>
-                <a 
-                  href="/#classes" 
+                </Link>
+                <Link 
+                  to="/#classes" 
                   className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   CLASSES
-                </a>
-                <a 
-                  href="/#contact" 
+                </Link>
+                <Link 
+                  to="/#contact" 
                   className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   CONTACT
-                </a>
+                </Link>
               </div>
             </div>
           )}
