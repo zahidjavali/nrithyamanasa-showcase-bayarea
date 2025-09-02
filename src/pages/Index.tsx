@@ -137,7 +137,7 @@ const Index = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <img 
-                src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
+                src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
                 alt="Logo" 
                 className="h-10 w-auto"
               />
@@ -232,16 +232,16 @@ const Index = () => {
         ></div>
         <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Nrithya Taranga 2024
+            Nrithya Taranga 2025
           </h1>
           <p className="text-base sm:text-lg md:text-xl mb-8 text-amber-100">
-            The event is scheduled for September 22nd at 4:00 pm and will be held at Mission City Center For Performing Arts in Santa Clara.
+            The event is scheduled for September 21st at 3:30 pm - 5:30 pm and will be held at Mission City Center For Performing Arts in Santa Clara.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
               className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-lg w-full sm:w-auto"
-              onClick={() => window.open('https://www.eventbrite.com/e/nrithya-taranga-2024-tickets-938834267567?aff=oddtdtcreator', '_blank')}
+              onClick={() => window.open('https://www.eventbrite.com/e/nrithya-taranga-2025-shakti-tickets-1598078137729?aff=oddtdtcreator', '_blank')}
             >
               Reserve Tickets
             </Button>
@@ -260,7 +260,7 @@ const Index = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Nrithya Taranga 2024</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Nrithya Taranga 2025</h2>
             <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Join us for a beautiful evening of Bharatanatyam performances featuring talented students and special guests.
@@ -276,8 +276,8 @@ const Index = () => {
                 <CardTitle className="text-purple-700">Date & Time</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-2">September 22nd, 2024</p>
-                <p className="text-gray-600">4:00 PM - 6:00 PM</p>
+                <p className="text-gray-600 mb-2">September 21st, 2025</p>
+                <p className="text-gray-600">3:30 PM - 5:30 PM</p>
               </CardContent>
             </Card>
 
@@ -342,7 +342,7 @@ const Index = () => {
             <div className="text-center">
               <div className="w-80 h-80 mx-auto mb-6 overflow-hidden rounded-full">
                 <img 
-                  src="https://manasanagaraj.com/wp-content/uploads/2019/04/aboutme.jpg" 
+                  src="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" 
                   alt="Manasa Nagaraj"
                   className="w-full h-full object-cover"
                 />
@@ -369,7 +369,7 @@ const Index = () => {
             <Card className="text-center h-full">
               <CardHeader>
                 <img 
-                  src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-143858.jpg" 
+                  src="/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png" 
                   alt="Bharatanatyam students of Manasa Nagaraj"
                   className="w-full h-48 object-cover rounded-t-lg mb-4"
                 />
@@ -385,7 +385,7 @@ const Index = () => {
             <Card className="text-center h-full">
               <CardHeader>
                 <img 
-                  src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-144620.png" 
+                  src="/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png" 
                   alt="Bharatanatyam students of Manasa Nagaraj"
                   className="w-full h-48 object-cover rounded-t-lg mb-4"
                 />
@@ -401,7 +401,7 @@ const Index = () => {
             <Card className="text-center h-full">
               <CardHeader>
                 <img 
-                  src="https://manasanagaraj.com/wp-content/uploads/2020/04/20190824-151857.png" 
+                  src="/lovable-uploads/853fc79e-5fff-4635-9d9d-88bb107c6fae.png" 
                   alt="Bharatanatyam students of Manasa Nagaraj"
                   className="w-full h-48 object-cover rounded-t-lg mb-4"
                 />
@@ -653,7 +653,7 @@ const Index = () => {
             <div className="text-center">
               <div className="w-80 h-80 mx-auto mb-6 overflow-hidden rounded-full border-4 border-white/20">
                 <img 
-                  src="https://manasanagaraj.com/wp-content/uploads/2019/04/5D4_7134.jpg" 
+                  src="/lovable-uploads/8cf78aad-8881-4264-9a55-2013c1b005c3.png" 
                   alt="Contact Image"
                   className="w-full h-full object-cover"
                 />
@@ -673,13 +673,13 @@ const Index = () => {
             <div>
               <div className="flex items-center mb-4">
                 <img 
-                  src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
+                  src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
                   alt="Logo" 
                   className="h-8 w-auto"
                 />
               </div>
               <p className="text-gray-400">
-                Bay Area's premier Bharatanatyam academy, nurturing classical dance traditions since inception.
+                Bay Area's premier Bharatanatyam academy, nurturing classical dance traditions since inception. As a proud affiliate of SAMPADA University, we offer students the opportunity to pursue formal dance examinations and certifications, ensuring authentic training rooted in traditional methodology while providing recognized academic credentials.
               </p>
             </div>
             
@@ -743,7 +743,7 @@ const Index = () => {
           <Separator className="my-8 bg-gray-800" />
           
           <div className="text-center text-gray-400">
-            <p>&copy; 2025 Nrithyamanasa Performing Arts Center. All rights reserved.</p>
+            <p>&copy; 2025 Nrithyamanasa Dance Academy. All Rights Reserved.</p>
           </div>
         </div>
       </footer>
