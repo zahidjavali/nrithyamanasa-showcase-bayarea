@@ -227,7 +227,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://manasanagaraj.com/wp-content/uploads/2019/05/s2.jpg')"
+            backgroundImage: "url('/lovable-uploads/f9cfedfe-4f86-49ae-96a3-625c6e9c9b48.png')"
           }}
         ></div>
         <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
