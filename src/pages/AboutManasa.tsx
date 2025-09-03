@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Facebook, Instagram, Youtube, Menu, X } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const AboutManasa = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,6 +18,19 @@ const AboutManasa = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-amber-50">
+      <Helmet>
+        <title>About Manasa Nagaraj - Master Bharatanatyam Instructor | Nrithyamanasa</title>
+        <meta name="description" content="Learn about Manasa Nagaraj, the master instructor behind Nrithyamanasa Academy. Discover her journey, achievements, and dedication to preserving classical Bharatanatyam tradition." />
+        <meta property="og:title" content="About Manasa Nagaraj - Master Bharatanatyam Instructor | Nrithyamanasa" />
+        <meta property="og:description" content="Learn about Manasa Nagaraj, the master instructor behind Nrithyamanasa Academy. Discover her journey, achievements, and dedication to preserving classical Bharatanatyam tradition." />
+        <meta property="og:image" content="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" />
+        <meta property="og:url" content="https://manasanagaraj.netlify.app/about-manasa" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Manasa Nagaraj - Master Bharatanatyam Instructor" />
+        <meta name="twitter:description" content="Learn about Manasa Nagaraj, the master instructor behind Nrithyamanasa Academy." />
+        <meta name="twitter:image" content="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" />
+        <link rel="canonical" href="https://manasanagaraj.netlify.app/about-manasa" />
+      </Helmet>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-purple-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

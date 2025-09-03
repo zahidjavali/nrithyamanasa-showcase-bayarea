@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Facebook, Instagram, Youtube, Menu, X } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const PressGallery = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,6 +34,19 @@ const PressGallery = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-amber-50">
+      <Helmet>
+        <title>Press Gallery & Media Coverage | Nrithyamanasa Academy</title>
+        <meta name="description" content="Explore media coverage and press articles about Nrithyamanasa Academy and Manasa Nagaraj's Bharatanatyam performances in newspapers and publications." />
+        <meta property="og:title" content="Press Gallery & Media Coverage | Nrithyamanasa Academy" />
+        <meta property="og:description" content="Explore media coverage and press articles about Nrithyamanasa Academy and Manasa Nagaraj's Bharatanatyam performances." />
+        <meta property="og:image" content="https://manasanagaraj.com/wp-content/uploads/2019/04/5D4_7134.jpg" />
+        <meta property="og:url" content="https://manasanagaraj.netlify.app/press-gallery" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Press Gallery & Media Coverage | Nrithyamanasa Academy" />
+        <meta name="twitter:description" content="Explore media coverage and press articles about Nrithyamanasa Academy." />
+        <meta name="twitter:image" content="https://manasanagaraj.com/wp-content/uploads/2019/04/5D4_7134.jpg" />
+        <link rel="canonical" href="https://manasanagaraj.netlify.app/press-gallery" />
+      </Helmet>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-purple-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

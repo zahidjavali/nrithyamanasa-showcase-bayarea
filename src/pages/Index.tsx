@@ -8,6 +8,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/s
 import { Star, MapPin, Phone, Mail, Award, Calendar, Users, Facebook, Instagram, Youtube, Clock, Music, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Index = () => {
   useEffect(() => {
@@ -118,6 +119,19 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-amber-50">
+      <Helmet>
+        <title>Nrithyamanasa - Premier Bharatanatyam Academy in Santa Clara</title>
+        <meta name="description" content="Learn classical Indian dance Bharatanatyam with master instructor Manasa Nagaraj at Santa Clara's premier dance academy. Classes for all levels from beginner to advanced." />
+        <meta property="og:title" content="Nrithyamanasa - Premier Bharatanatyam Academy in Santa Clara" />
+        <meta property="og:description" content="Learn classical Indian dance Bharatanatyam with master instructor Manasa Nagaraj at Santa Clara's premier dance academy. Classes for all levels from beginner to advanced." />
+        <meta property="og:image" content="/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png" />
+        <meta property="og:url" content="https://manasanagaraj.netlify.app/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Nrithyamanasa - Premier Bharatanatyam Academy in Santa Clara" />
+        <meta name="twitter:description" content="Learn classical Indian dance Bharatanatyam with master instructor Manasa Nagaraj at Santa Clara's premier dance academy." />
+        <meta name="twitter:image" content="/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png" />
+        <link rel="canonical" href="https://manasanagaraj.netlify.app/" />
+      </Helmet>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -447,7 +461,8 @@ const Index = () => {
           </div>
           
           <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="w-full text-left">
+            <Accordion type="single" collapsible className="w-full">
+              <div className="text-left">
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-purple-700 font-semibold">
                   What is Bharatanatyam?
@@ -486,13 +501,15 @@ const Index = () => {
                   What should students wear for classes?
                 </AccordionTrigger>
                 <AccordionContent>
-                  <ul className="text-gray-600 space-y-2">
-                    <li>• Girls should wear a dance practice sari or salwar kameez.</li>
-                    <li>• Boys should wear a dhoti or kurta pyjama.</li>
-                    <li>• All students should have their waist firmly tied.</li>
-                    <li>• Hair should be tied back neatly in a bun or plait.</li>
-                    <li>• No dance costume, jewelry, or ankle bells should be worn.</li>
-                  </ul>
+                  <div className="text-left">
+                    <ul className="text-gray-600 space-y-2">
+                      <li>• Girls should wear a dance practice sari or salwar kameez.</li>
+                      <li>• Boys should wear a dhoti or kurta pyjama.</li>
+                      <li>• All students should have their waist firmly tied.</li>
+                      <li>• Hair should be tied back neatly in a bun or plait.</li>
+                      <li>• No dance costume, jewelry, or ankle bells should be worn.</li>
+                    </ul>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
 
@@ -578,16 +595,19 @@ const Index = () => {
                   Student Rules and Expectations
                 </AccordionTrigger>
                 <AccordionContent>
-                  <ul className="text-gray-600 space-y-2">
-                    <li>• All students should attend classes regularly.</li>
-                    <li>• Please arrive on time for warm-up exercises to avoid injury.</li>
-                    <li>• Students should show respect to the teacher and follow instructions.</li>
-                    <li>• Follow the dress code - students not in proper dress cannot participate.</li>
-                    <li>• Be friendly and welcoming to other students in the class.</li>
-                    <li>• Give your 100% effort, energy, and keep a positive attitude in every class.</li>
-                  </ul>
+                  <div className="text-left">
+                    <ul className="text-gray-600 space-y-2">
+                      <li>• All students should attend classes regularly.</li>
+                      <li>• Please arrive on time for warm-up exercises to avoid injury.</li>
+                      <li>• Students should show respect to the teacher and follow instructions.</li>
+                      <li>• Follow the dress code - students not in proper dress cannot participate.</li>
+                      <li>• Be friendly and welcoming to other students in the class.</li>
+                      <li>• Give your 100% effort, energy, and keep a positive attitude in every class.</li>
+                    </ul>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
+              </div>
             </Accordion>
           </div>
         </div>

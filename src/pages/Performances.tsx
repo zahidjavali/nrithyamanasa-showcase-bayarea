@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Facebook, Instagram, Youtube, Menu, X } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Performances = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,6 +18,19 @@ const Performances = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-amber-50">
+      <Helmet>
+        <title>Bharatanatyam Performances | Nrithyamanasa Academy</title>
+        <meta name="description" content="Watch beautiful Bharatanatyam performances by students of Nrithyamanasa Academy. Experience the grace and beauty of classical Indian dance through our showcases and recitals." />
+        <meta property="og:title" content="Bharatanatyam Performances | Nrithyamanasa Academy" />
+        <meta property="og:description" content="Watch beautiful Bharatanatyam performances by students of Nrithyamanasa Academy. Experience the grace and beauty of classical Indian dance." />
+        <meta property="og:image" content="/lovable-uploads/f9cfedfe-4f86-49ae-96a3-625c6e9c9b48.png" />
+        <meta property="og:url" content="https://manasanagaraj.netlify.app/performances" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Bharatanatyam Performances | Nrithyamanasa Academy" />
+        <meta name="twitter:description" content="Watch beautiful Bharatanatyam performances by students of Nrithyamanasa Academy." />
+        <meta name="twitter:image" content="/lovable-uploads/f9cfedfe-4f86-49ae-96a3-625c6e9c9b48.png" />
+        <link rel="canonical" href="https://manasanagaraj.netlify.app/performances" />
+      </Helmet>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-purple-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
