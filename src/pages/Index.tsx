@@ -249,7 +249,7 @@ const Index = () => {
               variant="outline" 
               className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-purple-600 px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-lg w-full sm:w-auto flex items-center justify-center"
             >
-              <Link to="/about-manasa" className="flex items-center justify-center w-full h-full">Learn More</Link>
+              <Link to="/about-manasa" className="flex items-center justify-center w-full h-full">About Manasa Nagaraj</Link>
             </Button>
           </div>
         </div>
@@ -447,7 +447,7 @@ const Index = () => {
           </div>
           
           <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible className="w-full text-left">
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-purple-700 font-semibold">
                   What is Bharatanatyam?
@@ -601,15 +601,15 @@ const Index = () => {
             <Separator className="w-24 mx-auto bg-white h-1 mb-6" />
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="w-20 h-20 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center">
                     <MapPin className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Address</h3>
-                  <p className="text-amber-100">
+                  <p className="text-amber-100 text-sm sm:text-base">
                     1078 Monroe St,<br />
                     Santa Clara,<br />
                     CA 95050
@@ -621,7 +621,7 @@ const Index = () => {
                     <Phone className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Call Us</h3>
-                  <p className="text-amber-100">
+                  <p className="text-amber-100 text-sm sm:text-base">
                     858 880 4577<br />
                     858 880 4576
                   </p>
@@ -632,7 +632,7 @@ const Index = () => {
                     <Mail className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Email Us</h3>
-                  <p className="text-amber-100">
+                  <p className="text-amber-100 text-sm sm:text-base break-all">
                     manasanrithya@gmail.com
                   </p>
                 </div>
@@ -642,7 +642,7 @@ const Index = () => {
                     <Users className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Join Us</h3>
-                  <p className="text-amber-100">
+                  <p className="text-amber-100 text-sm sm:text-base">
                     Classes in Bay Area
                   </p>
                 </div>
@@ -650,17 +650,104 @@ const Index = () => {
             </div>
             
             <div className="text-center">
-              <div className="w-80 h-80 mx-auto mb-6 overflow-hidden rounded-full border-4 border-white/20">
+              <div className="w-60 h-60 sm:w-80 sm:h-80 mx-auto mb-6 overflow-hidden rounded-full border-4 border-white/20">
                 <img 
                   src="/lovable-uploads/8cf78aad-8881-4264-9a55-2013c1b005c3.png" 
                   alt="Contact Image"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="text-amber-100 max-w-md mx-auto">
+              <p className="text-amber-100 max-w-md mx-auto text-sm sm:text-base px-4">
                 If you are interested in learning Bharatanatyam and live in the Bay Area, please visit us for a consultation. We have classes tailored to suit you.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Press Reviews Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Press Reviews</h2>
+            <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="text-center h-full">
+              <CardContent className="pt-6">
+                <p className="text-lg text-gray-600 italic mb-4">
+                  "She is an amazing performer. I saw her dance at an event—gracious, expressive, and captivating. Loved it!"
+                </p>
+                <p className="text-purple-600 font-semibold">— Avani K.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center h-full">
+              <CardContent className="pt-6">
+                <p className="text-lg text-gray-600 italic mb-4">
+                  "Moving with felicity."
+                </p>
+                <p className="text-amber-600 font-semibold">— V. Nagaraj, The Hindu</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center h-full">
+              <CardContent className="pt-6">
+                <p className="text-lg text-gray-600 italic mb-4">
+                  "Dancing like a swan."
+                </p>
+                <p className="text-purple-600 font-semibold">— Prajavani, a leading Kannada-language newspaper from Karnataka</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Testimonials</h2>
+            <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="h-full">
+              <CardContent className="pt-6">
+                <p className="text-gray-600 mb-4">
+                  "Nrithyamanasa is an inspiring place to learn Bharatanatyam. I look forward to these classes every week. Manasa is an excellent dancer and a dedicated, passionate teacher. She is a skilled choreographer who tailors her work to the skill levels of her students. Manasa encourages cultural and artistic growth while providing motivational support in a friendly, joyful environment."
+                </p>
+                <p className="text-purple-600 font-semibold">— G.G / Krupa</p>
+              </CardContent>
+            </Card>
+
+            <Card className="h-full">
+              <CardContent className="pt-6">
+                <p className="text-gray-600 mb-4">
+                  "My daughter has been learning dance here for the past year, and I've seen significant improvement in her skills. She is always excited to attend her class. Ms. Manasa is an excellent Bharatanatyam dancer and ensures her students perform at a professional level on stage, giving them tremendous confidence at a young age. I highly recommend this dance school."
+                </p>
+                <p className="text-amber-600 font-semibold">— Gokul R.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="h-full">
+              <CardContent className="pt-6">
+                <p className="text-gray-600 mb-4">
+                  "This is a wonderful studio to learn Indian classical dance. The teacher is professional, energetic, and highly skilled. I strongly recommend attending these classes—whether you are a beginner or advanced."
+                </p>
+                <p className="text-purple-600 font-semibold">— Renuka Sahane</p>
+              </CardContent>
+            </Card>
+
+            <Card className="h-full">
+              <CardContent className="pt-6">
+                <p className="text-gray-600 mb-4">
+                  "My daughter has been taking Bharatanatyam classes here for the past two years, and she loves them. The classes combine beginners and intermediate-level students, which allows my daughter to also watch and learn from others. If you want your child to learn Bharatanatyam in its traditional form, this is the right place—a complete package. One of the best Bharatanatyam teachers in the Bay Area."
+                </p>
+                <p className="text-amber-600 font-semibold">— Ajay G.</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -704,7 +791,7 @@ const Index = () => {
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4">Connect with me on Social Media</h3>
+              <h3 className="font-semibold mb-4">Connect with me on social media</h3>
               <div className="flex space-x-4 mb-4">
                 <a 
                   href="https://www.facebook.com/nrithyamanasa/" 
