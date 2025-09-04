@@ -260,8 +260,7 @@ const Index = () => {
             </Button>
             <Button 
               size="lg" 
-              variant="outline" 
-              className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-purple-600 px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-lg w-full sm:w-auto flex items-center justify-center"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-lg w-full sm:w-auto flex items-center justify-center"
             >
               <Link to="/about-manasa" className="flex items-center justify-center w-full h-full">About Manasa Nagaraj</Link>
             </Button>
@@ -374,7 +373,7 @@ const Index = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Classes for All Levels</h2>
             <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              NPAC offers dedicated instruction in Bharatanatyam for beginners, intermediate and advanced students. Using rhythmic footwork, geometric movements, coded hand gestures, and facial expressions to tell powerful stories and create intricate dance sequences, we help students develop their skills in both pure dance (nritta) and expressive dance (nritya).
+              NPAC offers dedicated instruction in Bharatanatyam for beginners, intermediate and advanced students. Using rhythmic footwork, geometric movements, coded hand gestures, and facial expressions to tell powerful stories and create intricate dance sequences, we help students develop their skills in both pure dance (nritta) and expressive dance (nritya). As a proud affiliate of SAMPADA University, we offer students the opportunity to pursue formal dance examinations and certifications, ensuring authentic training rooted in traditional methodology while providing recognized academic credentials.
             </p>
           </div>
           
@@ -462,9 +461,9 @@ const Index = () => {
           
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="w-full">
-              <div className="text-left">
-              <AccordionItem value="item-1">
-                <AccordionTrigger className="text-purple-700 font-semibold">
+              <div className="text-left space-y-2">
+              <AccordionItem value="item-1" className="text-left">
+                <AccordionTrigger className="text-purple-700 font-semibold text-left justify-start">
                   What is Bharatanatyam?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -474,8 +473,8 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-2">
-                <AccordionTrigger className="text-amber-700 font-semibold">
+              <AccordionItem value="item-2" className="text-left">
+                <AccordionTrigger className="text-amber-700 font-semibold text-left justify-start">
                   How long and how many times a week are the classes?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -485,8 +484,8 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-3">
-                <AccordionTrigger className="text-purple-700 font-semibold">
+              <AccordionItem value="item-3" className="text-left">
+                <AccordionTrigger className="text-purple-700 font-semibold text-left justify-start">
                   What is the minimum age to start learning Bharatanatyam?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -496,8 +495,8 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-4">
-                <AccordionTrigger className="text-amber-700 font-semibold">
+              <AccordionItem value="item-4" className="text-left">
+                <AccordionTrigger className="text-amber-700 font-semibold text-left justify-start">
                   What should students wear for classes?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -513,8 +512,8 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-5">
-                <AccordionTrigger className="text-purple-700 font-semibold">
+              <AccordionItem value="item-5" className="text-left">
+                <AccordionTrigger className="text-purple-700 font-semibold text-left justify-start">
                   Why does each level take different time?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -524,8 +523,8 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-6">
-                <AccordionTrigger className="text-amber-700 font-semibold">
+              <AccordionItem value="item-6" className="text-left">
+                <AccordionTrigger className="text-amber-700 font-semibold text-left justify-start">
                   How do I register?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -535,8 +534,8 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-7">
-                <AccordionTrigger className="text-purple-700 font-semibold">
+              <AccordionItem value="item-7" className="text-left">
+                <AccordionTrigger className="text-purple-700 font-semibold text-left justify-start">
                   How do I cancel?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -546,8 +545,8 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-8">
-                <AccordionTrigger className="text-amber-700 font-semibold">
+              <AccordionItem value="item-8" className="text-left">
+                <AccordionTrigger className="text-amber-700 font-semibold text-left justify-start">
                   Do you offer 1 class or 2 per week?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -557,8 +556,8 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-9">
-                <AccordionTrigger className="text-purple-700 font-semibold">
+              <AccordionItem value="item-9" className="text-left">
+                <AccordionTrigger className="text-purple-700 font-semibold text-left justify-start">
                   Are classes held during summer and winter breaks?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -568,8 +567,8 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-10">
-                <AccordionTrigger className="text-amber-700 font-semibold">
+              <AccordionItem value="item-10" className="text-left">
+                <AccordionTrigger className="text-amber-700 font-semibold text-left justify-start">
                   Do you offer trial classes?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -579,8 +578,8 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-11">
-                <AccordionTrigger className="text-purple-700 font-semibold">
+              <AccordionItem value="item-11" className="text-left">
+                <AccordionTrigger className="text-purple-700 font-semibold text-left justify-start">
                   What if I miss a class?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -590,8 +589,8 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-12">
-                <AccordionTrigger className="text-amber-700 font-semibold">
+              <AccordionItem value="item-12" className="text-left">
+                <AccordionTrigger className="text-amber-700 font-semibold text-left justify-start">
                   Student Rules and Expectations
                 </AccordionTrigger>
                 <AccordionContent>
@@ -652,9 +651,9 @@ const Index = () => {
                     <Mail className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Email Us</h3>
-                  <p className="text-amber-100 text-sm sm:text-base break-all">
-                    manasanrithya@gmail.com
-                  </p>
+              <p className="text-amber-100 text-sm sm:text-base break-words px-2 md:break-all md:px-0">
+                manasanrithya@gmail.com
+              </p>
                 </div>
                 
                 <div className="text-center">
@@ -677,7 +676,7 @@ const Index = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="text-amber-100 max-w-md mx-auto text-sm sm:text-base px-4">
+              <p className="text-amber-100 max-w-md mx-auto text-sm sm:text-base px-2 sm:px-4 break-words">
                 If you are interested in learning Bharatanatyam and live in the Bay Area, please visit us for a consultation. We have classes tailored to suit you.
               </p>
             </div>

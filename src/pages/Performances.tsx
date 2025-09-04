@@ -381,7 +381,7 @@ const Performances = () => {
             <div className="sm:col-span-2 md:col-span-1">
               <div className="flex items-center mb-4">
                 <img 
-                  src="https://manasanagaraj.com/wp-content/uploads/2019/05/aaaa.png" 
+                  src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
                   alt="Logo" 
                   className="h-8 w-auto"
                 />
