@@ -163,8 +163,6 @@ const Index = () => {
               <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors">ABOUT MANASA</Link>
               <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-colors">PERFORMANCES</Link>
               <Link to="/press-gallery" className="text-gray-700 hover:text-purple-600 transition-colors">PRESS GALLERY</Link>
-              <a href="#showcase" className="text-gray-700 hover:text-purple-600 transition-colors">SHOWCASE</a>
-              <a href="#classes" className="text-gray-700 hover:text-purple-600 transition-colors">CLASSES</a>
               <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-colors">CONTACT</a>
             </div>
 
@@ -190,30 +188,6 @@ const Index = () => {
                     </SheetClose>
                     <SheetClose asChild>
                       <Link to="/press-gallery" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">PRESS GALLERY</Link>
-                    </SheetClose>
-                    <SheetClose asChild>
-                      <a 
-                        href="#showcase" 
-                        className="text-gray-700 hover:text-purple-600 transition-colors text-lg"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          document.getElementById('showcase')?.scrollIntoView({ behavior: 'smooth' });
-                        }}
-                      >
-                        SHOWCASE
-                      </a>
-                    </SheetClose>
-                    <SheetClose asChild>
-                      <a 
-                        href="#classes" 
-                        className="text-gray-700 hover:text-purple-600 transition-colors text-lg"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          document.getElementById('classes')?.scrollIntoView({ behavior: 'smooth' });
-                        }}
-                      >
-                        CLASSES
-                      </a>
                     </SheetClose>
                     <SheetClose asChild>
                       <a 

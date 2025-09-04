@@ -51,8 +51,6 @@ const AboutManasa = () => {
               <span className="text-purple-600 font-semibold text-sm lg:text-base">ABOUT MANASA</span>
               <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">PERFORMANCES</Link>
               <Link to="/press-gallery" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">PRESS GALLERY</Link>
-              <a href="/#showcase" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">SHOWCASE</a>
-              <a href="/#classes" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">CLASSES</a>
               <a href="/#contact" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">CONTACT</a>
             </div>
 
@@ -95,20 +93,6 @@ const AboutManasa = () => {
                   PRESS GALLERY
                 </Link>
                 <Link 
-                  to="/#showcase" 
-                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  SHOWCASE
-                </Link>
-                <Link 
-                  to="/#classes" 
-                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  CLASSES
-                </Link>
-                <Link 
                   to="/#contact" 
                   className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -127,7 +111,7 @@ const AboutManasa = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://manasanagaraj.com/wp-content/uploads/2019/04/aboutme.jpg')"
+            backgroundImage: "url('/public/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png')"
           }}
         ></div>
         <div className="relative z-20 max-w-7xl mx-auto">
@@ -143,7 +127,7 @@ const AboutManasa = () => {
             <div className="relative">
               <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 overflow-hidden rounded-full border-4 border-white shadow-2xl">
                 <img 
-                  src="https://manasanagaraj.com/wp-content/uploads/2019/04/aboutme.jpg" 
+                  src="/public/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png" 
                   alt="Manasa Nagaraj"
                   className="w-full h-full object-cover"
                 />
@@ -172,7 +156,7 @@ const AboutManasa = () => {
             
             <div className="text-center order-first md:order-last">
               <img 
-                src="https://manasanagaraj.com/wp-content/uploads/2019/04/aboutme.jpg" 
+                src="/public/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" 
                 alt="Manasa Nagaraj"
                 className="w-full rounded-lg shadow-lg"
               />
@@ -187,7 +171,7 @@ const AboutManasa = () => {
           <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="text-center">
               <img 
-                src="https://manasanagaraj.com/wp-content/uploads/2019/04/5D4_7134.jpg" 
+                src="/public/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png" 
                 alt="Manasa Nagaraj"
                 className="w-full rounded-lg shadow-lg"
               />
@@ -231,7 +215,7 @@ const AboutManasa = () => {
             
             <div className="text-center order-first md:order-last">
               <img 
-                src="https://manasanagaraj.com/wp-content/uploads/2019/04/Nritya-Manasa-48.jpg" 
+                src="/public/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
                 alt="Manasa Nagaraj Performance"
                 className="w-full rounded-lg shadow-lg"
               />

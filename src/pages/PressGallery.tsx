@@ -67,8 +67,6 @@ const PressGallery = () => {
               <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">ABOUT MANASA</Link>
               <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">PERFORMANCES</Link>
               <span className="text-purple-600 font-semibold text-sm lg:text-base">PRESS GALLERY</span>
-              <a href="/#showcase" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">SHOWCASE</a>
-              <a href="/#classes" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">CLASSES</a>
               <a href="/#contact" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">CONTACT</a>
             </div>
 
@@ -110,20 +108,6 @@ const PressGallery = () => {
                   PERFORMANCES
                 </Link>
                 <span className="block px-3 py-2 text-purple-600 font-semibold">PRESS GALLERY</span>
-                <Link 
-                  to="/#showcase" 
-                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  SHOWCASE
-                </Link>
-                <Link 
-                  to="/#classes" 
-                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  CLASSES
-                </Link>
                 <Link 
                   to="/#contact" 
                   className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
