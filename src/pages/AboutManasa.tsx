@@ -11,7 +11,7 @@ const AboutManasa = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    "/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png",
+    "/lovable-uploads/3177d9fa-4519-4701-80de-44830083ec53.png",
     "/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png", 
     "/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png",
     "/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png",
