@@ -195,7 +195,16 @@ const Index = () => {
                         className="text-gray-700 hover:text-purple-600 transition-colors text-lg"
                         onClick={(e) => {
                           e.preventDefault();
-                          document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                          // Small delay to ensure sheet closes first, then scroll
+                          setTimeout(() => {
+                            const contactSection = document.getElementById('contact');
+                            if (contactSection) {
+                              contactSection.scrollIntoView({ 
+                                behavior: 'smooth',
+                                block: 'start'
+                              });
+                            }
+                          }, 100);
                         }}
                       >
                         CONTACT
