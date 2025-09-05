@@ -571,8 +571,8 @@ const AboutManasa = () => {
                 transition={{ type: "spring", stiffness: 200 }}
               >
                 <img 
-                  src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
-                  alt="Manasa Nagaraj Logo Performance"
+                  src="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" 
+                  alt="Manasa Nagaraj Performance"
                   className="w-full h-[500px] object-cover"
                   loading="lazy"
                 />
