@@ -5,15 +5,85 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
-import { Star, MapPin, Phone, Mail, Award, Calendar, Users, Facebook, Instagram, Youtube, Clock, Music, Menu } from "lucide-react";
+import { Star, MapPin, Phone, Mail, Award, Calendar, Users, Facebook, Instagram, Youtube, Clock, Music, Menu, X, Heart, Sparkles, Flower } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Index = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const heroImages = [
+    "/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png",
+    "/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png", 
+    "/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png",
+    "/lovable-uploads/853fc79e-5fff-4635-9d9d-88bb107c6fae.png"
+  ];
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Auto-slide hero images
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
   }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const FloatingIcon = ({ children, delay = 0, style }: { children: React.ReactNode, delay?: number, style?: React.CSSProperties }) => (
+    <motion.div
+      className="absolute text-amber-400 opacity-30"
+      style={style}
+      animate={{
+        y: [0, -20, 0],
+        rotate: [0, 10, -10, 0],
+        scale: [1, 1.1, 1],
+      }}
+      transition={{
+        duration: 4,
+        delay,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+
+  const SparkleEffect = () => (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {[...Array(15)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute text-yellow-300"
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+          }}
+          animate={{
+            scale: [0, 1, 0],
+            rotate: [0, 180, 360],
+            opacity: [0, 1, 0],
+          }}
+          transition={{
+            duration: 3,
+            delay: Math.random() * 2,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          <Sparkles className="w-3 h-3" />
+        </motion.div>
+      ))}
+    </div>
+  );
 
   // SEO Schema markup
   const faqSchema = {
@@ -146,108 +216,183 @@ const Index = () => {
       />
 
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-purple-100">
+      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-purple-200 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <img 
-                src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
-                alt="Logo" 
-                className="h-10 w-auto"
-              />
+              <Link to="/">
+                <motion.img 
+                  src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
+                  alt="Nrithyamanasa Logo" 
+                  className="h-8 sm:h-10 w-auto cursor-pointer"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                />
+              </Link>
             </div>
             
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              <Link to="/" className="text-purple-600 font-semibold">HOME</Link>
-              <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors">ABOUT MANASA</Link>
-              <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-colors">PERFORMANCES</Link>
-              <Link to="/press-gallery" className="text-gray-700 hover:text-purple-600 transition-colors">PRESS GALLERY</Link>
-              <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-colors">CONTACT</a>
+            <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+              <span className="text-purple-600 font-bold text-sm lg:text-base bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">HOME</span>
+              <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105">ABOUT MANASA</Link>
+              <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105">PERFORMANCES</Link>
+              <Link to="/press-gallery" className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105">PRESS GALLERY</Link>
+              <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105">CONTACT</a>
             </div>
 
-            {/* Mobile Navigation */}
+            {/* Mobile menu button */}
             <div className="md:hidden">
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="h-10 w-10">
-                    <Menu className="h-6 w-6 text-purple-600" />
-                    <span className="sr-only">Open menu</span>
-                  </Button>
-                </SheetTrigger>
-                <SheetContent side="right" className="w-80">
-                  <div className="flex flex-col space-y-6 pt-6">
-                    <SheetClose asChild>
-                      <Link to="/" className="text-purple-600 font-semibold text-lg">HOME</Link>
-                    </SheetClose>
-                    <SheetClose asChild>
-                      <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">ABOUT MANASA</Link>
-                    </SheetClose>
-                    <SheetClose asChild>
-                      <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">PERFORMANCES</Link>
-                    </SheetClose>
-                    <SheetClose asChild>
-                      <Link to="/press-gallery" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">PRESS GALLERY</Link>
-                    </SheetClose>
-                    <SheetClose asChild>
-                      <a 
-                        href="#contact" 
-                        className="text-gray-700 hover:text-purple-600 transition-colors text-lg"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          // Small delay to ensure sheet closes first, then scroll
-                          setTimeout(() => {
-                            const contactSection = document.getElementById('contact');
-                            if (contactSection) {
-                              contactSection.scrollIntoView({ 
-                                behavior: 'smooth',
-                                block: 'start'
-                              });
-                            }
-                          }, 100);
-                        }}
-                      >
-                        CONTACT
-                      </a>
-                    </SheetClose>
-                  </div>
-                </SheetContent>
-              </Sheet>
+              <motion.button
+                onClick={toggleMobileMenu}
+                className="text-gray-700 hover:text-purple-600 transition-colors p-2"
+                aria-label="Toggle mobile menu"
+                whileTap={{ scale: 0.95 }}
+              >
+                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </motion.button>
             </div>
           </div>
+
+          {/* Mobile Navigation Menu */}
+          <AnimatePresence>
+            {isMobileMenuOpen && (
+              <motion.div 
+                className="md:hidden"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-sm border-t border-purple-100">
+                  <span className="block px-3 py-2 text-purple-600 font-semibold">HOME</span>
+                  <Link 
+                    to="/about-manasa" 
+                    className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    ABOUT MANASA
+                  </Link>
+                  <Link 
+                    to="/performances" 
+                    className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    PERFORMANCES
+                  </Link>
+                  <Link 
+                    to="/press-gallery" 
+                    className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    PRESS GALLERY
+                  </Link>
+                  <button 
+                    className="block w-full text-left px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsMobileMenuOpen(false);
+                      setTimeout(() => {
+                        const contactSection = document.getElementById('contact');
+                        if (contactSection) {
+                          contactSection.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                          });
+                        }
+                      }, 300);
+                    }}
+                  >
+                    CONTACT
+                  </button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </nav>
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png')"
-          }}
-        ></div>
-        <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Nrithya Taranga 2025
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl mb-8 text-amber-100">
-            The event is scheduled for September 21st at 3:30 pm - 5:30 pm and will be held at Mission City Center For Performing Arts in Santa Clara.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-lg w-full sm:w-auto"
-              onClick={() => window.open('https://www.eventbrite.com/e/nrithya-taranga-2025-shakti-tickets-1598078137729?aff=oddtdtcreator', '_blank')}
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/95 via-pink-900/90 to-amber-900/95 z-10"></div>
+          <motion.div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('${heroImages[currentImageIndex]}')`
+            }}
+            key={currentImageIndex}
+            initial={{ scale: 1.1, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 2 }}
+          />
+          
+          {/* Floating Decorative Elements */}
+          <FloatingIcon delay={0} style={{ left: '10%', top: '20%' }}>
+            <Music className="w-8 h-8" />
+          </FloatingIcon>
+          <FloatingIcon delay={1} style={{ right: '15%', top: '30%' }}>
+            <Flower className="w-6 h-6" />
+          </FloatingIcon>
+          <FloatingIcon delay={2} style={{ left: '20%', bottom: '25%' }}>
+            <Star className="w-7 h-7" />
+          </FloatingIcon>
+          <FloatingIcon delay={0.5} style={{ right: '25%', bottom: '35%' }}>
+            <Heart className="w-5 h-5" />
+          </FloatingIcon>
+          
+          <SparkleEffect />
+        </div>
+
+        <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+          <motion.h1 
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 drop-shadow-2xl"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.2, type: "spring" }}
+          >
+            <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
+              Nrithya Taranga 2025
+            </span>
+          </motion.h1>
+          <motion.p 
+            className="text-base sm:text-lg md:text-xl mb-8 text-white font-medium leading-relaxed drop-shadow-lg max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 1 }}
+          >
+            The event is scheduled for <span className="text-yellow-300 font-bold">September 21st at 3:30 pm - 5:30 pm</span> and will be held at <span className="text-amber-300 font-bold">Mission City Center For Performing Arts</span> in Santa Clara.
+          </motion.p>
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Reserve Tickets
-            </Button>
-            <Button 
-              size="lg" 
-              className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-lg w-full sm:w-auto flex items-center justify-center"
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg w-full sm:w-auto shadow-2xl border-2 border-amber-400/30"
+                onClick={() => window.open('https://www.eventbrite.com/e/nrithya-taranga-2025-shakti-tickets-1598078137729?aff=oddtdtcreator', '_blank')}
+              >
+                Reserve Tickets
+              </Button>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <Link to="/about-manasa" className="flex items-center justify-center w-full h-full">About Manasa Nagaraj</Link>
-            </Button>
-          </div>
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg w-full sm:w-auto shadow-2xl border-2 border-purple-400/30"
+              >
+                <Link to="/about-manasa" className="flex items-center justify-center w-full h-full">About Manasa Nagaraj</Link>
+              </Button>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -305,46 +450,117 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Welcome</h2>
-            <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Manasa Nagaraj is the Artistic Director of Nrithyamanasa Performing Arts Center. She is also the Director of <a href="https://www.eshayoga.com/" className="text-purple-600 hover:text-purple-700">Esha Yoga</a>, a highly-rated studio in Santa Clara.
+      <section id="about" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-white via-purple-50 to-pink-50 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-xl"></div>
+          <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-br from-amber-400 to-orange-400 rounded-full blur-xl"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-purple-900 mb-6">
+              Meet <span className="text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">Manasa Nagaraj</span>
+            </h2>
+            <Separator className="w-24 mx-auto bg-gradient-to-r from-purple-600 to-pink-600 h-1 mb-6" />
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              Manasa Nagaraj is the Artistic Director of <span className="font-bold text-purple-700">Nrithyamanasa Performing Arts Center</span>. She is also the Director of <a href="https://www.eshayoga.com/" className="text-purple-600 hover:text-purple-700 font-semibold underline decoration-purple-300">Esha Yoga</a>, a highly-rated studio in Santa Clara.
             </p>
-          </div>
+          </motion.div>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Meet Manasa Nagaraj</h3>
-              <p className="text-lg text-gray-600 mb-6">
-                With decades of experience in classical dance and wellness, Manasa brings excellent skills to her students. Her commitment to preserving traditional Bharatanatyam while making it accessible to modern students has made her one of the most respected instructors in the Bay Area.
-              </p>
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="flex items-center space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
-                  ))}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <motion.div 
+                className="bg-gradient-to-r from-purple-100 to-pink-100 p-6 sm:p-8 rounded-2xl border border-purple-200 shadow-xl"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
+                <h3 className="text-2xl sm:text-3xl font-bold text-purple-900 mb-6">Master Instructor & Artist</h3>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  With <span className="font-bold text-purple-700">decades of experience</span> in classical dance and wellness, Manasa brings exceptional skills to her students. Her commitment to preserving traditional <span className="text-amber-600 font-semibold">Bharatanatyam</span> while making it accessible to modern students has made her one of the most respected instructors in the Bay Area.
+                </p>
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="flex items-center space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <motion.div
+                        key={i}
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        transition={{ delay: i * 0.1, type: "spring" }}
+                        viewport={{ once: true }}
+                      >
+                        <Star className="h-6 w-6 fill-amber-400 text-amber-400" />
+                      </motion.div>
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-gray-600">Highly rated instructor</span>
                 </div>
-                <span className="text-sm text-gray-500">Highly rated instructor</span>
-              </div>
-              <Button className="bg-purple-600 hover:bg-purple-700 w-full sm:w-auto">
-                <Link to="/about-manasa">Read More about Manasa</Link>
-              </Button>
-            </div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg w-full sm:w-auto">
+                    <Link to="/about-manasa" className="flex items-center justify-center w-full h-full">Read More about Manasa</Link>
+                  </Button>
+                </motion.div>
+              </motion.div>
+            </motion.div>
             
-            <div className="text-center">
-              <div className="w-80 h-80 mx-auto mb-6 overflow-hidden rounded-full">
-                <img 
-                  src="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" 
-                  alt="Manasa Nagaraj"
-                  className="w-full h-full object-cover"
+            <motion.div 
+              className="text-center"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative inline-block">
+                <motion.div 
+                  className="w-72 h-72 sm:w-80 sm:h-80 mx-auto mb-6 overflow-hidden rounded-full border-4 border-white shadow-2xl"
+                  whileHover={{ scale: 1.05, rotate: 3 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                >
+                  <img 
+                    src="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" 
+                    alt="Manasa Nagaraj - Master Bharatanatyam Instructor"
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                  />
+                </motion.div>
+                <motion.div 
+                  className="absolute -inset-4 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 rounded-full blur opacity-20"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 />
+                
+                {/* Decorative elements around the image */}
+                <motion.div
+                  className="absolute -top-4 -right-4 text-yellow-400"
+                  animate={{ rotate: [0, 360] }}
+                  transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                >
+                  <Award className="w-8 h-8" />
+                </motion.div>
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-2">Manasa Nagaraj</h4>
-              <p className="text-gray-600">Artistic Director & Master Instructor</p>
-            </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <h4 className="text-xl sm:text-2xl font-bold text-purple-900 mb-2">Manasa Nagaraj</h4>
+                <p className="text-gray-600 font-medium">Artistic Director & Master Instructor</p>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>
