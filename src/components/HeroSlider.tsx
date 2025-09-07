@@ -31,72 +31,101 @@ export const HeroSlider = ({ images, autoSlideInterval = 4000 }: HeroSliderProps
   };
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
-      {/* Image Slider */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentIndex}
-          className="absolute inset-0"
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
-        >
-          <img
-            src={images[currentIndex]}
-            alt={`Bharatanatyam performance ${currentIndex + 1}`}
-            className="w-full h-full object-cover object-top filter brightness-105 contrast-110 saturate-110"
-            loading={currentIndex === 0 ? "eager" : "lazy"}
-            style={{ objectPosition: '50% 20%' }}
-          />
-          {/* Subtle gradient overlay for better contrast */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/20"></div>
-        </motion.div>
-      </AnimatePresence>
+    <div className="relative h-screen w-full overflow-hidden bg-gradient-to-b from-red-900 via-red-800 to-black">
+      {/* Auditorium Stage Container */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        {/* Red Curtains Frame */}
+        <div className="relative w-full max-w-6xl h-3/4 mx-auto">
+          {/* Top Curtain Valance */}
+          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-red-700 to-red-800 z-20 shadow-lg">
+            <div className="flex justify-center items-center h-full">
+              <div className="flex space-x-4">
+                {[...Array(8)].map((_, i) => (
+                  <div key={i} className="w-3 h-3 bg-yellow-400 rounded-full shadow-md"></div>
+                ))}
+              </div>
+            </div>
+          </div>
 
-      {/* Navigation Arrows */}
+          {/* Left Curtain */}
+          <div className="absolute top-16 left-0 bottom-0 w-16 bg-gradient-to-r from-red-700 to-red-600 z-20 shadow-2xl">
+            <div className="h-full bg-gradient-to-b from-red-600 via-red-700 to-red-800 opacity-80"></div>
+          </div>
+
+          {/* Right Curtain */}
+          <div className="absolute top-16 right-0 bottom-0 w-16 bg-gradient-to-l from-red-700 to-red-600 z-20 shadow-2xl">
+            <div className="h-full bg-gradient-to-b from-red-600 via-red-700 to-red-800 opacity-80"></div>
+          </div>
+
+          {/* Stage Frame - Image Container */}
+          <div className="absolute top-16 left-16 right-16 bottom-0 bg-black rounded-b-lg overflow-hidden shadow-2xl">
+            {/* Stage Lighting */}
+            <div className="absolute inset-0 bg-gradient-to-b from-yellow-100/10 via-transparent to-red-900/20 z-10 pointer-events-none"></div>
+            
+            {/* Image Slider */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                className="absolute inset-0"
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 1.2, ease: "easeInOut" }}
+              >
+                <img
+                  src={images[currentIndex]}
+                  alt={`Bharatanatyam performance ${currentIndex + 1}`}
+                  className="w-full h-full object-contain object-center filter brightness-110 contrast-105 saturate-105"
+                  loading={currentIndex === 0 ? "eager" : "lazy"}
+                />
+                {/* Stage floor reflection */}
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/40 to-transparent"></div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
+      </div>
+
+      {/* Navigation Arrows - Positioned outside the curtain frame */}
       <button
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 rounded-full p-3 group"
+        className="absolute left-8 top-1/2 -translate-y-1/2 z-30 bg-red-600/80 backdrop-blur-sm hover:bg-red-500 transition-all duration-300 rounded-full p-4 group shadow-2xl border-2 border-yellow-400"
         aria-label="Previous image"
       >
-        <ChevronLeft className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+        <ChevronLeft className="w-6 h-6 text-yellow-200 group-hover:scale-110 transition-transform" />
       </button>
 
       <button
         onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 rounded-full p-3 group"
+        className="absolute right-8 top-1/2 -translate-y-1/2 z-30 bg-red-600/80 backdrop-blur-sm hover:bg-red-500 transition-all duration-300 rounded-full p-4 group shadow-2xl border-2 border-yellow-400"
         aria-label="Next image"
       >
-        <ChevronRight className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+        <ChevronRight className="w-6 h-6 text-yellow-200 group-hover:scale-110 transition-transform" />
       </button>
 
-      {/* Dots Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
+      {/* Dots Indicator - Positioned below the stage */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-4 bg-red-800/80 backdrop-blur-sm px-6 py-3 rounded-full border border-yellow-400">
         {images.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-4 h-4 rounded-full transition-all duration-300 border-2 ${
               index === currentIndex
-                ? "bg-white scale-125 shadow-lg"
-                : "bg-white/50 hover:bg-white/75"
+                ? "bg-yellow-400 border-yellow-300 scale-125 shadow-lg shadow-yellow-400/50"
+                : "bg-red-600 border-yellow-400/50 hover:bg-yellow-400/20"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
 
-      {/* Side Progress Bars */}
-      <div className="absolute left-2 top-1/2 -translate-y-1/2 z-20 flex flex-col space-y-2">
-        {images.map((_, index) => (
+      {/* Stage Lights */}
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 z-25 flex space-x-8">
+        {[...Array(3)].map((_, index) => (
           <div
             key={index}
-            className={`w-1 h-12 rounded-full transition-all duration-500 ${
-              index === currentIndex
-                ? "bg-gradient-to-b from-amber-400 to-pink-400"
-                : "bg-white/30"
-            }`}
+            className="w-8 h-8 bg-yellow-300 rounded-full shadow-lg animate-pulse"
+            style={{ animationDelay: `${index * 0.5}s` }}
           />
         ))}
       </div>

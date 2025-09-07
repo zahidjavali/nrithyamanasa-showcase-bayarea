@@ -371,7 +371,7 @@ const Performances = () => {
                 />
               </div>
               <p className="text-gray-400 text-sm sm:text-base">
-                Bay Area's premier Bharatanatyam academy, nurturing classical dance traditions since inception.
+                Bay Area's premier Bharatanatyam academy, nurturing classical dance traditions since inception. As a proud affiliate of SAMPADA University, we offer students the opportunity to pursue formal dance examinations and certifications, ensuring authentic training rooted in traditional methodology while providing recognized academic credentials.
               </p>
             </div>
             
