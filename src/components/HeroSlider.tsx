@@ -45,8 +45,9 @@ export const HeroSlider = ({ images, autoSlideInterval = 4000 }: HeroSliderProps
           <img
             src={images[currentIndex]}
             alt={`Bharatanatyam performance ${currentIndex + 1}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top filter brightness-105 contrast-110 saturate-110"
             loading={currentIndex === 0 ? "eager" : "lazy"}
+            style={{ objectPosition: '50% 20%' }}
           />
           {/* Subtle gradient overlay for better contrast */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/20"></div>

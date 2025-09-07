@@ -21,7 +21,10 @@ const Index = () => {
     "/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png", 
     "/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png",
     "/lovable-uploads/853fc79e-5fff-4635-9d9d-88bb107c6fae.png",
-    "/lovable-uploads/f9cfedfe-4f86-49ae-96a3-625c6e9c9b48.png"
+    "/lovable-uploads/f9cfedfe-4f86-49ae-96a3-625c6e9c9b48.png",
+    "/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png",
+    "/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png",
+    "/lovable-uploads/8cf78aad-8881-4264-9a55-2013c1b005c3.png"
   ];
 
   useEffect(() => {
@@ -513,39 +516,39 @@ const Index = () => {
               className="order-2 lg:order-1"
             >
               <PerformanceCard className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-6 sm:p-8">
-                <div className="text-white">
-                  <motion.h3 
-                    className="text-2xl sm:text-3xl font-bold mb-6 text-yellow-300"
-                    whileHover={{ scale: 1.02 }}
-                  >
-                    🎭 Master Instructor & Artist
-                  </motion.h3>
-                  
-                  <div className="space-y-6">
-                    <p className="text-lg leading-relaxed text-gray-200">
-                      With <span className="font-bold text-pink-300">decades of experience</span> in classical dance and wellness, Manasa brings exceptional skills to her students. Her commitment to preserving traditional <span className="text-amber-300 font-semibold">Bharatanatyam</span> while making it accessible to modern students has made her one of the most respected instructors in the Bay Area.
-                    </p>
-                    
-                    <motion.div 
-                      className="flex items-center justify-center sm:justify-start space-x-4 p-4 bg-gradient-to-r from-yellow-400/20 to-amber-400/20 rounded-xl border border-yellow-400/30"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ type: "spring", stiffness: 200 }}
-                    >
-                      <div className="flex items-center space-x-1">
-                        {[...Array(5)].map((_, i) => (
-                          <motion.div
-                            key={i}
-                            initial={{ scale: 0, rotate: -180 }}
-                            whileInView={{ scale: 1, rotate: 0 }}
-                            transition={{ delay: i * 0.1, type: "spring", stiffness: 200 }}
-                            viewport={{ once: true }}
-                          >
-                            <Star className="h-6 w-6 fill-yellow-400 text-yellow-400 drop-shadow-lg" />
-                          </motion.div>
-                        ))}
-                      </div>
-                      <span className="text-white font-bold">Highly Rated Instructor</span>
-                    </motion.div>
+                 <div className="text-white">
+                   <motion.h3 
+                     className="text-2xl sm:text-3xl font-bold mb-6 text-black bg-gradient-to-r from-yellow-300 to-amber-300 bg-clip-text text-transparent"
+                     whileHover={{ scale: 1.02 }}
+                   >
+                     🎭 Master Instructor & Artist
+                   </motion.h3>
+                   
+                   <div className="space-y-6">
+                     <p className="text-lg leading-relaxed text-gray-900 bg-white/90 p-4 rounded-lg">
+                       With <span className="font-bold text-purple-600">decades of experience</span> in classical dance and wellness, Manasa brings exceptional skills to her students. Her commitment to preserving traditional <span className="text-amber-600 font-semibold">Bharatanatyam</span> while making it accessible to modern students has made her one of the most respected instructors in the Bay Area.
+                     </p>
+                     
+                     <motion.div 
+                       className="flex items-center justify-center sm:justify-start space-x-4 p-4 bg-white/90 rounded-xl border border-purple-300"
+                       whileHover={{ scale: 1.05 }}
+                       transition={{ type: "spring", stiffness: 200 }}
+                     >
+                       <div className="flex items-center space-x-1">
+                         {[...Array(5)].map((_, i) => (
+                           <motion.div
+                             key={i}
+                             initial={{ scale: 0, rotate: -180 }}
+                             whileInView={{ scale: 1, rotate: 0 }}
+                             transition={{ delay: i * 0.1, type: "spring", stiffness: 200 }}
+                             viewport={{ once: true }}
+                           >
+                             <Star className="h-6 w-6 fill-yellow-400 text-yellow-400 drop-shadow-lg" />
+                           </motion.div>
+                         ))}
+                       </div>
+                       <span className="text-purple-700 font-bold">Highly Rated Instructor</span>
+                     </motion.div>
                     
                     <motion.div className="pt-4">
                       <ThemedButton
@@ -665,79 +668,147 @@ const Index = () => {
         </div>
       </section>
 
+      {/* SAMPADA University Partnership Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-100 via-yellow-100 to-amber-100 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-orange-400 to-amber-400 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <PerformanceCard className="bg-gradient-to-br from-white/90 to-orange-50/90 backdrop-blur-sm border-2 border-orange-200 p-8 shadow-2xl">
+              <motion.h2 
+                className="text-3xl sm:text-4xl font-bold mb-6 text-orange-800"
+                whileHover={{ scale: 1.02 }}
+              >
+                🏛️ SAMPADA University Partnership: From 2-Year Foundation to Certified Excellence
+              </motion.h2>
+              <Separator className="w-32 mx-auto bg-gradient-to-r from-orange-600 to-amber-600 h-1 mb-6" />
+              <p className="text-lg text-gray-700 leading-relaxed max-w-5xl mx-auto">
+                As a proud affiliate of <span className="font-bold text-orange-700">SAMPADA University (Silicon Andhra Music Performing Arts and Dance Academy)</span>, we offer students the opportunity to pursue formal dance examinations and university-recognized certifications. Our <span className="font-semibold text-amber-700">Level 1 examination requires a minimum of 2 years of foundational training</span> and mastery of basic steps, ensuring students enter the four-level certification pathway with solid technical foundations. Students earn <span className="font-bold text-orange-600">16 university credits per level</span> through our affiliation with <span className="text-purple-700 font-semibold">Potti Sreeramulu Telugu University</span>, a NAAC-accredited institution, working toward <span className="font-bold text-green-700">Junior Certification (Levels 1-2)</span> or <span className="font-bold text-blue-700">Senior Certification (Levels 1-4)</span> that provides valuable academic credentials for future educational pursuits.
+              </p>
+            </PerformanceCard>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Classes Section */}
-      <section id="classes" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Classes for All Levels</h2>
-            <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              NPAC offers dedicated instruction in Bharatanatyam for beginners, intermediate and advanced students. Using rhythmic footwork, geometric movements, coded hand gestures, and facial expressions to tell powerful stories and create intricate dance sequences, we help students develop their skills in both pure dance (nritta) and expressive dance (nritya). As a proud affiliate of SAMPADA University, we offer students the opportunity to pursue formal dance examinations and certifications, ensuring authentic training rooted in traditional methodology while providing recognized academic credentials.
+      <section id="classes" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-100 via-pink-100 to-indigo-100 relative overflow-hidden">
+        <ConfettiEffect />
+        <FloatingIcons />
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <motion.h2 
+              className="text-3xl sm:text-4xl font-bold mb-6"
+              whileHover={{ scale: 1.05 }}
+            >
+              🎨 <span className="text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 bg-clip-text">Classes for All Levels</span>
+            </motion.h2>
+            <Separator className="w-32 mx-auto bg-gradient-to-r from-purple-600 to-pink-600 h-1 mb-6" />
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              NPAC offers dedicated instruction in Bharatanatyam for beginners, intermediate and advanced students. Using rhythmic footwork, geometric movements, coded hand gestures, and facial expressions to tell powerful stories and create intricate dance sequences, we help students develop their skills in both pure dance (nritta) and expressive dance (nritya).
             </p>
-          </div>
+          </motion.div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center h-full">
-              <CardHeader>
-                <img 
+            <PerformanceCard delay={0.1} className="text-center bg-gradient-to-br from-purple-500 to-purple-700 text-white border-2 border-purple-300 shadow-2xl">
+              <CardHeader className="relative">
+                <motion.img 
                   src="/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png" 
                   alt="Bharatanatyam students of Manasa Nagaraj"
-                  className="w-full h-48 object-cover rounded-t-lg mb-4"
+                  className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 200 }}
                 />
-                <CardTitle className="text-purple-700">Beginner Classes</CardTitle>
+                <CardTitle className="text-yellow-300 text-xl font-bold">🌱 Beginner Classes</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
+                <p className="text-purple-100 leading-relaxed">
                   Students learn the basic dance steps (Adavus) during the first three years. In these important years, a strong foundation is built that helps students achieve perfection in later years. Classes are held twice a week for one hour each.
                 </p>
               </CardContent>
-            </Card>
+            </PerformanceCard>
 
-            <Card className="text-center h-full">
-              <CardHeader>
-                <img 
+            <PerformanceCard delay={0.2} className="text-center bg-gradient-to-br from-amber-500 to-orange-600 text-white border-2 border-amber-300 shadow-2xl">
+              <CardHeader className="relative">
+                <motion.img 
                   src="/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png" 
                   alt="Bharatanatyam students of Manasa Nagaraj"
-                  className="w-full h-48 object-cover rounded-t-lg mb-4"
+                  className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 200 }}
                 />
-                <CardTitle className="text-amber-700">Intermediate Classes</CardTitle>
+                <CardTitle className="text-yellow-100 text-xl font-bold">🌸 Intermediate Classes</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
+                <p className="text-amber-100 leading-relaxed">
                   For students who have learned adavus. Warm-up and adavu classes focus on developing and maintaining posture and core strength. Expressive items are introduced with devotional themes. Classes are held twice a week for one hour each.
                 </p>
               </CardContent>
-            </Card>
+            </PerformanceCard>
 
-            <Card className="text-center h-full">
-              <CardHeader>
-                <img 
+            <PerformanceCard delay={0.3} className="text-center bg-gradient-to-br from-pink-500 to-rose-600 text-white border-2 border-pink-300 shadow-2xl">
+              <CardHeader className="relative">
+                <motion.img 
                   src="/lovable-uploads/853fc79e-5fff-4635-9d9d-88bb107c6fae.png" 
                   alt="Bharatanatyam students of Manasa Nagaraj"
-                  className="w-full h-48 object-cover rounded-t-lg mb-4"
+                  className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 200 }}
                 />
-                <CardTitle className="text-purple-700">Advanced/Pre-Arangetram</CardTitle>
+                <CardTitle className="text-yellow-200 text-xl font-bold">🏆 Advanced/Pre-Arangetram</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
+                <p className="text-pink-100 leading-relaxed">
                   In the three to four years before the arangetram, complex varnams and other advanced items are taught and practiced.
                 </p>
               </CardContent>
-            </Card>
+            </PerformanceCard>
           </div>
         </div>
       </section>
 
       {/* Performance Showcase Section */}
-      <section id="showcase" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Performance Showcase</h2>
-            <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+      <section id="showcase" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-100 via-pink-100 to-purple-100 relative overflow-hidden">
+        <StageSpotlights />
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-red-400 to-pink-400 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-400 to-indigo-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <motion.h2 
+              className="text-3xl sm:text-4xl font-bold mb-6"
+              whileHover={{ scale: 1.05 }}
+            >
+              🎭 <span className="text-transparent bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text">Performance Showcase</span>
+            </motion.h2>
+            <Separator className="w-32 mx-auto bg-gradient-to-r from-red-600 to-purple-600 h-1 mb-6" />
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Experience the beauty and grace of Bharatanatyam through our performances and student showcases.
             </p>
-          </div>
+          </motion.div>
           
           <div className="aspect-video max-w-4xl mx-auto">
             <iframe 
@@ -984,88 +1055,120 @@ const Index = () => {
       </section>
 
       {/* Press Reviews Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Press Reviews</h2>
-            <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
-          </div>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-100 via-orange-100 to-red-100 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-orange-400 to-red-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <motion.h2 
+              className="text-3xl sm:text-4xl font-bold mb-6"
+              whileHover={{ scale: 1.05 }}
+            >
+              📰 <span className="text-transparent bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 bg-clip-text">Press Reviews</span>
+            </motion.h2>
+            <Separator className="w-32 mx-auto bg-gradient-to-r from-yellow-600 to-red-600 h-1 mb-6" />
+          </motion.div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center h-full">
+            <PerformanceCard delay={0.1} className="text-center bg-gradient-to-br from-yellow-400 to-orange-500 text-white border-2 border-yellow-300 shadow-2xl">
               <CardContent className="pt-6">
-                <p className="text-lg text-gray-600 italic mb-4">
+                <p className="text-lg text-yellow-100 italic mb-4 leading-relaxed">
                   "She is an amazing performer. I saw her dance at an event—gracious, expressive, and captivating. Loved it!"
                 </p>
-                <p className="text-purple-600 font-semibold">— Avani K.</p>
+                <p className="text-white font-bold text-lg">— Avani K.</p>
               </CardContent>
-            </Card>
+            </PerformanceCard>
 
-            <Card className="text-center h-full">
+            <PerformanceCard delay={0.2} className="text-center bg-gradient-to-br from-orange-500 to-red-500 text-white border-2 border-orange-300 shadow-2xl">
               <CardContent className="pt-6">
-                <p className="text-lg text-gray-600 italic mb-4">
+                <p className="text-lg text-orange-100 italic mb-4 leading-relaxed">
                   "Moving with felicity."
                 </p>
-                <p className="text-amber-600 font-semibold">— V. Nagaraj, The Hindu</p>
+                <p className="text-white font-bold text-lg">— V. Nagaraj, The Hindu</p>
               </CardContent>
-            </Card>
+            </PerformanceCard>
 
-            <Card className="text-center h-full">
+            <PerformanceCard delay={0.3} className="text-center bg-gradient-to-br from-red-500 to-pink-500 text-white border-2 border-red-300 shadow-2xl">
               <CardContent className="pt-6">
-                <p className="text-lg text-gray-600 italic mb-4">
+                <p className="text-lg text-red-100 italic mb-4 leading-relaxed">
                   "Dancing like a swan."
                 </p>
-                <p className="text-purple-600 font-semibold">— Prajavani, a leading Kannada-language newspaper from Karnataka</p>
+                <p className="text-white font-bold text-lg">— Prajavani, a leading Kannada-language newspaper from Karnataka</p>
               </CardContent>
-            </Card>
+            </PerformanceCard>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-amber-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Testimonials</h2>
-            <Separator className="w-24 mx-auto bg-purple-600 h-1 mb-6" />
-          </div>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-teal-100 via-cyan-100 to-blue-100 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-80 h-80 bg-gradient-to-br from-teal-400 to-cyan-400 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-cyan-400 to-blue-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <motion.h2 
+              className="text-3xl sm:text-4xl font-bold mb-6"
+              whileHover={{ scale: 1.05 }}
+            >
+              💬 <span className="text-transparent bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text">Testimonials</span>
+            </motion.h2>
+            <Separator className="w-32 mx-auto bg-gradient-to-r from-teal-600 to-blue-600 h-1 mb-6" />
+          </motion.div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="h-full">
+            <PerformanceCard delay={0.1} className="bg-gradient-to-br from-teal-500 to-cyan-600 text-white border-2 border-teal-300 shadow-2xl">
               <CardContent className="pt-6">
-                <p className="text-gray-600 mb-4">
+                <p className="text-teal-100 mb-4 leading-relaxed">
                   "Nrithyamanasa is an inspiring place to learn Bharatanatyam. I look forward to these classes every week. Manasa is an excellent dancer and a dedicated, passionate teacher. She is a skilled choreographer who tailors her work to the skill levels of her students. Manasa encourages cultural and artistic growth while providing motivational support in a friendly, joyful environment."
                 </p>
-                <p className="text-purple-600 font-semibold">— G.G / Krupa</p>
+                <p className="text-white font-bold text-lg">— G.G / Krupa</p>
               </CardContent>
-            </Card>
+            </PerformanceCard>
 
-            <Card className="h-full">
+            <PerformanceCard delay={0.2} className="bg-gradient-to-br from-cyan-500 to-blue-600 text-white border-2 border-cyan-300 shadow-2xl">
               <CardContent className="pt-6">
-                <p className="text-gray-600 mb-4">
+                <p className="text-cyan-100 mb-4 leading-relaxed">
                   "My daughter has been learning dance here for the past year, and I've seen significant improvement in her skills. She is always excited to attend her class. Ms. Manasa is an excellent Bharatanatyam dancer and ensures her students perform at a professional level on stage, giving them tremendous confidence at a young age. I highly recommend this dance school."
                 </p>
-                <p className="text-amber-600 font-semibold">— Gokul R.</p>
+                <p className="text-white font-bold text-lg">— Gokul R.</p>
               </CardContent>
-            </Card>
+            </PerformanceCard>
 
-            <Card className="h-full">
+            <PerformanceCard delay={0.3} className="bg-gradient-to-br from-blue-500 to-indigo-600 text-white border-2 border-blue-300 shadow-2xl">
               <CardContent className="pt-6">
-                <p className="text-gray-600 mb-4">
+                <p className="text-blue-100 mb-4 leading-relaxed">
                   "This is a wonderful studio to learn Indian classical dance. The teacher is professional, energetic, and highly skilled. I strongly recommend attending these classes—whether you are a beginner or advanced."
                 </p>
-                <p className="text-purple-600 font-semibold">— Renuka Sahane</p>
+                <p className="text-white font-bold text-lg">— Renuka Sahane</p>
               </CardContent>
-            </Card>
+            </PerformanceCard>
 
-            <Card className="h-full">
+            <PerformanceCard delay={0.4} className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white border-2 border-indigo-300 shadow-2xl">
               <CardContent className="pt-6">
-                <p className="text-gray-600 mb-4">
+                <p className="text-indigo-100 mb-4 leading-relaxed">
                   "My daughter has been taking Bharatanatyam classes here for the past two years, and she loves them. The classes combine beginners and intermediate-level students, which allows my daughter to also watch and learn from others. If you want your child to learn Bharatanatyam in its traditional form, this is the right place—a complete package. One of the best Bharatanatyam teachers in the Bay Area."
                 </p>
-                <p className="text-amber-600 font-semibold">— Ajay G.</p>
+                <p className="text-white font-bold text-lg">— Ajay G.</p>
               </CardContent>
-            </Card>
+            </PerformanceCard>
           </div>
         </div>
       </section>
