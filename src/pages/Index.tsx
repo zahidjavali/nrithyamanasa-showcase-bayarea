@@ -740,7 +740,7 @@ const Index = () => {
                 type: "spring",
                 stiffness: 200
               }} />
-                <CardTitle className="text-xl font-bold text-[#e71a46]">🌱 Beginner Classes</CardTitle>
+                <CardTitle className="text-xl font-bold text-yellow-100">🌱 Beginner Classes</CardTitle>
               </CardHeader>
               <CardContent className="bg-[#e71a46]">
                 <p className="text-purple-100 leading-relaxed">
@@ -777,7 +777,7 @@ const Index = () => {
                 <CardTitle className="text-yellow-200 text-xl font-bold">🏆 Advanced/Pre-Arangetram</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-pink-100 leading-relaxed">
+                <p className="leading-relaxed text-slate-50">
                   In the three to four years before the arangetram, complex varnams and other advanced items are taught and practiced.
                 </p>
               </CardContent>
