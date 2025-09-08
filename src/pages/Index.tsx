@@ -743,7 +743,7 @@ const Index = () => {
                 <CardTitle className="text-xl font-bold text-yellow-200">🌱 Beginner Classes</CardTitle>
               </CardHeader>
               <CardContent className="bg-[#e71a46]">
-                <p className="text-purple-100 leading-relaxed">
+                <p className="text-purple-100 leading-relaxed my-[10px]">
                   Students learn the basic dance steps (Adavus) during the first three years. In these important years, a strong foundation is built that helps students achieve perfection in later years. Classes are held twice a week for one hour each.
                 </p>
               </CardContent>
@@ -760,7 +760,7 @@ const Index = () => {
                 <CardTitle className="text-xl font-bold text-yellow-200">🌸 Intermediate Classes</CardTitle>
               </CardHeader>
               <CardContent className="bg-[#e71a46]">
-                <p className="leading-relaxed text-slate-50">
+                <p className="leading-relaxed text-slate-50 my-[10px]">
                   For students who have learned adavus. Warm-up and adavu classes focus on developing and maintaining posture and core strength. Expressive items are introduced with devotional themes. Classes are held twice a week for one hour each.
                 </p>
               </CardContent>
@@ -777,7 +777,7 @@ const Index = () => {
                 <CardTitle className="text-yellow-200 text-xl font-bold">🏆 Advanced/Pre-Arangetram</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="leading-relaxed text-slate-50">
+                <p className="leading-relaxed text-slate-50 mx-0 px-0 my-[10px]">
                   In the three to four years before the arangetram, complex varnams and other advanced items are taught and practiced.
                 </p>
               </CardContent>
