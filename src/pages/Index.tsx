@@ -733,14 +733,14 @@ const Index = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <PerformanceCard delay={0.1} className="text-center bg-gradient-to-br from-purple-500 to-purple-700 text-white border-2 border-purple-300 shadow-2xl">
-              <CardHeader className="relative">
+              <CardHeader className="relative bg-[#0a0005]">
                 <motion.img src="/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png" alt="Bharatanatyam students of Manasa Nagaraj" className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30" whileHover={{
                 scale: 1.05
               }} transition={{
                 type: "spring",
                 stiffness: 200
               }} />
-                <CardTitle className="text-yellow-300 text-xl font-bold">🌱 Beginner Classes</CardTitle>
+                <CardTitle className="text-xl font-bold text-[#e71a46]">🌱 Beginner Classes</CardTitle>
               </CardHeader>
               <CardContent className="bg-[#e71a46]">
                 <p className="text-purple-100 leading-relaxed">
@@ -750,7 +750,7 @@ const Index = () => {
             </PerformanceCard>
 
             <PerformanceCard delay={0.2} className="text-center bg-gradient-to-br from-amber-500 to-orange-600 text-white border-2 border-amber-300 shadow-2xl">
-              <CardHeader className="relative">
+              <CardHeader className="relative bg-[#0e0d0d]">
                 <motion.img src="/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png" alt="Bharatanatyam students of Manasa Nagaraj" className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30" whileHover={{
                 scale: 1.05
               }} transition={{
@@ -759,15 +759,15 @@ const Index = () => {
               }} />
                 <CardTitle className="text-yellow-100 text-xl font-bold">🌸 Intermediate Classes</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-amber-100 leading-relaxed">
+              <CardContent className="bg-[#e71a46]">
+                <p className="leading-relaxed text-slate-50">
                   For students who have learned adavus. Warm-up and adavu classes focus on developing and maintaining posture and core strength. Expressive items are introduced with devotional themes. Classes are held twice a week for one hour each.
                 </p>
               </CardContent>
             </PerformanceCard>
 
             <PerformanceCard delay={0.3} className="text-center bg-gradient-to-br from-pink-500 to-rose-600 text-white border-2 border-pink-300 shadow-2xl">
-              <CardHeader className="relative">
+              <CardHeader className="relative bg-slate-950">
                 <motion.img src="/lovable-uploads/853fc79e-5fff-4635-9d9d-88bb107c6fae.png" alt="Bharatanatyam students of Manasa Nagaraj" className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30" whileHover={{
                 scale: 1.05
               }} transition={{
