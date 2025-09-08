@@ -390,7 +390,7 @@ const Index = () => {
               }}>
                   <Calendar className="h-10 w-10 text-white" />
                 </motion.div>
-                <CardTitle className="text-purple-700 text-xl font-bold">📅 Date & Time</CardTitle>
+                <CardTitle className="text-xl font-bold text-yellow-200">📅 Date & Time</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 mb-2 font-semibold text-lg">September 21st, 2025</p>
@@ -411,7 +411,7 @@ const Index = () => {
               }}>
                   <MapPin className="h-10 w-10 text-white" />
                 </motion.div>
-                <CardTitle className="text-amber-700 text-xl font-bold">📍 Venue</CardTitle>
+                <CardTitle className="text-xl font-bold text-yellow-200">📍 Venue</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 font-semibold text-lg">Mission City Center</p>
@@ -433,7 +433,7 @@ const Index = () => {
               }}>
                   <Music className="h-10 w-10 text-white" />
                 </motion.div>
-                <CardTitle className="text-pink-700 text-xl font-bold">🎵 Performances</CardTitle>
+                <CardTitle className="text-xl font-bold text-yellow-200">🎵 Performances</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 text-lg leading-relaxed">Classical Bharatanatyam recitals, themed productions, and student showcases</p>
