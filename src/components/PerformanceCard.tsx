@@ -34,7 +34,7 @@ export const PerformanceCard = ({
   }}>
       {/* Decorative border effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 rounded-2xl blur-sm opacity-20" />
-      <div className="absolute inset-0.5 rounded-2xl bg-[#e71a46]" />
+      <div className="absolute inset-0.5 rounded-2xl bg-amber-950" />
       
       {/* Content */}
       <div className="relative z-10 bg-inherit">
