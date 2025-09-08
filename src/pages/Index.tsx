@@ -393,8 +393,8 @@ const Index = () => {
                 <CardTitle className="text-xl font-bold text-yellow-200">📅 Date & Time</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-700 mb-2 font-semibold text-lg">September 21st, 2025</p>
-                <p className="text-gray-600 text-lg">3:30 PM - 5:30 PM</p>
+                <p className="mb-2 font-semibold text-lg text-gray-50">September 21st, 2025</p>
+                <p className="text-lg text-gray-50">3:30 PM - 5:30 PM</p>
                 <div className="mt-4 p-3 bg-purple-50 rounded-lg">
                   <p className="text-sm text-purple-700">Mark your calendars! 📝</p>
                 </div>
@@ -414,9 +414,9 @@ const Index = () => {
                 <CardTitle className="text-xl font-bold text-yellow-200">📍 Venue</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-700 font-semibold text-lg">Mission City Center</p>
-                <p className="text-gray-700 font-semibold">For Performing Arts</p>
-                <p className="text-gray-600 text-sm mt-2">Santa Clara, CA</p>
+                <p className="font-semibold text-lg text-gray-50">Mission City Center</p>
+                <p className="font-semibold text-gray-50">For Performing Arts</p>
+                <p className="text-sm mt-2 text-gray-50">Santa Clara, CA</p>
                 <div className="mt-4 p-3 bg-amber-50 rounded-lg">
                   <p className="text-sm text-amber-700">World-class venue! 🎭</p>
                 </div>
@@ -436,7 +436,7 @@ const Index = () => {
                 <CardTitle className="text-xl font-bold text-yellow-200">🎵 Performances</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-700 text-lg leading-relaxed">Classical Bharatanatyam recitals, themed productions, and student showcases</p>
+                <p className="text-lg leading-relaxed text-gray-50">Classical Bharatanatyam recitals, themed productions, and student showcases</p>
                 <div className="mt-4 p-3 bg-pink-50 rounded-lg">
                   <p className="text-sm text-pink-700">Pure artistic magic! ✨</p>
                 </div>
@@ -742,7 +742,7 @@ const Index = () => {
               }} />
                 <CardTitle className="text-xl font-bold text-yellow-200">🌱 Beginner Classes</CardTitle>
               </CardHeader>
-              <CardContent className="bg-[#e71a46]">
+              <CardContent className="bg-inherit">
                 <p className="text-purple-100 leading-relaxed my-[10px]">
                   Students learn the basic dance steps (Adavus) during the first three years. In these important years, a strong foundation is built that helps students achieve perfection in later years. Classes are held twice a week for one hour each.
                 </p>
@@ -759,7 +759,7 @@ const Index = () => {
               }} />
                 <CardTitle className="text-xl font-bold text-yellow-200">🌸 Intermediate Classes</CardTitle>
               </CardHeader>
-              <CardContent className="bg-[#e71a46]">
+              <CardContent className="bg-inherit">
                 <p className="leading-relaxed text-slate-50 my-[10px]">
                   For students who have learned adavus. Warm-up and adavu classes focus on developing and maintaining posture and core strength. Expressive items are introduced with devotional themes. Classes are held twice a week for one hour each.
                 </p>
