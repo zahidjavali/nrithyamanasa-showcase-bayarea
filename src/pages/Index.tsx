@@ -740,7 +740,7 @@ const Index = () => {
                 type: "spring",
                 stiffness: 200
               }} />
-                <CardTitle className="text-xl font-bold text-yellow-100">🌱 Beginner Classes</CardTitle>
+                <CardTitle className="text-xl font-bold text-yellow-200">🌱 Beginner Classes</CardTitle>
               </CardHeader>
               <CardContent className="bg-[#e71a46]">
                 <p className="text-purple-100 leading-relaxed">
@@ -757,7 +757,7 @@ const Index = () => {
                 type: "spring",
                 stiffness: 200
               }} />
-                <CardTitle className="text-yellow-100 text-xl font-bold">🌸 Intermediate Classes</CardTitle>
+                <CardTitle className="text-xl font-bold text-yellow-200">🌸 Intermediate Classes</CardTitle>
               </CardHeader>
               <CardContent className="bg-[#e71a46]">
                 <p className="leading-relaxed text-slate-50">
