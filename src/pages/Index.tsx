@@ -689,14 +689,14 @@ const Index = () => {
           once: true
         }}>
             <PerformanceCard className="bg-gradient-to-br from-white/90 to-orange-50/90 backdrop-blur-sm border-2 border-orange-200 p-8 shadow-2xl">
-              <motion.h2 className="text-3xl sm:text-4xl font-bold mb-6 text-orange-800" whileHover={{
+              <motion.h2 whileHover={{
               scale: 1.02
-            }}>
+            }} className="text-3xl sm:text-4xl font-bold mb-6 text-yellow-200">
                 🏛️ SAMPADA University Partnership: From 2-Year Foundation to Certified Excellence
               </motion.h2>
               <Separator className="w-32 mx-auto bg-gradient-to-r from-orange-600 to-amber-600 h-1 mb-6" />
               <p className="text-lg text-gray-700 leading-relaxed max-w-5xl mx-auto">
-                As a proud affiliate of <span className="font-bold text-orange-700">SAMPADA University (Silicon Andhra Music Performing Arts and Dance Academy)</span>, we offer students the opportunity to pursue formal dance examinations and university-recognized certifications. Our <span className="font-semibold text-amber-700">Level 1 examination requires a minimum of 2 years of foundational training</span> and mastery of basic steps, ensuring students enter the four-level certification pathway with solid technical foundations. Students earn <span className="font-bold text-orange-600">16 university credits per level</span> through our affiliation with <span className="text-purple-700 font-semibold">Potti Sreeramulu Telugu University</span>, a NAAC-accredited institution, working toward <span className="font-bold text-green-700">Junior Certification (Levels 1-2)</span> or <span className="font-bold text-blue-700">Senior Certification (Levels 1-4)</span> that provides valuable academic credentials for future educational pursuits.
+                As a proud affiliate of <span className="font-bold text-yellow-200">SAMPADA University (Silicon Andhra Music Performing Arts and Dance Academy)</span>, we offer students the opportunity to pursue formal dance examinations and university-recognized certifications. Our <span className="font-semibold text-amber-700">Level 1 examination requires a minimum of 2 years of foundational training</span> and mastery of basic steps, ensuring students enter the four-level certification pathway with solid technical foundations. Students earn <span className="font-bold text-orange-600">16 university credits per level</span> through our affiliation with <span className="text-purple-700 font-semibold">Potti Sreeramulu Telugu University</span>, a NAAC-accredited institution, working toward <span className="font-bold text-green-700">Junior Certification (Levels 1-2)</span> or <span className="font-bold text-blue-700">Senior Certification (Levels 1-4)</span> that provides valuable academic credentials for future educational pursuits.
               </p>
             </PerformanceCard>
           </motion.div>
