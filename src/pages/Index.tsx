@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,22 +11,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { HeroSlider } from "@/components/HeroSlider";
 import { ConfettiEffect, FloatingIcons, TheaterCurtains, RedCarpet, StageSpotlights } from "@/components/TheatricalEffects";
 import { PerformanceCard, ThemedButton } from "@/components/PerformanceCard";
-
 const Index = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const heroImages = [
-    "/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png",
-    "/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png", 
-    "/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png",
-    "/lovable-uploads/853fc79e-5fff-4635-9d9d-88bb107c6fae.png",
-    "/lovable-uploads/f9cfedfe-4f86-49ae-96a3-625c6e9c9b48.png"
-  ];
-
+  const heroImages = ["/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png", "/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png", "/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png", "/lovable-uploads/853fc79e-5fff-4635-9d9d-88bb107c6fae.png", "/lovable-uploads/f9cfedfe-4f86-49ae-96a3-625c6e9c9b48.png"];
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -36,34 +25,29 @@ const Index = () => {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is Bharatanatyam?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Bharatanatyam is a classical dance form from South India that evolved over centuries in temples and royal courts. It uses beautiful body movements, hand gestures, and facial expressions to tell stories."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the minimum age to start learning Bharatanatyam?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The best age to start is 5 years and above. We teach children using fun and easy methods to help them learn the rhythms, music, and movements of Bharatanatyam."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long and how many times a week are the classes?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Classes are one hour long and held once or twice a week based on what students prefer. Please check our Classes page for the schedule."
-        }
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "What is Bharatanatyam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bharatanatyam is a classical dance form from South India that evolved over centuries in temples and royal courts. It uses beautiful body movements, hand gestures, and facial expressions to tell stories."
       }
-    ]
+    }, {
+      "@type": "Question",
+      "name": "What is the minimum age to start learning Bharatanatyam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best age to start is 5 years and above. We teach children using fun and easy methods to help them learn the rhythms, music, and movements of Bharatanatyam."
+      }
+    }, {
+      "@type": "Question",
+      "name": "How long and how many times a week are the classes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Classes are one hour long and held once or twice a week based on what students prefer. Please check our Classes page for the schedule."
+      }
+    }]
   };
-
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "DanceSchool",
@@ -84,58 +68,46 @@ const Index = () => {
       "@type": "Person",
       "name": "Manasa Nagaraj"
     },
-    "offers": [
-      {
-        "@type": "Service",
-        "name": "Beginner Bharatanatyam Classes",
-        "description": "Foundation classes for students aged 5 and above"
-      },
-      {
-        "@type": "Service",
-        "name": "Intermediate Bharatanatyam Classes",
-        "description": "Classes for students who have learned basic steps"
-      },
-      {
-        "@type": "Service",
-        "name": "Advanced Bharatanatyam Classes",
-        "description": "Pre-Arangetram training for advanced students"
-      }
-    ]
+    "offers": [{
+      "@type": "Service",
+      "name": "Beginner Bharatanatyam Classes",
+      "description": "Foundation classes for students aged 5 and above"
+    }, {
+      "@type": "Service",
+      "name": "Intermediate Bharatanatyam Classes",
+      "description": "Classes for students who have learned basic steps"
+    }, {
+      "@type": "Service",
+      "name": "Advanced Bharatanatyam Classes",
+      "description": "Pre-Arangetram training for advanced students"
+    }]
   };
-
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "About Manasa",
-        "item": "/about-manasa"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Performances",
-        "item": "/performances"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "name": "Press Gallery",
-        "item": "/press-gallery"
-      }
-    ]
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "/"
+    }, {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About Manasa",
+      "item": "/about-manasa"
+    }, {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Performances",
+      "item": "/performances"
+    }, {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Press Gallery",
+      "item": "/press-gallery"
+    }]
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-amber-50 relative overflow-hidden">
+  return <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-amber-50 relative overflow-hidden">
       <Helmet>
         <title>Nrithyamanasa - Premier Bharatanatyam Academy in Santa Clara</title>
         <meta name="description" content="Learn classical Indian dance Bharatanatyam with master instructor Manasa Nagaraj at Santa Clara's premier dance academy. Classes for all levels from beginner to advanced." />
@@ -149,18 +121,15 @@ const Index = () => {
         <meta name="twitter:image" content="/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png" />
         <link rel="canonical" href="https://manasanagaraj.netlify.app/" />
       </Helmet>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+      __html: JSON.stringify(faqSchema)
+    }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+      __html: JSON.stringify(localBusinessSchema)
+    }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+      __html: JSON.stringify(breadcrumbSchema)
+    }} />
 
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-purple-200 shadow-2xl">
@@ -168,13 +137,13 @@ const Index = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link to="/">
-                <motion.img 
-                  src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
-                  alt="Nrithyamanasa Logo" 
-                  className="h-8 sm:h-10 w-auto cursor-pointer"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                />
+                <motion.img src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" alt="Nrithyamanasa Logo" className="h-8 sm:h-10 w-auto cursor-pointer" whileHover={{
+                scale: 1.1,
+                rotate: 5
+              }} transition={{
+                type: "spring",
+                stiffness: 300
+              }} />
               </Link>
             </div>
             
@@ -204,12 +173,9 @@ const Index = () => {
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <motion.button
-                onClick={toggleMobileMenu}
-                className="text-gray-700 hover:text-purple-600 transition-colors p-2 rounded-lg hover:bg-purple-50"
-                aria-label="Toggle mobile menu"
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.button onClick={toggleMobileMenu} className="text-gray-700 hover:text-purple-600 transition-colors p-2 rounded-lg hover:bg-purple-50" aria-label="Toggle mobile menu" whileTap={{
+              scale: 0.95
+            }}>
                 {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </motion.button>
             </div>
@@ -217,58 +183,46 @@ const Index = () => {
 
           {/* Mobile Navigation Menu */}
           <AnimatePresence>
-            {isMobileMenuOpen && (
-              <motion.div 
-                className="md:hidden"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-              >
+            {isMobileMenuOpen && <motion.div className="md:hidden" initial={{
+            opacity: 0,
+            height: 0
+          }} animate={{
+            opacity: 1,
+            height: "auto"
+          }} exit={{
+            opacity: 0,
+            height: 0
+          }} transition={{
+            duration: 0.3
+          }}>
                 <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-sm border-t border-purple-100 rounded-b-lg">
                   <span className="block px-3 py-2 text-purple-600 font-semibold">HOME</span>
-                  <Link 
-                    to="/about-manasa" 
-                    className="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
+                  <Link to="/about-manasa" className="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                     ABOUT MANASA
                   </Link>
-                  <Link 
-                    to="/performances" 
-                    className="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
+                  <Link to="/performances" className="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                     PERFORMANCES
                   </Link>
-                  <Link 
-                    to="/press-gallery" 
-                    className="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
+                  <Link to="/press-gallery" className="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                     PRESS GALLERY
                   </Link>
-                  <button 
-                    className="block w-full text-left px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setIsMobileMenuOpen(false);
-                      setTimeout(() => {
-                        const contactSection = document.getElementById('contact');
-                        if (contactSection) {
-                          contactSection.scrollIntoView({ 
-                            behavior: 'smooth',
-                            block: 'start'
-                          });
-                        }
-                      }, 300);
-                    }}
-                  >
+                  <button className="block w-full text-left px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors" onClick={e => {
+                e.preventDefault();
+                setIsMobileMenuOpen(false);
+                setTimeout(() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }
+                }, 300);
+              }}>
                     CONTACT
                   </button>
                 </div>
-              </motion.div>
-            )}
+              </motion.div>}
           </AnimatePresence>
         </div>
       </nav>
@@ -284,23 +238,30 @@ const Index = () => {
         {/* Theatrical Background Effects */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-3xl animate-pulse" style={{
+          animationDelay: '1s'
+        }}></div>
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
-          <motion.div
-            className="text-center mb-8 sm:mb-12"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-          >
+          <motion.div className="text-center mb-8 sm:mb-12" initial={{
+          opacity: 0,
+          y: 50
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 1
+        }} viewport={{
+          once: true
+        }}>
             {/* Main Event Title */}
-            <motion.div 
-              className="relative inline-block mb-6"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 200 }}
-            >
+            <motion.div className="relative inline-block mb-6" whileHover={{
+            scale: 1.05
+          }} transition={{
+            type: "spring",
+            stiffness: 200
+          }}>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-2xl">
                 <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-amber-300 bg-clip-text text-transparent">
                   Nrithya Taranga 2025
@@ -308,39 +269,51 @@ const Index = () => {
               </h1>
               
               {/* Decorative elements around title */}
-              <motion.div
-                className="absolute -top-6 -left-6 text-yellow-300"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-              >
+              <motion.div className="absolute -top-6 -left-6 text-yellow-300" animate={{
+              rotate: 360
+            }} transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear"
+            }}>
                 <Theater className="w-8 h-8 sm:w-12 sm:h-12" />
               </motion.div>
-              <motion.div
-                className="absolute -top-6 -right-6 text-pink-300"
-                animate={{ rotate: -360 }}
-                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-              >
+              <motion.div className="absolute -top-6 -right-6 text-pink-300" animate={{
+              rotate: -360
+            }} transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear"
+            }}>
                 <Mic className="w-8 h-8 sm:w-12 sm:h-12" />
               </motion.div>
             </motion.div>
 
-            <motion.p 
-              className="text-lg sm:text-xl md:text-2xl mb-8 max-w-4xl mx-auto font-medium leading-relaxed drop-shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <motion.p className="text-lg sm:text-xl md:text-2xl mb-8 max-w-4xl mx-auto font-medium leading-relaxed drop-shadow-lg" initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            delay: 0.3,
+            duration: 0.8
+          }} viewport={{
+            once: true
+          }}>
               Join us for an enchanting evening of classical <span className="text-yellow-300 font-bold">Bharatanatyam</span> performances featuring talented students and special guests.
             </motion.p>
 
-            <motion.div 
-              className="text-base sm:text-lg mb-8 text-amber-100 max-w-3xl mx-auto"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-base sm:text-lg mb-8 text-amber-100 max-w-3xl mx-auto" initial={{
+            opacity: 0
+          }} whileInView={{
+            opacity: 1
+          }} transition={{
+            delay: 0.5,
+            duration: 0.8
+          }} viewport={{
+            once: true
+          }}>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-4">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-5 h-5 text-yellow-300" />
@@ -357,24 +330,22 @@ const Index = () => {
               </div>
             </motion.div>
 
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <ThemedButton
-                onClick={() => window.open('https://www.eventbrite.com/e/nrithya-taranga-2025-shakti-tickets-1598078137729?aff=oddtdtcreator', '_blank')}
-                className="text-lg px-8 py-4 min-w-[200px]"
-              >
+            <motion.div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center" initial={{
+            opacity: 0,
+            scale: 0.8
+          }} whileInView={{
+            opacity: 1,
+            scale: 1
+          }} transition={{
+            delay: 0.7,
+            duration: 0.8
+          }} viewport={{
+            once: true
+          }}>
+              <ThemedButton onClick={() => window.open('https://www.eventbrite.com/e/nrithya-taranga-2025-shakti-tickets-1598078137729?aff=oddtdtcreator', '_blank')} className="text-lg px-8 py-4 min-w-[200px]">
                 🎟️ Reserve Tickets
               </ThemedButton>
-              <ThemedButton
-                variant="secondary"
-                onClick={() => window.location.href = '/about-manasa'}
-                className="text-lg px-8 py-4 min-w-[200px]"
-              >
+              <ThemedButton variant="secondary" onClick={() => window.location.href = '/about-manasa'} className="text-lg px-8 py-4 min-w-[200px]">
                 ✨ About Manasa
               </ThemedButton>
             </motion.div>
@@ -392,13 +363,17 @@ const Index = () => {
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <motion.div className="text-center mb-12" initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8
+        }} viewport={{
+          once: true
+        }}>
             <h2 className="text-3xl sm:text-4xl font-bold text-purple-900 mb-6">
               Event <span className="text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">Highlights</span>
             </h2>
@@ -408,11 +383,11 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <PerformanceCard delay={0.1} className="text-center">
               <CardHeader className="relative">
-                <motion.div 
-                  className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl"
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 1 }}
-                >
+                <motion.div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl" whileHover={{
+                rotate: 360
+              }} transition={{
+                duration: 1
+              }}>
                   <Calendar className="h-10 w-10 text-white" />
                 </motion.div>
                 <CardTitle className="text-purple-700 text-xl font-bold">📅 Date & Time</CardTitle>
@@ -428,11 +403,12 @@ const Index = () => {
 
             <PerformanceCard delay={0.2} className="text-center">
               <CardHeader className="relative">
-                <motion.div 
-                  className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-2xl"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
+                <motion.div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-2xl" whileHover={{
+                scale: 1.1
+              }} transition={{
+                type: "spring",
+                stiffness: 300
+              }}>
                   <MapPin className="h-10 w-10 text-white" />
                 </motion.div>
                 <CardTitle className="text-amber-700 text-xl font-bold">📍 Venue</CardTitle>
@@ -449,14 +425,12 @@ const Index = () => {
 
             <PerformanceCard delay={0.3} className="text-center">
               <CardHeader className="relative">
-                <motion.div 
-                  className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center shadow-2xl"
-                  whileHover={{ 
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 10, -10, 0]
-                  }}
-                  transition={{ duration: 0.8 }}
-                >
+                <motion.div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center shadow-2xl" whileHover={{
+                scale: [1, 1.1, 1],
+                rotate: [0, 10, -10, 0]
+              }} transition={{
+                duration: 0.8
+              }}>
                   <Music className="h-10 w-10 text-white" />
                 </motion.div>
                 <CardTitle className="text-pink-700 text-xl font-bold">🎵 Performances</CardTitle>
@@ -477,23 +451,32 @@ const Index = () => {
         {/* Theatrical background effects */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-rose-400/20 to-red-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse" style={{
+          animationDelay: '2s'
+        }}></div>
+          <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-rose-400/20 to-red-400/20 rounded-full blur-3xl animate-pulse" style={{
+          animationDelay: '1s'
+        }}></div>
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <motion.h2 
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 200 }}
-            >
+          <motion.div className="text-center mb-12" initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8
+        }} viewport={{
+          once: true
+        }}>
+            <motion.h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6" whileHover={{
+            scale: 1.05
+          }} transition={{
+            type: "spring",
+            stiffness: 200
+          }}>
               Meet <span className="text-transparent bg-gradient-to-r from-yellow-300 via-pink-300 to-amber-300 bg-clip-text">Manasa Nagaraj</span>
             </motion.h2>
             <Separator className="w-32 mx-auto bg-gradient-to-r from-yellow-400 to-pink-400 h-1 mb-6" />
@@ -505,19 +488,22 @@ const Index = () => {
           </motion.div>
           
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="order-2 lg:order-1"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            x: -50
+          }} whileInView={{
+            opacity: 1,
+            x: 0
+          }} transition={{
+            duration: 0.8
+          }} viewport={{
+            once: true
+          }} className="order-2 lg:order-1">
               <PerformanceCard className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-6 sm:p-8">
                  <div className="text-white">
-                   <motion.h3 
-                     className="text-2xl sm:text-3xl font-bold mb-6 text-black bg-gradient-to-r from-yellow-300 to-amber-300 bg-clip-text text-transparent"
-                     whileHover={{ scale: 1.02 }}
-                   >
+                   <motion.h3 className="text-2xl sm:text-3xl font-bold mb-6 text-black bg-gradient-to-r from-yellow-300 to-amber-300 bg-clip-text text-transparent" whileHover={{
+                  scale: 1.02
+                }}>
                      🎭 Master Instructor & Artist
                    </motion.h3>
                    
@@ -526,32 +512,34 @@ const Index = () => {
                        With <span className="font-bold text-purple-600">decades of experience</span> in classical dance and wellness, Manasa brings exceptional skills to her students. Her commitment to preserving traditional <span className="text-amber-600 font-semibold">Bharatanatyam</span> while making it accessible to modern students has made her one of the most respected instructors in the Bay Area.
                      </p>
                      
-                     <motion.div 
-                       className="flex items-center justify-center sm:justify-start space-x-4 p-4 bg-white/90 rounded-xl border border-purple-300"
-                       whileHover={{ scale: 1.05 }}
-                       transition={{ type: "spring", stiffness: 200 }}
-                     >
+                     <motion.div className="flex items-center justify-center sm:justify-start space-x-4 p-4 bg-white/90 rounded-xl border border-purple-300" whileHover={{
+                    scale: 1.05
+                  }} transition={{
+                    type: "spring",
+                    stiffness: 200
+                  }}>
                        <div className="flex items-center space-x-1">
-                         {[...Array(5)].map((_, i) => (
-                           <motion.div
-                             key={i}
-                             initial={{ scale: 0, rotate: -180 }}
-                             whileInView={{ scale: 1, rotate: 0 }}
-                             transition={{ delay: i * 0.1, type: "spring", stiffness: 200 }}
-                             viewport={{ once: true }}
-                           >
+                         {[...Array(5)].map((_, i) => <motion.div key={i} initial={{
+                        scale: 0,
+                        rotate: -180
+                      }} whileInView={{
+                        scale: 1,
+                        rotate: 0
+                      }} transition={{
+                        delay: i * 0.1,
+                        type: "spring",
+                        stiffness: 200
+                      }} viewport={{
+                        once: true
+                      }}>
                              <Star className="h-6 w-6 fill-yellow-400 text-yellow-400 drop-shadow-lg" />
-                           </motion.div>
-                         ))}
+                           </motion.div>)}
                        </div>
                        <span className="text-purple-700 font-bold">Highly Rated Instructor</span>
                      </motion.div>
                     
                     <motion.div className="pt-4">
-                      <ThemedButton
-                        onClick={() => window.location.href = '/about-manasa'}
-                        className="w-full sm:w-auto text-lg px-8 py-4"
-                      >
+                      <ThemedButton onClick={() => window.location.href = '/about-manasa'} className="w-full sm:w-auto text-lg px-8 py-4">
                         🌟 Discover Her Journey
                       </ThemedButton>
                     </motion.div>
@@ -560,102 +548,116 @@ const Index = () => {
               </PerformanceCard>
             </motion.div>
             
-            <motion.div 
-              className="text-center order-1 lg:order-2"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <motion.div className="text-center order-1 lg:order-2" initial={{
+            opacity: 0,
+            x: 50
+          }} whileInView={{
+            opacity: 1,
+            x: 0
+          }} transition={{
+            duration: 0.8
+          }} viewport={{
+            once: true
+          }}>
               <div className="relative inline-block">
-                <motion.div 
-                  className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto mb-6 overflow-hidden rounded-full border-4 border-gradient-to-r from-yellow-400 to-pink-400 shadow-2xl"
-                  whileHover={{ scale: 1.05, rotate: 3 }}
-                  transition={{ type: "spring", stiffness: 200 }}
-                  style={{
-                    borderImage: "linear-gradient(45deg, #fbbf24, #ec4899) 1"
-                  }}
-                >
-                  <img 
-                    src="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" 
-                    alt="Manasa Nagaraj - Master Bharatanatyam Instructor"
-                    className="w-full h-full object-cover"
-                    loading="eager"
-                  />
+                <motion.div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto mb-6 overflow-hidden rounded-full border-4 border-gradient-to-r from-yellow-400 to-pink-400 shadow-2xl" whileHover={{
+                scale: 1.05,
+                rotate: 3
+              }} transition={{
+                type: "spring",
+                stiffness: 200
+              }} style={{
+                borderImage: "linear-gradient(45deg, #fbbf24, #ec4899) 1"
+              }}>
+                  <img src="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" alt="Manasa Nagaraj - Master Bharatanatyam Instructor" className="w-full h-full object-cover" loading="eager" />
                 </motion.div>
                 
                 {/* Multiple rotating glows */}
-                <motion.div 
-                  className="absolute -inset-6 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 rounded-full blur-xl opacity-30"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                />
-                <motion.div 
-                  className="absolute -inset-8 bg-gradient-to-r from-yellow-400 via-red-400 to-purple-400 rounded-full blur-2xl opacity-20"
-                  animate={{ rotate: -360 }}
-                  transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                />
+                <motion.div className="absolute -inset-6 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 rounded-full blur-xl opacity-30" animate={{
+                rotate: 360
+              }} transition={{
+                duration: 20,
+                repeat: Infinity,
+                ease: "linear"
+              }} />
+                <motion.div className="absolute -inset-8 bg-gradient-to-r from-yellow-400 via-red-400 to-purple-400 rounded-full blur-2xl opacity-20" animate={{
+                rotate: -360
+              }} transition={{
+                duration: 30,
+                repeat: Infinity,
+                ease: "linear"
+              }} />
                 
                 {/* Floating decorative elements */}
-                <motion.div
-                  className="absolute -top-8 -right-8 text-yellow-300 bg-white/10 backdrop-blur-sm rounded-full p-3"
-                  animate={{ 
-                    rotate: [0, 360],
-                    y: [0, -10, 0]
-                  }}
-                  transition={{ 
-                    rotate: { duration: 8, repeat: Infinity, ease: "linear" },
-                    y: { duration: 3, repeat: Infinity, ease: "easeInOut" }
-                  }}
-                >
+                <motion.div className="absolute -top-8 -right-8 text-yellow-300 bg-white/10 backdrop-blur-sm rounded-full p-3" animate={{
+                rotate: [0, 360],
+                y: [0, -10, 0]
+              }} transition={{
+                rotate: {
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "linear"
+                },
+                y: {
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }
+              }}>
                   <Award className="w-8 h-8" />
                 </motion.div>
                 
-                <motion.div
-                  className="absolute -bottom-4 -left-4 text-pink-300 bg-white/10 backdrop-blur-sm rounded-full p-2"
-                  animate={{ 
-                    scale: [1, 1.2, 1],
-                    rotate: [0, 180, 360]
-                  }}
-                  transition={{ 
-                    duration: 4, 
-                    repeat: Infinity, 
-                    ease: "easeInOut" 
-                  }}
-                >
+                <motion.div className="absolute -bottom-4 -left-4 text-pink-300 bg-white/10 backdrop-blur-sm rounded-full p-2" animate={{
+                scale: [1, 1.2, 1],
+                rotate: [0, 180, 360]
+              }} transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}>
                   <Heart className="w-6 h-6" />
                 </motion.div>
               </div>
               
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-                viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              delay: 0.3,
+              duration: 0.8
+            }} viewport={{
+              once: true
+            }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <h4 className="text-xl sm:text-2xl font-bold text-yellow-300 mb-2">Manasa Nagaraj</h4>
                 <p className="text-gray-200 font-medium text-lg">Artistic Director & Master Instructor</p>
                 <div className="mt-4 flex justify-center space-x-4">
-                  <motion.div 
-                    className="text-pink-300"
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  >
+                  <motion.div className="text-pink-300" animate={{
+                  scale: [1, 1.2, 1]
+                }} transition={{
+                  duration: 2,
+                  repeat: Infinity
+                }}>
                     🎵
                   </motion.div>
-                  <motion.div 
-                    className="text-yellow-300"
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                  >
+                  <motion.div className="text-yellow-300" animate={{
+                  scale: [1, 1.2, 1]
+                }} transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  delay: 0.5
+                }}>
                     ✨
                   </motion.div>
-                  <motion.div 
-                    className="text-purple-300"
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                  >
+                  <motion.div className="text-purple-300" animate={{
+                  scale: [1, 1.2, 1]
+                }} transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  delay: 1
+                }}>
                     🌟
                   </motion.div>
                 </div>
@@ -669,22 +671,27 @@ const Index = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-100 via-yellow-100 to-amber-100 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-orange-400 to-amber-400 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full blur-3xl animate-pulse" style={{
+          animationDelay: '2s'
+        }}></div>
         </div>
         
         <div className="max-w-6xl mx-auto relative z-10">
-          <motion.div 
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <motion.div className="text-center" initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8
+        }} viewport={{
+          once: true
+        }}>
             <PerformanceCard className="bg-gradient-to-br from-white/90 to-orange-50/90 backdrop-blur-sm border-2 border-orange-200 p-8 shadow-2xl">
-              <motion.h2 
-                className="text-3xl sm:text-4xl font-bold mb-6 text-orange-800"
-                whileHover={{ scale: 1.02 }}
-              >
+              <motion.h2 className="text-3xl sm:text-4xl font-bold mb-6 text-orange-800" whileHover={{
+              scale: 1.02
+            }}>
                 🏛️ SAMPADA University Partnership: From 2-Year Foundation to Certified Excellence
               </motion.h2>
               <Separator className="w-32 mx-auto bg-gradient-to-r from-orange-600 to-amber-600 h-1 mb-6" />
@@ -702,17 +709,20 @@ const Index = () => {
         <FloatingIcons />
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <motion.h2 
-              className="text-3xl sm:text-4xl font-bold mb-6"
-              whileHover={{ scale: 1.05 }}
-            >
+          <motion.div className="text-center mb-12" initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8
+        }} viewport={{
+          once: true
+        }}>
+            <motion.h2 className="text-3xl sm:text-4xl font-bold mb-6" whileHover={{
+            scale: 1.05
+          }}>
               🎨 <span className="text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 bg-clip-text">Classes for All Levels</span>
             </motion.h2>
             <Separator className="w-32 mx-auto bg-gradient-to-r from-purple-600 to-pink-600 h-1 mb-6" />
@@ -724,16 +734,15 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <PerformanceCard delay={0.1} className="text-center bg-gradient-to-br from-purple-500 to-purple-700 text-white border-2 border-purple-300 shadow-2xl">
               <CardHeader className="relative">
-                <motion.img 
-                  src="/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png" 
-                  alt="Bharatanatyam students of Manasa Nagaraj"
-                  className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 200 }}
-                />
+                <motion.img src="/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png" alt="Bharatanatyam students of Manasa Nagaraj" className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30" whileHover={{
+                scale: 1.05
+              }} transition={{
+                type: "spring",
+                stiffness: 200
+              }} />
                 <CardTitle className="text-yellow-300 text-xl font-bold">🌱 Beginner Classes</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="bg-[#e71a46]">
                 <p className="text-purple-100 leading-relaxed">
                   Students learn the basic dance steps (Adavus) during the first three years. In these important years, a strong foundation is built that helps students achieve perfection in later years. Classes are held twice a week for one hour each.
                 </p>
@@ -742,13 +751,12 @@ const Index = () => {
 
             <PerformanceCard delay={0.2} className="text-center bg-gradient-to-br from-amber-500 to-orange-600 text-white border-2 border-amber-300 shadow-2xl">
               <CardHeader className="relative">
-                <motion.img 
-                  src="/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png" 
-                  alt="Bharatanatyam students of Manasa Nagaraj"
-                  className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 200 }}
-                />
+                <motion.img src="/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png" alt="Bharatanatyam students of Manasa Nagaraj" className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30" whileHover={{
+                scale: 1.05
+              }} transition={{
+                type: "spring",
+                stiffness: 200
+              }} />
                 <CardTitle className="text-yellow-100 text-xl font-bold">🌸 Intermediate Classes</CardTitle>
               </CardHeader>
               <CardContent>
@@ -760,13 +768,12 @@ const Index = () => {
 
             <PerformanceCard delay={0.3} className="text-center bg-gradient-to-br from-pink-500 to-rose-600 text-white border-2 border-pink-300 shadow-2xl">
               <CardHeader className="relative">
-                <motion.img 
-                  src="/lovable-uploads/853fc79e-5fff-4635-9d9d-88bb107c6fae.png" 
-                  alt="Bharatanatyam students of Manasa Nagaraj"
-                  className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 200 }}
-                />
+                <motion.img src="/lovable-uploads/853fc79e-5fff-4635-9d9d-88bb107c6fae.png" alt="Bharatanatyam students of Manasa Nagaraj" className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30" whileHover={{
+                scale: 1.05
+              }} transition={{
+                type: "spring",
+                stiffness: 200
+              }} />
                 <CardTitle className="text-yellow-200 text-xl font-bold">🏆 Advanced/Pre-Arangetram</CardTitle>
               </CardHeader>
               <CardContent>
@@ -784,21 +791,26 @@ const Index = () => {
         <StageSpotlights />
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-red-400 to-pink-400 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-400 to-indigo-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-400 to-indigo-400 rounded-full blur-3xl animate-pulse" style={{
+          animationDelay: '1s'
+        }}></div>
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <motion.h2 
-              className="text-3xl sm:text-4xl font-bold mb-6"
-              whileHover={{ scale: 1.05 }}
-            >
+          <motion.div className="text-center mb-12" initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8
+        }} viewport={{
+          once: true
+        }}>
+            <motion.h2 className="text-3xl sm:text-4xl font-bold mb-6" whileHover={{
+            scale: 1.05
+          }}>
               🎭 <span className="text-transparent bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text">Performance Showcase</span>
             </motion.h2>
             <Separator className="w-32 mx-auto bg-gradient-to-r from-red-600 to-purple-600 h-1 mb-6" />
@@ -808,12 +820,7 @@ const Index = () => {
           </motion.div>
           
           <div className="aspect-video max-w-4xl mx-auto">
-            <iframe 
-              src="https://www.youtube.com/embed/videoseries?list=UUjHetu8d3HAn6D3NViNLNjA" 
-              title="Nrithyamanasa Performance Videos"
-              className="w-full h-full rounded-lg shadow-lg"
-              allowFullScreen
-            ></iframe>
+            <iframe src="https://www.youtube.com/embed/videoseries?list=UUjHetu8d3HAn6D3NViNLNjA" title="Nrithyamanasa Performance Videos" className="w-full h-full rounded-lg shadow-lg" allowFullScreen></iframe>
           </div>
         </div>
       </section>
@@ -1037,11 +1044,7 @@ const Index = () => {
             
             <div className="text-center">
               <div className="w-60 h-60 sm:w-80 sm:h-80 mx-auto mb-6 overflow-hidden rounded-full border-4 border-white/20">
-                <img 
-                  src="/lovable-uploads/8cf78aad-8881-4264-9a55-2013c1b005c3.png" 
-                  alt="Contact Image"
-                  className="w-full h-full object-cover"
-                />
+                <img src="/lovable-uploads/8cf78aad-8881-4264-9a55-2013c1b005c3.png" alt="Contact Image" className="w-full h-full object-cover" />
               </div>
               <p className="text-amber-100 max-w-md mx-auto text-sm sm:text-base px-2 sm:px-4 break-words">
                 If you are interested in learning Bharatanatyam and live in the Bay Area, please visit us for a consultation. We have classes tailored to suit you.
@@ -1055,21 +1058,26 @@ const Index = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-100 via-orange-100 to-red-100 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-orange-400 to-red-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-orange-400 to-red-400 rounded-full blur-3xl animate-pulse" style={{
+          animationDelay: '1.5s'
+        }}></div>
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <motion.h2 
-              className="text-3xl sm:text-4xl font-bold mb-6"
-              whileHover={{ scale: 1.05 }}
-            >
+          <motion.div className="text-center mb-12" initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8
+        }} viewport={{
+          once: true
+        }}>
+            <motion.h2 className="text-3xl sm:text-4xl font-bold mb-6" whileHover={{
+            scale: 1.05
+          }}>
               📰 <span className="text-transparent bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 bg-clip-text">Press Reviews</span>
             </motion.h2>
             <Separator className="w-32 mx-auto bg-gradient-to-r from-yellow-600 to-red-600 h-1 mb-6" />
@@ -1110,21 +1118,26 @@ const Index = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-teal-100 via-cyan-100 to-blue-100 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-80 h-80 bg-gradient-to-br from-teal-400 to-cyan-400 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-cyan-400 to-blue-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-cyan-400 to-blue-400 rounded-full blur-3xl animate-pulse" style={{
+          animationDelay: '1s'
+        }}></div>
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <motion.h2 
-              className="text-3xl sm:text-4xl font-bold mb-6"
-              whileHover={{ scale: 1.05 }}
-            >
+          <motion.div className="text-center mb-12" initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8
+        }} viewport={{
+          once: true
+        }}>
+            <motion.h2 className="text-3xl sm:text-4xl font-bold mb-6" whileHover={{
+            scale: 1.05
+          }}>
               💬 <span className="text-transparent bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 bg-clip-text">Testimonials</span>
             </motion.h2>
             <Separator className="w-32 mx-auto bg-gradient-to-r from-teal-600 to-blue-600 h-1 mb-6" />
@@ -1176,11 +1189,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center mb-4">
-                <img 
-                  src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
-                  alt="Logo" 
-                  className="h-8 w-auto"
-                />
+                <img src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" alt="Logo" className="h-8 w-auto" />
               </div>
               <p className="text-gray-400">
                 Bay Area's premier Bharatanatyam academy, nurturing classical dance traditions since inception. As a proud affiliate of SAMPADA University, we offer students the opportunity to pursue formal dance examinations and certifications, ensuring authentic training rooted in traditional methodology while providing recognized academic credentials.
@@ -1211,28 +1220,13 @@ const Index = () => {
             <div>
               <h3 className="font-semibold mb-4">Connect with me on social media</h3>
               <div className="flex space-x-4 mb-4">
-                <a 
-                  href="https://www.facebook.com/nrithyamanasa/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
+                <a href="https://www.facebook.com/nrithyamanasa/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   <Facebook className="h-6 w-6" />
                 </a>
-                <a 
-                  href="https://www.instagram.com/nrithyamanasa/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
+                <a href="https://www.instagram.com/nrithyamanasa/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   <Instagram className="h-6 w-6" />
                 </a>
-                <a 
-                  href="https://www.youtube.com/channel/UCjHetu8d3HAn6D3NViNLNjA/videos" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
+                <a href="https://www.youtube.com/channel/UCjHetu8d3HAn6D3NViNLNjA/videos" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   <Youtube className="h-6 w-6" />
                 </a>
               </div>
@@ -1251,8 +1245,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
