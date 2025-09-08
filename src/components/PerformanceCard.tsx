@@ -37,7 +37,7 @@ export const PerformanceCard = ({
       <div className="absolute inset-0.5 rounded-2xl bg-[#e71a46]" />
       
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 bg-inherit">
         {children}
       </div>
 
