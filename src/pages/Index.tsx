@@ -8,12 +8,11 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
-import { HeroSlider } from "@/components/HeroSlider";
+import { VideoHero } from "@/components/VideoHero";
 import { ConfettiEffect, FloatingIcons, TheaterCurtains, RedCarpet, StageSpotlights } from "@/components/TheatricalEffects";
 import { PerformanceCard, ThemedButton } from "@/components/PerformanceCard";
 const Index = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const heroImages = ["/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png", "/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png", "/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png", "/lovable-uploads/853fc79e-5fff-4635-9d9d-88bb107c6fae.png", "/lovable-uploads/f9cfedfe-4f86-49ae-96a3-625c6e9c9b48.png"];
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -227,11 +226,8 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Slider Section */}
-      <section className="relative">
-        <HeroSlider images={heroImages} autoSlideInterval={5000} />
-        <RedCarpet />
-      </section>
+      {/* Hero Video Section */}
+      <VideoHero />
 
       {/* Event Information Section */}
       <section className="relative py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-900 via-pink-900 to-red-900 text-white overflow-hidden">
