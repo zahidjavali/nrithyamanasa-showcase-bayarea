@@ -265,7 +265,7 @@ const Index = () => {
             </motion.h2>
             <Separator className="w-32 mx-auto bg-gradient-to-r from-yellow-400 to-pink-400 h-1 mb-6" />
             <p className="text-lg sm:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-              Artistic Director of <span className="font-bold text-yellow-300">Nrithyamanasa Performing Arts Center</span> and Director of 
+              Artistic Director of <span className="font-bold text-yellow-300">Nrithyamanasa Dance Academy</span> and Director of 
               <a href="https://www.eshayoga.com/" className="text-pink-300 hover:text-pink-200 font-semibold underline decoration-pink-300 ml-1 mr-1">Esha Yoga</a> 
               in Santa Clara.
             </p>
@@ -353,7 +353,10 @@ const Index = () => {
               }} style={{
                 borderImage: "linear-gradient(45deg, #fbbf24, #ec4899) 1"
               }}>
-                  <img src="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" alt="Manasa Nagaraj - Master Bharatanatyam Instructor" className="w-full h-full object-cover max-w-full" style={{ maxWidth: '100%', height: 'auto' }} loading="eager" />
+                  <img src="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" alt="Manasa Nagaraj - Master Bharatanatyam Instructor" className="w-full h-full object-cover max-w-full" style={{
+                  maxWidth: '100%',
+                  height: 'auto'
+                }} loading="eager" />
                 </motion.div>
                 
                 {/* Multiple rotating glows */}
@@ -573,46 +576,57 @@ const Index = () => {
       {/* Class Schedule Box */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-100 via-pink-100 to-indigo-100">
         <div className="max-w-4xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-purple-600 via-pink-500 to-rose-500 rounded-3xl p-8 sm:p-10 shadow-2xl border-4 border-white/30"
-          >
-            <motion.h3 
-              className="text-3xl sm:text-4xl font-bold text-center mb-8 text-white"
-              whileHover={{ scale: 1.02 }}
-            >
+          <motion.div initial={{
+          opacity: 0,
+          y: 30
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.8
+        }} viewport={{
+          once: true
+        }} className="bg-gradient-to-br from-purple-600 via-pink-500 to-rose-500 rounded-3xl p-8 sm:p-10 shadow-2xl border-4 border-white/30">
+            <motion.h3 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-white" whileHover={{
+            scale: 1.02
+          }}>
               📅 Class Schedule
             </motion.h3>
             
             <div className="space-y-6 text-white">
-              <motion.div 
-                className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/40"
-                whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.25)" }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+              <motion.div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/40" whileHover={{
+              scale: 1.02,
+              backgroundColor: "rgba(255, 255, 255, 0.25)"
+            }} transition={{
+              type: "spring",
+              stiffness: 300
+            }}>
                 <h4 className="text-2xl font-bold mb-4 text-yellow-200">👩‍🎓 Adults</h4>
                 <p className="text-lg mb-2 font-semibold">Wednesdays: 6-7 PM, 7-8 PM, 8-9 PM</p>
                 <p className="text-base italic text-yellow-100">(Beginners: 6-7 PM)</p>
               </motion.div>
               
-              <motion.div 
-                className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/40"
-                whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.25)" }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+              <motion.div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/40" whileHover={{
+              scale: 1.02,
+              backgroundColor: "rgba(255, 255, 255, 0.25)"
+            }} transition={{
+              type: "spring",
+              stiffness: 300
+            }}>
                 <h4 className="text-2xl font-bold mb-4 text-yellow-200">👧 Kids</h4>
                 <p className="text-lg font-semibold">Tuesday, Thursday, Friday: 6-7 PM</p>
               </motion.div>
               
-              <motion.div 
-                className="bg-gradient-to-r from-yellow-400 to-amber-400 rounded-2xl p-6 text-center border-2 border-yellow-300 shadow-lg"
-                initial={{ scale: 0.95 }}
-                whileInView={{ scale: 1 }}
-                transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse", repeatDelay: 1 }}
-              >
+              <motion.div className="bg-gradient-to-r from-yellow-400 to-amber-400 rounded-2xl p-6 text-center border-2 border-yellow-300 shadow-lg" initial={{
+              scale: 0.95
+            }} whileInView={{
+              scale: 1
+            }} transition={{
+              duration: 0.5,
+              repeat: Infinity,
+              repeatType: "reverse",
+              repeatDelay: 1
+            }}>
                 <p className="text-2xl font-bold text-purple-900">
                   🎉 2026 will be our 10th year! 🎊
                 </p>
