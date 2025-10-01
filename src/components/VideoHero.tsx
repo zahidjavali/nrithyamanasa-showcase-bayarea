@@ -22,7 +22,7 @@ export const VideoHero = () => {
         playsInline
         preload="auto"
         poster="/videos/website-poster.jpg"
-        className={`hidden md:block absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+        className={`hidden md:block absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
           isVideoLoaded ? 'opacity-100' : 'opacity-0'
         }`}
         onLoadedData={() => setIsVideoLoaded(true)}
@@ -39,7 +39,7 @@ export const VideoHero = () => {
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
         poster="/videos/mobile-poster.jpg"
         className={`md:hidden absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isVideoLoaded ? 'opacity-100' : 'opacity-0'
