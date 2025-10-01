@@ -229,221 +229,9 @@ const Index = () => {
       {/* Hero Video Section */}
       <VideoHero />
 
-      {/* Event Information Section */}
-      <section className="relative py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-900 via-pink-900 to-red-900 text-white overflow-hidden">
-        {/* Theatrical Background Effects */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-3xl animate-pulse" style={{
-          animationDelay: '1s'
-        }}></div>
-        </div>
-
-        <div className="max-w-6xl mx-auto relative z-10">
-          <motion.div className="text-center mb-8 sm:mb-12" initial={{
-          opacity: 0,
-          y: 50
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 1
-        }} viewport={{
-          once: true
-        }}>
-            {/* Main Event Title */}
-            <motion.div className="relative inline-block mb-6" whileHover={{
-            scale: 1.05
-          }} transition={{
-            type: "spring",
-            stiffness: 200
-          }}>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-2xl">
-                <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-amber-300 bg-clip-text text-transparent">
-                  Nrithya Taranga 2025
-                </span>
-              </h1>
-              
-              {/* Decorative elements around title */}
-              <motion.div className="absolute -top-6 -left-6 text-yellow-300" animate={{
-              rotate: 360
-            }} transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "linear"
-            }}>
-                <Theater className="w-8 h-8 sm:w-12 sm:h-12" />
-              </motion.div>
-              <motion.div className="absolute -top-6 -right-6 text-pink-300" animate={{
-              rotate: -360
-            }} transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "linear"
-            }}>
-                <Mic className="w-8 h-8 sm:w-12 sm:h-12" />
-              </motion.div>
-            </motion.div>
-
-            <motion.p className="text-lg sm:text-xl md:text-2xl mb-8 max-w-4xl mx-auto font-medium leading-relaxed drop-shadow-lg" initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            delay: 0.3,
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              Join us for an enchanting evening of classical <span className="text-yellow-300 font-bold">Bharatanatyam</span> performances featuring talented students and special guests.
-            </motion.p>
-
-            <motion.div className="text-base sm:text-lg mb-8 text-amber-100 max-w-3xl mx-auto" initial={{
-            opacity: 0
-          }} whileInView={{
-            opacity: 1
-          }} transition={{
-            delay: 0.5,
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-4">
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-5 h-5 text-yellow-300" />
-                  <span className="font-semibold">September 21st, 2025</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-5 h-5 text-pink-300" />
-                  <span className="font-semibold">3:30 PM - 5:30 PM</span>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <MapPin className="w-5 h-5 text-purple-300" />
-                <span className="font-semibold">Mission City Center For Performing Arts, Santa Clara</span>
-              </div>
-            </motion.div>
-
-            <motion.div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center" initial={{
-            opacity: 0,
-            scale: 0.8
-          }} whileInView={{
-            opacity: 1,
-            scale: 1
-          }} transition={{
-            delay: 0.7,
-            duration: 0.8
-          }} viewport={{
-            once: true
-          }}>
-              <ThemedButton onClick={() => window.open('https://www.eventbrite.com/e/nrithya-taranga-2025-shakti-tickets-1598078137729?aff=oddtdtcreator', '_blank')} className="text-lg px-8 py-4 min-w-[200px]">
-                🎟️ Reserve Tickets
-              </ThemedButton>
-              <ThemedButton variant="secondary" onClick={() => window.location.href = '/about-manasa'} className="text-lg px-8 py-4 min-w-[200px]">
-                ✨ About Manasa
-              </ThemedButton>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Event Details Section */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-purple-50 to-pink-50 relative overflow-hidden">
-        {/* Decorative background elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-amber-400 to-orange-400 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-rose-300 to-pink-300 rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div className="text-center mb-12" initial={{
-          opacity: 0,
-          y: 30
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.8
-        }} viewport={{
-          once: true
-        }}>
-            <h2 className="text-3xl sm:text-4xl font-bold text-purple-900 mb-6">
-              Event <span className="text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">Highlights</span>
-            </h2>
-            <Separator className="w-24 mx-auto bg-gradient-to-r from-purple-600 to-pink-600 h-1 mb-6" />
-          </motion.div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <PerformanceCard delay={0.1} className="text-center">
-              <CardHeader className="relative">
-                <motion.div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl" whileHover={{
-                rotate: 360
-              }} transition={{
-                duration: 1
-              }}>
-                  <Calendar className="h-10 w-10 text-white" />
-                </motion.div>
-                <CardTitle className="text-xl font-bold text-yellow-200">📅 Date & Time</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="mb-2 font-semibold text-lg text-gray-50">September 21st, 2025</p>
-                <p className="text-lg text-gray-50">3:30 PM - 5:30 PM</p>
-                <div className="mt-4 p-3 bg-purple-50 rounded-lg">
-                  <p className="text-sm text-purple-700">Mark your calendars! 📝</p>
-                </div>
-              </CardContent>
-            </PerformanceCard>
-
-            <PerformanceCard delay={0.2} className="text-center">
-              <CardHeader className="relative">
-                <motion.div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-2xl" whileHover={{
-                scale: 1.1
-              }} transition={{
-                type: "spring",
-                stiffness: 300
-              }}>
-                  <MapPin className="h-10 w-10 text-white" />
-                </motion.div>
-                <CardTitle className="text-xl font-bold text-yellow-200">📍 Venue</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="font-semibold text-lg text-gray-50">Mission City Center</p>
-                <p className="font-semibold text-gray-50">For Performing Arts</p>
-                <p className="text-sm mt-2 text-gray-50">Santa Clara, CA</p>
-                <div className="mt-4 p-3 bg-amber-50 rounded-lg">
-                  <p className="text-sm text-amber-700">World-class venue! 🎭</p>
-                </div>
-              </CardContent>
-            </PerformanceCard>
-
-            <PerformanceCard delay={0.3} className="text-center">
-              <CardHeader className="relative">
-                <motion.div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center shadow-2xl" whileHover={{
-                scale: [1, 1.1, 1],
-                rotate: [0, 10, -10, 0]
-              }} transition={{
-                duration: 0.8
-              }}>
-                  <Music className="h-10 w-10 text-white" />
-                </motion.div>
-                <CardTitle className="text-xl font-bold text-yellow-200">🎵 Performances</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-lg leading-relaxed text-gray-50">Classical Bharatanatyam recitals, themed productions, and student showcases</p>
-                <div className="mt-4 p-3 bg-pink-50 rounded-lg">
-                  <p className="text-sm text-pink-700">Pure artistic magic! ✨</p>
-                </div>
-              </CardContent>
-            </PerformanceCard>
-          </div>
-        </div>
-      </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-900 via-pink-900 to-indigo-900 text-white relative overflow-hidden">
+      <section id="about" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-900 via-pink-900 to-indigo-900 text-white relative overflow-hidden w-full max-w-full overflow-x-hidden">
         {/* Theatrical background effects */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full blur-3xl animate-pulse"></div>
@@ -483,7 +271,7 @@ const Index = () => {
             </p>
           </motion.div>
           
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full max-w-full px-4 md:px-0">
             <motion.div initial={{
             opacity: 0,
             x: -50
@@ -494,17 +282,17 @@ const Index = () => {
             duration: 0.8
           }} viewport={{
             once: true
-          }} className="order-2 lg:order-1">
-              <PerformanceCard className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-6 sm:p-8">
-                 <div className="text-white">
-                   <motion.h3 className="text-2xl sm:text-3xl font-bold mb-6 text-black bg-gradient-to-r from-yellow-300 to-amber-300 bg-clip-text text-transparent" whileHover={{
+          }} className="order-2 lg:order-1 w-full max-w-full overflow-hidden">
+              <PerformanceCard className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-6 sm:p-8 w-full max-w-full">
+                 <div className="text-white w-full max-w-full overflow-hidden">
+                   <motion.h3 className="text-2xl sm:text-3xl font-bold mb-6 text-black bg-gradient-to-r from-yellow-300 to-amber-300 bg-clip-text text-transparent break-words" whileHover={{
                   scale: 1.02
                 }}>
                      🎭 Master Instructor & Artist
                    </motion.h3>
                    
-                   <div className="space-y-6">
-                     <p className="text-lg leading-relaxed text-gray-900 bg-white/90 p-4 rounded-lg">
+                   <div className="space-y-6 w-full max-w-full">
+                     <p className="text-lg leading-relaxed text-gray-900 bg-white/90 p-4 rounded-lg break-words word-wrap-break-word">
                        With <span className="font-bold text-purple-600">decades of experience</span> in classical dance and wellness, Manasa brings exceptional skills to her students. Her commitment to preserving traditional <span className="text-amber-600 font-semibold">Bharatanatyam</span> while making it accessible to modern students has made her one of the most respected instructors in the Bay Area.
                      </p>
                      
@@ -544,7 +332,7 @@ const Index = () => {
               </PerformanceCard>
             </motion.div>
             
-            <motion.div className="text-center order-1 lg:order-2" initial={{
+            <motion.div className="text-center order-1 lg:order-2 w-full max-w-full px-4 md:px-0" initial={{
             opacity: 0,
             x: 50
           }} whileInView={{
@@ -555,8 +343,8 @@ const Index = () => {
           }} viewport={{
             once: true
           }}>
-              <div className="relative inline-block">
-                <motion.div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto mb-6 overflow-hidden rounded-full border-4 border-gradient-to-r from-yellow-400 to-pink-400 shadow-2xl" whileHover={{
+              <div className="relative inline-block max-w-full">
+                <motion.div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto mb-6 overflow-hidden rounded-full border-4 border-gradient-to-r from-yellow-400 to-pink-400 shadow-2xl max-w-full" whileHover={{
                 scale: 1.05,
                 rotate: 3
               }} transition={{
@@ -565,7 +353,7 @@ const Index = () => {
               }} style={{
                 borderImage: "linear-gradient(45deg, #fbbf24, #ec4899) 1"
               }}>
-                  <img src="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" alt="Manasa Nagaraj - Master Bharatanatyam Instructor" className="w-full h-full object-cover" loading="eager" />
+                  <img src="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" alt="Manasa Nagaraj - Master Bharatanatyam Instructor" className="w-full h-full object-cover max-w-full" style={{ maxWidth: '100%', height: 'auto' }} loading="eager" />
                 </motion.div>
                 
                 {/* Multiple rotating glows */}
@@ -779,6 +567,58 @@ const Index = () => {
               </CardContent>
             </PerformanceCard>
           </div>
+        </div>
+      </section>
+
+      {/* Class Schedule Box */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-100 via-pink-100 to-indigo-100">
+        <div className="max-w-4xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-purple-600 via-pink-500 to-rose-500 rounded-3xl p-8 sm:p-10 shadow-2xl border-4 border-white/30"
+          >
+            <motion.h3 
+              className="text-3xl sm:text-4xl font-bold text-center mb-8 text-white"
+              whileHover={{ scale: 1.02 }}
+            >
+              📅 Class Schedule
+            </motion.h3>
+            
+            <div className="space-y-6 text-white">
+              <motion.div 
+                className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/40"
+                whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.25)" }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <h4 className="text-2xl font-bold mb-4 text-yellow-200">👩‍🎓 Adults</h4>
+                <p className="text-lg mb-2 font-semibold">Wednesdays: 6-7 PM, 7-8 PM, 8-9 PM</p>
+                <p className="text-base italic text-yellow-100">(Beginners: 6-7 PM)</p>
+              </motion.div>
+              
+              <motion.div 
+                className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/40"
+                whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.25)" }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <h4 className="text-2xl font-bold mb-4 text-yellow-200">👧 Kids</h4>
+                <p className="text-lg font-semibold">Tuesday, Thursday, Friday: 6-7 PM</p>
+              </motion.div>
+              
+              <motion.div 
+                className="bg-gradient-to-r from-yellow-400 to-amber-400 rounded-2xl p-6 text-center border-2 border-yellow-300 shadow-lg"
+                initial={{ scale: 0.95 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse", repeatDelay: 1 }}
+              >
+                <p className="text-2xl font-bold text-purple-900">
+                  🎉 2026 will be our 10th year! 🎊
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
