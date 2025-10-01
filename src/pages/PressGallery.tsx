@@ -17,19 +17,19 @@ const PressGallery = () => {
   };
 
   const pressImages = [
-    "https://manasanagaraj.com/wp-content/uploads/2019/04/dance-like-swan-prajavani-e1448583120986.png",
-    "https://manasanagaraj.com/wp-content/uploads/2019/04/DH-1.png",
-    "https://manasanagaraj.com/wp-content/uploads/2019/04/hindu-1-e1448582811410.jpg",
-    "https://manasanagaraj.com/wp-content/uploads/2019/04/hindu2-2-e1448582889114.png",
-    "https://manasanagaraj.com/wp-content/uploads/2019/04/hindu-2-e1448582838742.jpg",
-    "https://manasanagaraj.com/wp-content/uploads/2019/04/IE-e1448583067987.png",
-    "https://manasanagaraj.com/wp-content/uploads/2019/04/Kp-1.png",
-    "https://manasanagaraj.com/wp-content/uploads/2019/04/mysoremitra1.png",
-    "https://manasanagaraj.com/wp-content/uploads/2019/04/nritya-prathibe-e1448583165333.png",
-    "https://manasanagaraj.com/wp-content/uploads/2019/04/prajanudi.png",
-    "https://manasanagaraj.com/wp-content/uploads/2019/04/SOM-PAllaotsava-photo..png",
-    "https://manasanagaraj.com/wp-content/uploads/2019/04/som-pallotsava-1-e1448582932181.png",
-    "https://manasanagaraj.com/wp-content/uploads/2019/04/SOM-Rangapravesha-e1448582992873.png"
+    "/images/press-gallery/dance-like-swan-prajavani-e1448583120986.png",
+    "/images/press-gallery/DH-1.png",
+    "/images/press-gallery/hindu-1-e1448582811410.jpg",
+    "/images/press-gallery/hindu2-2-e1448582889114.png",
+    "/images/press-gallery/hindu-2-e1448582838742.jpg",
+    "/images/press-gallery/IE-e1448583067987.png",
+    "/images/press-gallery/Kp-1.png",
+    "/images/press-gallery/mysoremitra1.png",
+    "/images/press-gallery/nritya-prathibe-e1448583165333.png",
+    "/images/press-gallery/prajanudi.png",
+    "/images/press-gallery/SOM-PAllaotsava-photo.png",
+    "/images/press-gallery/som-pallotsava-1-e1448582932181.png",
+    "/images/press-gallery/SOM-Rangapravesha-e1448582992873.png"
   ];
 
   return (
