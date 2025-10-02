@@ -894,7 +894,7 @@ const Index = () => {
             
             <div className="text-center">
               <div className="w-60 h-60 sm:w-80 sm:h-80 mx-auto mb-6 overflow-hidden rounded-full border-4 border-white/20">
-                <img src="/lovable-uploads/8cf78aad-8881-4264-9a55-2013c1b005c3.png" alt="Contact Image" className="w-full h-full object-cover" />
+                <img src="/images/get-in-touch.jpg" alt="Bharatanatyam Dance Performance" className="w-full h-full object-cover" />
               </div>
               <p className="text-amber-100 max-w-md mx-auto text-sm sm:text-base px-2 sm:px-4 break-words">
                 If you are interested in learning Bharatanatyam and live in the Bay Area, please visit us for a consultation. We have classes tailored to suit you.
