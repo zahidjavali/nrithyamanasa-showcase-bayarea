@@ -57,12 +57,6 @@ export const VideoHero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-red-900 via-red-800 to-black animate-pulse" />
       )}
 
-      {/* Optional Text Overlay - Customize as needed */}
-      <div className="absolute inset-0 bg-black/20 flex items-center justify-center z-10">
-        <div className="text-center text-white">
-          {/* Add any overlay text here if needed */}
-        </div>
-      </div>
     </section>
   );
 };

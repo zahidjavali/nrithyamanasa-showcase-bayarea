@@ -144,6 +144,36 @@ const Performances = () => {
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-purple-900 mb-8 sm:mb-12">Recent Performances</h2>
           <div className="space-y-4 sm:space-y-6">
             <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 sm:p-6 border border-purple-100">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Nrithya Taranga</h3>
+              <p className="text-gray-700 text-sm sm:text-base">September 2025</p>
+              <p className="text-gray-700 text-sm sm:text-base">Mission City Center For Performing Arts, Santa Clara</p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 sm:p-6 border border-purple-100">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Purandara Vaibhava</h3>
+              <p className="text-gray-700 text-sm sm:text-base">March 2025</p>
+              <p className="text-gray-700 text-sm sm:text-base">Sri Krishna Vrindavana Temple, Bay Area</p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 sm:p-6 border border-purple-100">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Maha Shivaratri Naatyarchana</h3>
+              <p className="text-gray-700 text-sm sm:text-base">February 2025</p>
+              <p className="text-gray-700 text-sm sm:text-base">Sanatana Dharma Kendra, Bay Area</p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 sm:p-6 border border-purple-100">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Karnataka Composers Day</h3>
+              <p className="text-gray-700 text-sm sm:text-base">October 2024</p>
+              <p className="text-gray-700 text-sm sm:text-base">Organized by Namah Foundation, Bay Area</p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 sm:p-6 border border-purple-100">
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Nrithya Taranga</h3>
+              <p className="text-gray-700 text-sm sm:text-base">September 2024</p>
+              <p className="text-gray-700 text-sm sm:text-base">Mission City Center For Performing Arts, Santa Clara</p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-amber-50 rounded-lg p-4 sm:p-6 border border-purple-100">
               <h3 className="text-lg sm:text-xl font-semibold text-purple-900 mb-2">Deepotsava from Renowned Bay area Artists</h3>
               <p className="text-gray-700 text-sm sm:text-base">November 16th 2019</p>
             </div>
