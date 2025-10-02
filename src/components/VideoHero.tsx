@@ -20,7 +20,7 @@ export const VideoHero = () => {
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
         poster="/videos/website-poster.jpg"
         className={`hidden md:block absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
           isVideoLoaded ? 'opacity-100' : 'opacity-0'
@@ -29,7 +29,6 @@ export const VideoHero = () => {
         onError={() => setVideoError(true)}
       >
         <source src="/videos/website-video.mp4" type="video/mp4" />
-        <source src="/videos/website-video.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
 

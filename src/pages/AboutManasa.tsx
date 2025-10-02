@@ -108,6 +108,10 @@ const AboutManasa = () => {
                   src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
                   alt="Nrithyamanasa Logo" 
                   className="h-8 sm:h-10 w-auto cursor-pointer"
+                  width="120"
+                  height="40"
+                  loading="eager"
+                  fetchPriority="high"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 />
@@ -259,7 +263,9 @@ const AboutManasa = () => {
                   src="/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png" 
                   alt="Manasa Nagaraj - Classical Bharatanatyam Dancer"
                   className="w-full h-full object-cover"
-                  loading="eager"
+                  width="224"
+                  height="224"
+                  loading="lazy"
                 />
               </motion.div>
               <motion.div 
@@ -733,6 +739,9 @@ const AboutManasa = () => {
                   src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
                   alt="Nrithyamanasa Logo" 
                   className="h-8 w-auto"
+                  width="120"
+                  height="40"
+                  loading="lazy"
                   whileHover={{ scale: 1.1 }}
                 />
               </div>

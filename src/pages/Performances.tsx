@@ -39,8 +39,12 @@ const Performances = () => {
               <Link to="/">
                 <img 
                   src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
-                  alt="Logo" 
+                  alt="Nrithyamanasa Logo" 
                   className="h-8 sm:h-10 w-auto cursor-pointer"
+                  width="120"
+                  height="40"
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </Link>
             </div>
@@ -128,8 +132,11 @@ const Performances = () => {
               <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 overflow-hidden rounded-full border-4 border-white shadow-2xl">
                 <img 
                   src="https://manasanagaraj.com/wp-content/uploads/2019/04/5D4_7134.jpg" 
-                  alt="Bharatanatyam Performance"
+                  alt="Bharatanatyam Performance by Manasa Nagaraj"
                   className="w-full h-full object-cover"
+                  width="192"
+                  height="192"
+                  loading="lazy"
                 />
               </div>
               <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 to-amber-400 rounded-full blur opacity-20"></div>
@@ -396,8 +403,11 @@ const Performances = () => {
               <div className="flex items-center mb-4">
                 <img 
                   src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
-                  alt="Logo" 
+                  alt="Nrithyamanasa Logo" 
                   className="h-8 w-auto"
+                  width="120"
+                  height="40"
+                  loading="lazy"
                 />
               </div>
               <p className="text-gray-400 text-sm sm:text-base">
