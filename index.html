@@ -10,12 +10,19 @@
     <meta name="keywords" content="Bharatanatyam, classical Indian dance, Santa Clara, Manasa Nagaraj, dance academy, cultural education, Bay Area" />
     
     <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://www.youtube.com" />
+    <link rel="preconnect" href="https://www.youtube.com" crossorigin />
+    <link rel="preconnect" href="https://i.ytimg.com" crossorigin />
     <link rel="dns-prefetch" href="https://www.youtube.com" />
+    <link rel="dns-prefetch" href="https://i.ytimg.com" />
     
     <!-- Preload critical assets -->
-    <link rel="preload" href="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" as="image" type="image/png" />
-    <link rel="preload" href="/videos/website-video.mp4" as="video" type="video/mp4" />
+    <link rel="preload" href="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" as="image" type="image/png" fetchpriority="high" />
+    <link rel="preload" href="/videos/website-video.mp4" as="video" type="video/mp4" fetchpriority="high" />
+    <style>
+      /* Critical CSS for above-the-fold content */
+      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; -webkit-font-smoothing: antialiased; }
+      #root { min-height: 100vh; }
+    </style>
 
     <meta property="og:title" content="Nrithyamanasa - Premier Bharatanatyam Academy in Santa Clara" />
     <meta property="og:description" content="Learn classical Indian dance Bharatanatyam with master instructor Manasa Nagaraj at Santa Clara's premier dance academy. Classes for all levels from beginner to advanced." />

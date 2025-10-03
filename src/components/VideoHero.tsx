@@ -20,7 +20,7 @@ export const VideoHero = () => {
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
         poster="/videos/website-poster.jpg"
         className={`hidden md:block absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
           isVideoLoaded ? 'opacity-100' : 'opacity-0'

@@ -101,5 +101,11 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-display: swap;
+  }
+  
+  /* Optimize font loading */
+  @font-face {
+    font-display: swap;
   }
 }
