@@ -147,7 +147,7 @@ const PressGallery = () => {
             <div className="relative">
               <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 overflow-hidden rounded-full border-4 border-white shadow-2xl">
                 <img 
-                  src="https://manasanagaraj.com/wp-content/uploads/2019/04/hindu-1-e1448582811410.jpg" 
+                  src={new URL('@/assets/press-gallery-banner.webp', import.meta.url).href}
                   alt="Press Coverage - Manasa Nagaraj Bharatanatyam Performance"
                   className="w-full h-full object-cover"
                   width="192"
