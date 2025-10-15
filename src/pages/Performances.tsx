@@ -110,15 +110,19 @@ const Performances = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 to-amber-900/90 z-10"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('https://manasanagaraj.com/wp-content/uploads/2019/04/5D4_7134.jpg')"
-          }}
-        ></div>
-        <div className="relative z-20 max-w-7xl mx-auto">
+      <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex items-center">
+        {/* Animated Background with Blur */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/95 via-pink-900/90 to-amber-900/95 z-10"></div>
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('${new URL('@/assets/manasa-performance-banner.webp', import.meta.url).href}')`
+            }}
+          />
+        </div>
+        
+        <div className="relative z-20 max-w-7xl mx-auto w-full">
           <div className="text-center mb-8">
             <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 text-white drop-shadow-2xl">
               PERFORMANCES
@@ -139,7 +143,7 @@ const Performances = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 to-amber-400 rounded-full blur opacity-20"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 rounded-full blur opacity-30"></div>
             </div>
           </div>
         </div>
