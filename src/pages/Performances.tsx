@@ -131,7 +131,7 @@ const Performances = () => {
             <div className="relative">
               <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 overflow-hidden rounded-full border-4 border-white shadow-2xl">
                 <img 
-                  src="https://manasanagaraj.com/wp-content/uploads/2019/04/5D4_7134.jpg" 
+                  src="/lovable-uploads/f9cfedfe-4f86-49ae-96a3-625c6e9c9b48.png" 
                   alt="Bharatanatyam Performance by Manasa Nagaraj"
                   className="w-full h-full object-cover"
                   width="192"
