@@ -13,6 +13,7 @@ import journeyImage5 from "@/assets/manasa-journey-5.webp";
 import journeyImage6 from "@/assets/manasa-journey-6.webp";
 import journeyImage7 from "@/assets/manasa-journey-7.webp";
 import journeyImage8 from "@/assets/manasa-journey-8.webp";
+import teacherImage from "@/assets/manasa-teacher.webp";
 import Autoplay from "embla-carousel-autoplay";
 
 const AboutManasa = () => {
@@ -448,10 +449,12 @@ const AboutManasa = () => {
                 transition={{ type: "spring", stiffness: 200 }}
               >
                 <img 
-                  src="/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png" 
+                  src={teacherImage}
                   alt="Manasa Nagaraj Teaching"
                   className="w-full h-[500px] object-cover"
                   loading="lazy"
+                  width="600"
+                  height="500"
                 />
               </motion.div>
               
