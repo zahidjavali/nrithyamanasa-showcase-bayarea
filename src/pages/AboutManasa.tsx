@@ -6,6 +6,14 @@ import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import journeyImage1 from "@/assets/manasa-journey-1.webp";
+import journeyImage2 from "@/assets/manasa-journey-2.webp";
+import journeyImage3 from "@/assets/manasa-journey-3.webp";
+import journeyImage4 from "@/assets/manasa-journey-4.webp";
+import journeyImage5 from "@/assets/manasa-journey-5.webp";
+import journeyImage6 from "@/assets/manasa-journey-6.webp";
+import journeyImage7 from "@/assets/manasa-journey-7.webp";
+import journeyImage8 from "@/assets/manasa-journey-8.webp";
+import Autoplay from "embla-carousel-autoplay";
 
 const AboutManasa = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,12 +21,13 @@ const AboutManasa = () => {
 
   const images = [
     journeyImage1,
-    "/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png", 
-    "/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png",
-    "/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png",
-    "/lovable-uploads/853fc79e-5fff-4635-9d9d-88bb107c6fae.png",
-    "/lovable-uploads/8cf78aad-8881-4264-9a55-2013c1b005c3.png",
-    "/lovable-uploads/f9cfedfe-4f86-49ae-96a3-625c6e9c9b48.png"
+    journeyImage2,
+    journeyImage3,
+    journeyImage4,
+    journeyImage5,
+    journeyImage6,
+    journeyImage7,
+    journeyImage8
   ];
 
   useEffect(() => {
@@ -358,7 +367,15 @@ const AboutManasa = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <Carousel className="w-full">
+              <Carousel 
+                className="w-full"
+                plugins={[
+                  Autoplay({
+                    delay: 4000,
+                    stopOnInteraction: true,
+                  })
+                ]}
+              >
                 <CarouselContent>
                   {images.map((image, index) => (
                     <CarouselItem key={index}>
@@ -372,6 +389,8 @@ const AboutManasa = () => {
                           alt={`Manasa Nagaraj Performance ${index + 1}`}
                           className="w-full h-[400px] object-cover"
                           loading="lazy"
+                          width="600"
+                          height="400"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent"></div>
                       </motion.div>
