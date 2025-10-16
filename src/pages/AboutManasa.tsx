@@ -276,7 +276,9 @@ const AboutManasa = () => {
                   className="w-full h-full object-cover"
                   width="224"
                   height="224"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                 />
               </motion.div>
               <motion.div 
@@ -387,11 +389,13 @@ const AboutManasa = () => {
                       >
                         <img 
                           src={image} 
-                          alt={`Manasa Nagaraj Performance ${index + 1}`}
+                          alt={`Manasa Nagaraj Bharatanatyam Performance ${index + 1}`}
                           className="w-full h-[400px] object-cover"
-                          loading="lazy"
+                          loading={index === 0 ? "eager" : "lazy"}
+                          fetchPriority={index === 0 ? "high" : "auto"}
                           width="600"
                           height="400"
+                          decoding="async"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent"></div>
                       </motion.div>
@@ -450,11 +454,12 @@ const AboutManasa = () => {
               >
                 <img 
                   src={teacherImage}
-                  alt="Manasa Nagaraj Teaching"
+                  alt="Manasa Nagaraj Teaching Bharatanatyam to Students"
                   className="w-full h-[500px] object-cover"
                   loading="lazy"
                   width="600"
                   height="500"
+                  decoding="async"
                 />
               </motion.div>
               

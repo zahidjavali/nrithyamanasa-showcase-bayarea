@@ -140,7 +140,9 @@ const Performances = () => {
                   className="w-full h-full object-cover"
                   width="192"
                   height="192"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                 />
               </div>
               <div className="absolute -inset-4 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 rounded-full blur opacity-30"></div>

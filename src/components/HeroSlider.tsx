@@ -65,7 +65,16 @@ export const HeroSlider = ({
               duration: 1.2,
               ease: "easeInOut"
             }}>
-                <img src={images[currentIndex]} alt={`Bharatanatyam performance ${currentIndex + 1}`} className="w-full h-full object-contain object-center filter brightness-110 contrast-105 saturate-105" loading={currentIndex === 0 ? "eager" : "lazy"} />
+                <img 
+                  src={images[currentIndex]} 
+                  alt={`Bharatanatyam performance ${currentIndex + 1}`} 
+                  className="w-full h-full object-contain object-center filter brightness-110 contrast-105 saturate-105" 
+                  loading={currentIndex === 0 ? "eager" : "lazy"}
+                  fetchPriority={currentIndex === 0 ? "high" : "auto"}
+                  width="1200"
+                  height="800"
+                  decoding="async"
+                />
                 {/* Stage floor reflection */}
                 <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/40 to-transparent"></div>
               </motion.div>
@@ -76,7 +85,7 @@ export const HeroSlider = ({
 
       {/* Navigation Arrows - Positioned outside the curtain frame */}
       <button onClick={goToPrevious} className="absolute left-8 top-1/2 -translate-y-1/2 z-30 bg-red-600/80 backdrop-blur-sm hover:bg-red-500 transition-all duration-300 rounded-full p-4 group shadow-2xl border-2 border-yellow-400" aria-label="Previous image">
-        
+        <ChevronLeft className="w-6 h-6 text-yellow-200 group-hover:scale-110 transition-transform" />
       </button>
 
       <button onClick={goToNext} className="absolute right-8 top-1/2 -translate-y-1/2 z-30 bg-red-600/80 backdrop-blur-sm hover:bg-red-500 transition-all duration-300 rounded-full p-4 group shadow-2xl border-2 border-yellow-400" aria-label="Next image">

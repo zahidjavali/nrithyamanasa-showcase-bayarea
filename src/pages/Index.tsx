@@ -370,10 +370,7 @@ const Index = () => {
                     width="384"
                     height="384"
                     loading="lazy"
-                    style={{
-                      maxWidth: '100%',
-                      height: 'auto'
-                    }} 
+                    decoding="async"
                   />
                 </motion.div>
                 
@@ -541,11 +538,12 @@ const Index = () => {
               <CardHeader className="relative bg-[#0a0005]">
                 <motion.img 
                   src="/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png" 
-                  alt="Bharatanatyam students of Manasa Nagaraj" 
+                  alt="Beginner Bharatanatyam students performing adavus" 
                   className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30" 
                   width="400"
                   height="192"
                   loading="lazy"
+                  decoding="async"
                   whileHover={{
                     scale: 1.05
                   }} 
@@ -567,11 +565,12 @@ const Index = () => {
               <CardHeader className="relative bg-[#0e0d0d]">
                 <motion.img 
                   src="/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png" 
-                  alt="Bharatanatyam students of Manasa Nagaraj" 
+                  alt="Intermediate Bharatanatyam students performing expressive dance" 
                   className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30" 
                   width="400"
                   height="192"
                   loading="lazy"
+                  decoding="async"
                   whileHover={{
                     scale: 1.05
                   }} 
@@ -593,11 +592,12 @@ const Index = () => {
               <CardHeader className="relative bg-slate-950">
                 <motion.img 
                   src="/lovable-uploads/853fc79e-5fff-4635-9d9d-88bb107c6fae.png" 
-                  alt="Bharatanatyam students of Manasa Nagaraj" 
+                  alt="Advanced Bharatanatyam students pre-Arangetram performance" 
                   className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30" 
                   width="400"
                   height="192"
                   loading="lazy"
+                  decoding="async"
                   whileHover={{
                     scale: 1.05
                   }} 
@@ -947,11 +947,12 @@ const Index = () => {
               <div className="w-60 h-60 sm:w-80 sm:h-80 mx-auto mb-6 overflow-hidden rounded-full border-4 border-white/20">
                 <img 
                   src="/images/get-in-touch.jpg" 
-                  alt="Bharatanatyam Dance Performance" 
+                  alt="Contact Nrithyamanasa for Bharatanatyam classes in Bay Area" 
                   className="w-full h-full object-cover" 
                   width="320"
                   height="320"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
               <p className="text-amber-100 max-w-md mx-auto text-sm sm:text-base px-2 sm:px-4 break-words">
