@@ -375,7 +375,7 @@ const AboutManasa = () => {
                 plugins={[
                   Autoplay({
                     delay: 4000,
-                    stopOnInteraction: true,
+                    stopOnInteraction: false,
                   })
                 ]}
               >

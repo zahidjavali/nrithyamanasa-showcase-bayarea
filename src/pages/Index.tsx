@@ -241,16 +241,11 @@ const Index = () => {
 
 
       {/* About Section */}
-      <section id="about" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-900 via-pink-900 to-indigo-900 text-white relative overflow-hidden w-full max-w-full overflow-x-hidden">
-        {/* Theatrical background effects */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse" style={{
-          animationDelay: '2s'
-        }}></div>
-          <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-rose-400/20 to-red-400/20 rounded-full blur-3xl animate-pulse" style={{
-          animationDelay: '1s'
-        }}></div>
+      <section id="about" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden w-full max-w-full overflow-x-hidden">
+        {/* Subtle background effects */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full blur-xl"></div>
+          <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-br from-amber-400 to-orange-400 rounded-full blur-xl"></div>
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -265,18 +260,18 @@ const Index = () => {
         }} viewport={{
           once: true
         }}>
-            <motion.h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6" whileHover={{
+            <motion.h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900" whileHover={{
             scale: 1.05
           }} transition={{
             type: "spring",
             stiffness: 200
           }}>
-              Meet <span className="text-transparent bg-gradient-to-r from-yellow-300 via-pink-300 to-amber-300 bg-clip-text">Manasa Nagaraj</span>
+              Meet <span className="text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-amber-600 bg-clip-text">Manasa Nagaraj</span>
             </motion.h2>
-            <Separator className="w-32 mx-auto bg-gradient-to-r from-yellow-400 to-pink-400 h-1 mb-6" />
-            <p className="text-lg sm:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-              Artistic Director of <span className="font-bold text-yellow-300">Nrithyamanasa Dance Academy</span> and Director of 
-              <a href="https://www.eshayoga.com/" className="text-pink-300 hover:text-pink-200 font-semibold underline decoration-pink-300 ml-1 mr-1">Esha Yoga</a> 
+            <Separator className="w-32 mx-auto bg-gradient-to-r from-purple-600 to-pink-600 h-1 mb-6" />
+            <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              Artistic Director of <span className="font-bold text-purple-600">Nrithyamanasa Dance Academy</span> and Director of 
+              <a href="https://www.eshayoga.com/" className="text-pink-600 hover:text-pink-500 font-semibold underline decoration-pink-600 ml-1 mr-1">Esha Yoga</a> 
               in Santa Clara.
             </p>
           </motion.div>
@@ -293,20 +288,20 @@ const Index = () => {
           }} viewport={{
             once: true
           }} className="order-2 lg:order-1 w-full max-w-full overflow-hidden">
-              <PerformanceCard className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-6 sm:p-8 w-full max-w-full">
-                 <div className="text-white w-full max-w-full overflow-hidden">
-                   <motion.h3 className="text-2xl sm:text-3xl font-bold mb-6 text-black bg-gradient-to-r from-yellow-300 to-amber-300 bg-clip-text text-transparent break-words" whileHover={{
+              <PerformanceCard className="bg-white border border-gray-200 p-6 sm:p-8 w-full max-w-full shadow-lg">
+                 <div className="w-full max-w-full overflow-hidden">
+                   <motion.h3 className="text-2xl sm:text-3xl font-bold mb-6 text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text break-words" whileHover={{
                   scale: 1.02
                 }}>
                      🎭 Master Instructor & Artist
                    </motion.h3>
                    
                    <div className="space-y-6 w-full max-w-full">
-                     <p className="text-lg leading-relaxed text-gray-900 bg-white/90 p-4 rounded-lg break-words word-wrap-break-word">
+                     <p className="text-lg leading-relaxed text-gray-700 break-words">
                        With <span className="font-bold text-purple-600">decades of experience</span> in classical dance and wellness, Manasa brings exceptional skills to her students. Her commitment to preserving traditional <span className="text-amber-600 font-semibold">Bharatanatyam</span> while making it accessible to modern students has made her one of the most respected instructors in the Bay Area.
                      </p>
                      
-                     <motion.div className="flex items-center justify-center sm:justify-start space-x-4 p-4 bg-white/90 rounded-xl border border-purple-300" whileHover={{
+                     <motion.div className="flex items-center justify-center sm:justify-start space-x-4 p-4 bg-purple-50 rounded-xl border border-purple-200" whileHover={{
                     scale: 1.05
                   }} transition={{
                     type: "spring",

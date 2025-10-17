@@ -20,13 +20,16 @@ export const VideoHero = () => {
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
         poster="/videos/website-poster.jpg"
         className={`hidden md:block absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
           isVideoLoaded ? 'opacity-100' : 'opacity-0'
         }`}
+        style={{ imageRendering: 'crisp-edges' }}
         onLoadedData={() => setIsVideoLoaded(true)}
         onError={() => setVideoError(true)}
+        width="1920"
+        height="1080"
       >
         <source src="/videos/website-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -38,13 +41,16 @@ export const VideoHero = () => {
         muted
         loop
         playsInline
-        preload="none"
+        preload="metadata"
         poster="/videos/mobile-poster.jpg"
         className={`md:hidden absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isVideoLoaded ? 'opacity-100' : 'opacity-0'
         }`}
+        style={{ imageRendering: 'crisp-edges' }}
         onLoadedData={() => setIsVideoLoaded(true)}
         onError={() => setVideoError(true)}
+        width="1080"
+        height="1920"
       >
         <source src="/videos/mobile-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
