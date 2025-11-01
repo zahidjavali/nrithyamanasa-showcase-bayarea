@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Footer } from "@/components/Footer";
+import { Navigation } from "@/components/Navigation";
 import journeyImage1 from "@/assets/manasa-journey-1.webp";
 import journeyImage2 from "@/assets/manasa-journey-2.webp";
 import journeyImage3 from "@/assets/manasa-journey-3.webp";
@@ -111,93 +112,11 @@ const AboutManasa = () => {
       </Helmet>
 
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-purple-200 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <Link to="/">
-                <motion.img 
-                  src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
-                  alt="Nrithyamanasa Logo" 
-                  className="h-8 sm:h-10 w-auto cursor-pointer"
-                  width="120"
-                  height="40"
-                  loading="eager"
-                  fetchPriority="high"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                />
-              </Link>
-            </div>
-            
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105">HOME</Link>
-              <span className="text-purple-600 font-bold text-sm lg:text-base bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">ABOUT MANASA</span>
-              <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105">PERFORMANCES</Link>
-              <Link to="/press-gallery" className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105">PRESS GALLERY</Link>
-              <a href="/#contact" className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105">CONTACT</a>
-            </div>
-
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <motion.button
-                onClick={toggleMobileMenu}
-                className="text-gray-700 hover:text-purple-600 transition-colors"
-                aria-label="Toggle mobile menu"
-                whileTap={{ scale: 0.95 }}
-              >
-                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </motion.button>
-            </div>
-          </div>
-
-          {/* Mobile Navigation Menu */}
-          <AnimatePresence>
-            {isMobileMenuOpen && (
-              <motion.div 
-                className="md:hidden"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-sm border-t border-purple-100">
-                  <Link 
-                    to="/" 
-                    className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    HOME
-                  </Link>
-                  <span className="block px-3 py-2 text-purple-600 font-semibold">ABOUT MANASA</span>
-                  <Link 
-                    to="/performances" 
-                    className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    PERFORMANCES
-                  </Link>
-                  <Link 
-                    to="/press-gallery" 
-                    className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    PRESS GALLERY
-                  </Link>
-                  <Link 
-                    to="/#contact" 
-                    className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    CONTACT
-                  </Link>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </nav>
+      <Navigation 
+        isMobileMenuOpen={isMobileMenuOpen}
+        toggleMobileMenu={toggleMobileMenu}
+        setIsMobileMenuOpen={setIsMobileMenuOpen}
+      />
 
       {/* Hero Section */}
       <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex items-center">

@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Footer } from "@/components/Footer";
+import { Navigation } from "@/components/Navigation";
 
 const Performances = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,82 +34,11 @@ const Performances = () => {
         <link rel="canonical" href="https://manasanagaraj.netlify.app/performances" />
       </Helmet>
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-purple-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <Link to="/">
-                <img 
-                  src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
-                  alt="Nrithyamanasa Logo" 
-                  className="h-8 sm:h-10 w-auto cursor-pointer"
-                  width="120"
-                  height="40"
-                  loading="eager"
-                  fetchPriority="high"
-                />
-              </Link>
-            </div>
-            
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">HOME</Link>
-              <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">ABOUT MANASA</Link>
-              <span className="text-purple-600 font-semibold text-sm lg:text-base">PERFORMANCES</span>
-              <Link to="/press-gallery" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">PRESS GALLERY</Link>
-              <a href="/#contact" className="text-gray-700 hover:text-purple-600 transition-colors text-sm lg:text-base">CONTACT</a>
-            </div>
-
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button
-                onClick={toggleMobileMenu}
-                className="text-gray-700 hover:text-purple-600 transition-colors"
-                aria-label="Toggle mobile menu"
-              >
-                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
-            </div>
-          </div>
-
-          {/* Mobile Navigation Menu */}
-          {isMobileMenuOpen && (
-            <div className="md:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-sm border-t border-purple-100">
-                <Link 
-                  to="/" 
-                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  HOME
-                </Link>
-                <Link 
-                  to="/about-manasa" 
-                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  ABOUT MANASA
-                </Link>
-                <span className="block px-3 py-2 text-purple-600 font-semibold">PERFORMANCES</span>
-                <Link 
-                  to="/press-gallery" 
-                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  PRESS GALLERY
-                </Link>
-                <Link 
-                  to="/#contact" 
-                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  CONTACT
-                </Link>
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
+      <Navigation 
+        isMobileMenuOpen={isMobileMenuOpen}
+        toggleMobileMenu={toggleMobileMenu}
+        setIsMobileMenuOpen={setIsMobileMenuOpen}
+      />
 
       {/* Hero Section */}
       <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex items-center">

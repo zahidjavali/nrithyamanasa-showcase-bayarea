@@ -12,6 +12,7 @@ import { VideoHero } from "@/components/VideoHero";
 import { ConfettiEffect, FloatingIcons, TheaterCurtains, RedCarpet, StageSpotlights } from "@/components/TheatricalEffects";
 import { PerformanceCard, ThemedButton } from "@/components/PerformanceCard";
 import { Footer } from "@/components/Footer";
+import { Navigation } from "@/components/Navigation";
 const Index = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   useEffect(() => {
@@ -132,110 +133,11 @@ const Index = () => {
     }} />
 
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-purple-200 shadow-2xl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <Link to="/">
-                <motion.img 
-                  src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
-                  alt="Nrithyamanasa Logo" 
-                  className="h-8 sm:h-10 w-auto cursor-pointer" 
-                  width="120"
-                  height="40"
-                  loading="eager"
-                  fetchPriority="high"
-                  whileHover={{
-                    scale: 1.1,
-                    rotate: 5
-                  }} 
-                  transition={{
-                    type: "spring",
-                    stiffness: 300
-                  }} 
-                />
-              </Link>
-            </div>
-            
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-              <span className="text-purple-600 font-bold text-sm lg:text-base bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent relative">
-                HOME
-                <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600"></div>
-              </span>
-              <Link to="/about-manasa" className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105 relative group">
-                ABOUT MANASA
-                <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 scale-x-0 group-hover:scale-x-100 transition-transform"></div>
-              </Link>
-              <Link to="/performances" className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105 relative group">
-                PERFORMANCES
-                <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 scale-x-0 group-hover:scale-x-100 transition-transform"></div>
-              </Link>
-              <Link to="/press-gallery" className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105 relative group">
-                PRESS GALLERY
-                <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 scale-x-0 group-hover:scale-x-100 transition-transform"></div>
-              </Link>
-              <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105 relative group">
-                CONTACT
-                <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 scale-x-0 group-hover:scale-x-100 transition-transform"></div>
-              </a>
-            </div>
-
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <motion.button onClick={toggleMobileMenu} className="text-gray-700 hover:text-purple-600 transition-colors p-2 rounded-lg hover:bg-purple-50" aria-label="Toggle mobile menu" whileTap={{
-              scale: 0.95
-            }}>
-                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </motion.button>
-            </div>
-          </div>
-
-          {/* Mobile Navigation Menu */}
-          <AnimatePresence>
-            {isMobileMenuOpen && <motion.div className="md:hidden" initial={{
-            opacity: 0,
-            height: 0
-          }} animate={{
-            opacity: 1,
-            height: "auto"
-          }} exit={{
-            opacity: 0,
-            height: 0
-          }} transition={{
-            duration: 0.3
-          }}>
-                <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-sm border-t border-purple-100 rounded-b-lg">
-                  <span className="block px-3 py-2 text-purple-600 font-semibold">HOME</span>
-                  <Link to="/about-manasa" className="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-                    ABOUT MANASA
-                  </Link>
-                  <Link to="/performances" className="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-                    PERFORMANCES
-                  </Link>
-                  <Link to="/press-gallery" className="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-                    PRESS GALLERY
-                  </Link>
-                  <button className="block w-full text-left px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors" onClick={e => {
-                e.preventDefault();
-                setIsMobileMenuOpen(false);
-                setTimeout(() => {
-                  const contactSection = document.getElementById('contact');
-                  if (contactSection) {
-                    contactSection.scrollIntoView({
-                      behavior: 'smooth',
-                      block: 'start'
-                    });
-                  }
-                }, 300);
-              }}>
-                    CONTACT
-                  </button>
-                </div>
-              </motion.div>}
-          </AnimatePresence>
-        </div>
-      </nav>
+      <Navigation 
+        isMobileMenuOpen={isMobileMenuOpen}
+        toggleMobileMenu={toggleMobileMenu}
+        setIsMobileMenuOpen={setIsMobileMenuOpen}
+      />
 
       {/* Hero Video Section */}
       <VideoHero />
@@ -278,8 +180,25 @@ const Index = () => {
             <p className="text-lg sm:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
               Artistic Director of <span className="font-bold text-yellow-300">Nrithyamanasa Dance Academy</span> and Director of 
               <a href="https://www.eshayoga.com/" className="text-pink-300 hover:text-pink-200 font-semibold underline decoration-pink-300 ml-1 mr-1">Esha Yoga</a> 
-              in Santa Clara.
+              in Santa Clara. Also leading early childhood education at Sparklet Kids Academy.
             </p>
+            <div className="mt-6">
+              <Button 
+                variant="outline" 
+                size="sm"
+                asChild
+                className="border-yellow-300 text-yellow-300 hover:bg-yellow-300/20"
+              >
+                <a 
+                  href="https://sparkletkids.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="Explore Sparklet Kids Academy website in a new tab"
+                >
+                  Explore Sparklet Kids Academy
+                </a>
+              </Button>
+            </div>
           </motion.div>
           
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full max-w-full px-4 md:px-0">
@@ -660,7 +579,25 @@ const Index = () => {
               stiffness: 300
             }}>
                 <h4 className="text-2xl font-bold mb-4 text-yellow-200">👧 Kids</h4>
-                <p className="text-lg font-semibold">Tuesday, Thursday, Friday: 6-7 PM</p>
+                <p className="text-lg font-semibold mb-4">Tuesday, Thursday, Friday: 6-7 PM</p>
+                <p className="text-base text-yellow-100 mb-3">
+                  Looking for creative movement and arts enrichment for younger children? Explore Sparklet Kids Academy.
+                </p>
+                <Button 
+                  variant="secondary" 
+                  size="sm"
+                  asChild
+                  className="w-full sm:w-auto"
+                >
+                  <a 
+                    href="https://sparkletkids.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="Explore early years enrichment at Sparklet Kids Academy in a new tab"
+                  >
+                    Early-years Enrichment at Sparklet Kids Academy
+                  </a>
+                </Button>
               </motion.div>
               
               <motion.div className="bg-gradient-to-r from-yellow-400 to-amber-400 rounded-2xl p-6 text-center border-2 border-yellow-300 shadow-lg" initial={{
@@ -880,6 +817,17 @@ const Index = () => {
                       <li>• Give your 100% effort, energy, and keep a positive attitude in every class.</li>
                     </ul>
                   </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-13" className="text-left">
+                <AccordionTrigger className="text-purple-700 font-semibold text-left justify-start">
+                  Do you offer programs for younger children?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-gray-600">
+                    For early-years creative movement and arts enrichment, please visit <a href="https://sparkletkids.com/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">Sparklet Kids Academy</a>.
+                  </p>
                 </AccordionContent>
               </AccordionItem>
               </div>
