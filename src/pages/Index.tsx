@@ -11,6 +11,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { VideoHero } from "@/components/VideoHero";
 import { ConfettiEffect, FloatingIcons, TheaterCurtains, RedCarpet, StageSpotlights } from "@/components/TheatricalEffects";
 import { PerformanceCard, ThemedButton } from "@/components/PerformanceCard";
+import { Footer } from "@/components/Footer";
 const Index = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   useEffect(() => {
@@ -915,10 +916,14 @@ const Index = () => {
                     <Phone className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Call Us</h3>
-                  <p className="text-amber-100 text-sm sm:text-base">
-                    858 880 4577<br />
-                    858 880 4576
-                  </p>
+                  <div className="text-amber-100 text-sm sm:text-base space-y-1">
+                    <a href="tel:8588804577" className="block hover:text-white transition-colors">
+                      858 880 4577
+                    </a>
+                    <a href="tel:8588804576" className="block hover:text-white transition-colors">
+                      858 880 4576
+                    </a>
+                  </div>
                 </div>
                 
                 <div className="text-center">
@@ -926,9 +931,12 @@ const Index = () => {
                     <Mail className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Email Us</h3>
-              <p className="text-amber-100 text-sm sm:text-base break-words px-2 md:break-all md:px-0">
-                manasanrithya@gmail.com
-              </p>
+                  <a 
+                    href="mailto:manasanrithya@gmail.com"
+                    className="text-amber-100 text-sm sm:text-base break-words px-2 md:break-all md:px-0 hover:text-white transition-colors inline-block"
+                  >
+                    manasanrithya@gmail.com
+                  </a>
                 </div>
                 
                 <div className="text-center">
@@ -1092,75 +1100,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center mb-4">
-                <img 
-                  src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
-                  alt="Nrithyamanasa Logo" 
-                  className="h-8 w-auto" 
-                  width="120"
-                  height="40"
-                  loading="lazy"
-                />
-              </div>
-              <p className="text-gray-400">
-                Bay Area's premier Bharatanatyam academy, nurturing classical dance traditions since inception. As a proud affiliate of SAMPADA University, we offer students the opportunity to pursue formal dance examinations and certifications, ensuring authentic training rooted in traditional methodology while providing recognized academic credentials.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
-                <li><Link to="/about-manasa" className="hover:text-white transition-colors">About Manasa</Link></li>
-                <li><Link to="/performances" className="hover:text-white transition-colors">Performances</Link></li>
-                <li><Link to="/press-gallery" className="hover:text-white transition-colors">Press Gallery</Link></li>
-                <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Programs</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>Beginner Classes</li>
-                <li>Intermediate Training</li>
-                <li>Advanced/Pre-Arangetram</li>
-                <li><a href="https://www.eshayoga.com/" className="hover:text-white transition-colors">Esha Yoga</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Connect with me on social media</h3>
-              <div className="flex space-x-4 mb-4">
-                <a href="https://www.facebook.com/nrithyamanasa/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                  <Facebook className="h-6 w-6" />
-                </a>
-                <a href="https://www.instagram.com/nrithyamanasa/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                  <Instagram className="h-6 w-6" />
-                </a>
-                <a href="https://www.youtube.com/channel/UCjHetu8d3HAn6D3NViNLNjA/videos" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                  <Youtube className="h-6 w-6" />
-                </a>
-              </div>
-              <div className="space-y-2 text-gray-400">
-                <p>1078 Monroe St, Santa Clara, CA 95050</p>
-                <p>858 880 4577</p>
-                <p>manasanrithya@gmail.com</p>
-              </div>
-            </div>
-          </div>
-          
-          <Separator className="my-8 bg-gray-800" />
-          
-          <div className="text-center text-gray-400">
-            <p>&copy; 2025 Nrithyamanasa Dance Academy. All Rights Reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>;
 };
 export default Index;

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Footer } from "@/components/Footer";
 import journeyImage1 from "@/assets/manasa-journey-1.webp";
 import journeyImage2 from "@/assets/manasa-journey-2.webp";
 import journeyImage3 from "@/assets/manasa-journey-3.webp";
@@ -757,94 +758,7 @@ const AboutManasa = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
-            <div className="sm:col-span-2 md:col-span-1">
-              <div className="flex items-center mb-4">
-                <motion.img 
-                  src="/lovable-uploads/74d7bb37-cf4a-4724-a81f-71869fc277ee.png" 
-                  alt="Nrithyamanasa Logo" 
-                  className="h-8 w-auto"
-                  width="120"
-                  height="40"
-                  loading="lazy"
-                  whileHover={{ scale: 1.1 }}
-                />
-              </div>
-              <p className="text-gray-400 text-sm sm:text-base">
-                Bay Area's premier Bharatanatyam academy, nurturing classical dance traditions since inception. As a proud affiliate of SAMPADA University, we offer students the opportunity to pursue formal dance examinations and certifications, ensuring authentic training rooted in traditional methodology while providing recognized academic credentials.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4 text-sm sm:text-base">Quick Links</h3>
-              <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-                <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
-                <li><span className="text-white">About Manasa</span></li>
-                <li><Link to="/performances" className="hover:text-white transition-colors">Performances</Link></li>
-                <li><Link to="/press-gallery" className="hover:text-white transition-colors">Press Gallery</Link></li>
-                <li><a href="/#contact" className="hover:text-white transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4 text-sm sm:text-base">Programs</h3>
-              <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-                <li>Beginner Classes</li>
-                <li>Intermediate Training</li>
-                <li>Advanced/Pre-Arangetram</li>
-                <li><a href="https://www.eshayoga.com/" className="hover:text-white transition-colors">Esha Yoga</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4 text-sm sm:text-base">Connect with me on Social Media</h3>
-              <div className="flex space-x-4 mb-4">
-                <motion.a 
-                  href="https://www.facebook.com/nrithyamanasa/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                >
-                  <Facebook className="h-5 w-5 sm:h-6 sm:w-6" />
-                </motion.a>
-                <motion.a 
-                  href="https://www.instagram.com/nrithyamanasa/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  whileHover={{ scale: 1.2, rotate: -5 }}
-                >
-                  <Instagram className="h-5 w-5 sm:h-6 sm:w-6" />
-                </motion.a>
-                <motion.a 
-                  href="https://www.youtube.com/channel/UCjHetu8d3HAn6D3NViNLNjA/videos" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                >
-                  <Youtube className="h-5 w-5 sm:h-6 sm:w-6" />
-                </motion.a>
-              </div>
-              <div className="space-y-2 text-gray-400 text-sm">
-                <p>1078 Monroe St, Santa Clara, CA 95050</p>
-                <p>858 880 4577</p>
-                <p>manasanrithya@gmail.com</p>
-              </div>
-            </div>
-          </div>
-          
-          <Separator className="my-6 sm:my-8 bg-gray-800" />
-          
-          <div className="text-center text-gray-400 text-sm sm:text-base">
-            <p>&copy; 2025 Nrithyamanasa Performing Arts Center. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
