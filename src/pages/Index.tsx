@@ -580,24 +580,6 @@ const Index = () => {
             }}>
                 <h4 className="text-2xl font-bold mb-4 text-yellow-200">👧 Kids</h4>
                 <p className="text-lg font-semibold mb-4">Tuesday, Thursday, Friday: 6-7 PM</p>
-                <p className="text-base text-yellow-100 mb-3">
-                  Looking for creative movement and arts enrichment for younger children? Explore Sparklet Kids Academy.
-                </p>
-                <Button 
-                  variant="secondary" 
-                  size="sm"
-                  asChild
-                  className="w-full sm:w-auto"
-                >
-                  <a 
-                    href="https://sparkletkids.com/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label="Explore early years enrichment at Sparklet Kids Academy in a new tab"
-                  >
-                    Early-years Enrichment at Sparklet Kids Academy
-                  </a>
-                </Button>
               </motion.div>
               
               <motion.div className="bg-gradient-to-r from-yellow-400 to-amber-400 rounded-2xl p-6 text-center border-2 border-yellow-300 shadow-lg" initial={{
