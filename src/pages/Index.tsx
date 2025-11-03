@@ -178,7 +178,7 @@ const Index = () => {
             </motion.h2>
             <Separator className="w-32 mx-auto bg-gradient-to-r from-yellow-400 to-pink-400 h-1 mb-6" />
             <p className="text-lg sm:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-              Artistic Director of <span className="font-bold text-black">Nrithyamanasa Dance Academy</span> and Director of
+              Artistic Director of <span className="font-bold text-pink-300">Nrithyamanasa Dance Academy</span> and Director of
               <a href="https://www.eshayoga.com/" className="text-pink-300 hover:text-pink-200 font-semibold underline decoration-pink-300 ml-1 mr-1">Esha Yoga</a> 
               in Santa Clara. Also leading early childhood education at Sparklet Kids Academy.
             </p>
