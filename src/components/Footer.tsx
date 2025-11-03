@@ -40,8 +40,6 @@ export const Footer = () => {
               <li>Beginner Classes</li>
               <li>Intermediate Training</li>
               <li>Advanced/Pre-Arangetram</li>
-              <li><a href="https://www.eshayoga.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Esha Yoga</a></li>
-              <li><a href="https://sparkletkids.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Sparklet Kids Academy</a></li>
             </ul>
           </div>
           

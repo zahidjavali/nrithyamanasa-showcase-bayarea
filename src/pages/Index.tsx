@@ -174,11 +174,11 @@ const Index = () => {
             type: "spring",
             stiffness: 200
           }}>
-              Meet <span className="text-transparent bg-gradient-to-r from-yellow-300 via-pink-300 to-amber-300 bg-clip-text">Manasa Nagaraj</span>
+              Meet <span className="text-black">Manasa Nagaraj</span>
             </motion.h2>
             <Separator className="w-32 mx-auto bg-gradient-to-r from-yellow-400 to-pink-400 h-1 mb-6" />
             <p className="text-lg sm:text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-              Artistic Director of <span className="font-bold text-yellow-300">Nrithyamanasa Dance Academy</span> and Director of 
+              Artistic Director of <span className="font-bold text-black">Nrithyamanasa Dance Academy</span> and Director of
               <a href="https://www.eshayoga.com/" className="text-pink-300 hover:text-pink-200 font-semibold underline decoration-pink-300 ml-1 mr-1">Esha Yoga</a> 
               in Santa Clara. Also leading early childhood education at Sparklet Kids Academy.
             </p>
@@ -802,16 +802,6 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-13" className="text-left">
-                <AccordionTrigger className="text-purple-700 font-semibold text-left justify-start">
-                  Do you offer programs for younger children?
-                </AccordionTrigger>
-                <AccordionContent>
-                  <p className="text-gray-600">
-                    For early-years creative movement and arts enrichment, please visit <a href="https://sparkletkids.com/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 underline">Sparklet Kids Academy</a>.
-                  </p>
-                </AccordionContent>
-              </AccordionItem>
               </div>
             </Accordion>
           </div>
