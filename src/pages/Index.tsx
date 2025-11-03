@@ -183,21 +183,12 @@ const Index = () => {
               in Santa Clara. Also leading early childhood education at Sparklet Kids Academy.
             </p>
             <div className="mt-6">
-              <Button 
-                variant="outline" 
-                size="sm"
-                asChild
-                className="border-yellow-300 text-yellow-300 hover:bg-yellow-300/20"
+              <ThemedButton 
+                onClick={() => window.open('https://sparkletkids.com/', '_blank', 'noopener,noreferrer')}
+                className="text-base px-6 py-3"
               >
-                <a 
-                  href="https://sparkletkids.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  aria-label="Explore Sparklet Kids Academy website in a new tab"
-                >
-                  Explore Sparklet Kids Academy
-                </a>
-              </Button>
+                Explore Sparklet Kids Academy
+              </ThemedButton>
             </div>
           </motion.div>
           
