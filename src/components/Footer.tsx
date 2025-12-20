@@ -93,7 +93,7 @@ export const Footer = () => {
         <Separator className="my-6 sm:my-8 bg-gray-800" />
         
         <div className="text-center text-gray-400 text-sm sm:text-base space-y-2">
-          <p>&copy; 2025 Nrithyamanasa Performing Arts Center. All rights reserved.</p>
+          <p>&copy; 2026 Nrithyamanasa Performing Arts Center. All rights reserved.</p>
           <p>
             Content & Design by{" "}
             <a 
