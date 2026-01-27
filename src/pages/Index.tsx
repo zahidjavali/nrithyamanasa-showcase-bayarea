@@ -850,15 +850,20 @@ const Index = () => {
                   </a>
                 </div>
                 
-                <div className="text-center">
+                <a 
+                  href="https://clients.mindbodyonline.com/classic/ws?studioid=546293&stype=43&prodid=100041"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-center block hover:scale-105 transition-transform"
+                >
                   <div className="w-20 h-20 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center">
                     <Users className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Join Us</h3>
+                  <h3 className="text-xl font-bold mb-2">Register With Us</h3>
                   <p className="text-amber-100 text-sm sm:text-base">
                     Classes in Bay Area
                   </p>
-                </div>
+                </a>
               </div>
             </div>
             
