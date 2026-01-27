@@ -133,11 +133,7 @@ const Index = () => {
     }} />
 
       {/* Navigation */}
-      <Navigation 
-        isMobileMenuOpen={isMobileMenuOpen}
-        toggleMobileMenu={toggleMobileMenu}
-        setIsMobileMenuOpen={setIsMobileMenuOpen}
-      />
+      <Navigation isMobileMenuOpen={isMobileMenuOpen} toggleMobileMenu={toggleMobileMenu} setIsMobileMenuOpen={setIsMobileMenuOpen} />
 
       {/* Hero Video Section */}
       <VideoHero />
@@ -183,10 +179,7 @@ const Index = () => {
               in Santa Clara. Also leading early childhood education at Sparklet Kids Academy.
             </p>
             <div className="mt-6">
-              <ThemedButton 
-                onClick={() => window.open('https://sparkletkids.com/', '_blank', 'noopener,noreferrer')}
-                className="text-base px-6 py-3"
-              >
+              <ThemedButton onClick={() => window.open('https://sparkletkids.com/', '_blank', 'noopener,noreferrer')} className="text-base px-6 py-3">
                 Explore Sparklet Kids Academy
               </ThemedButton>
             </div>
@@ -274,15 +267,7 @@ const Index = () => {
               }} style={{
                 borderImage: "linear-gradient(45deg, #fbbf24, #ec4899) 1"
               }}>
-                  <img 
-                    src="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" 
-                    alt="Manasa Nagaraj - Master Bharatanatyam Instructor" 
-                    className="w-full h-full object-cover max-w-full" 
-                    width="384"
-                    height="384"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <img src="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" alt="Manasa Nagaraj - Master Bharatanatyam Instructor" className="w-full h-full object-cover max-w-full" width="384" height="384" loading="lazy" decoding="async" />
                 </motion.div>
                 
                 {/* Multiple rotating glows */}
@@ -447,22 +432,12 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <PerformanceCard delay={0.1} className="text-center bg-gradient-to-br from-purple-500 to-purple-700 text-white border-2 border-purple-300 shadow-2xl">
               <CardHeader className="relative bg-[#0a0005]">
-                <motion.img 
-                  src="/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png" 
-                  alt="Beginner Bharatanatyam students performing adavus" 
-                  className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30" 
-                  width="400"
-                  height="192"
-                  loading="lazy"
-                  decoding="async"
-                  whileHover={{
-                    scale: 1.05
-                  }} 
-                  transition={{
-                    type: "spring",
-                    stiffness: 200
-                  }} 
-                />
+                <motion.img src="/lovable-uploads/58c23e78-c86f-4d64-9e7d-9a29133a6273.png" alt="Beginner Bharatanatyam students performing adavus" className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30" width="400" height="192" loading="lazy" decoding="async" whileHover={{
+                scale: 1.05
+              }} transition={{
+                type: "spring",
+                stiffness: 200
+              }} />
                 <CardTitle className="text-xl font-bold text-yellow-200">🌱 Beginner Classes</CardTitle>
               </CardHeader>
               <CardContent className="bg-inherit">
@@ -474,22 +449,12 @@ const Index = () => {
 
             <PerformanceCard delay={0.2} className="text-center bg-gradient-to-br from-amber-500 to-orange-600 text-white border-2 border-amber-300 shadow-2xl">
               <CardHeader className="relative bg-[#0e0d0d]">
-                <motion.img 
-                  src="/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png" 
-                  alt="Intermediate Bharatanatyam students performing expressive dance" 
-                  className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30" 
-                  width="400"
-                  height="192"
-                  loading="lazy"
-                  decoding="async"
-                  whileHover={{
-                    scale: 1.05
-                  }} 
-                  transition={{
-                    type: "spring",
-                    stiffness: 200
-                  }} 
-                />
+                <motion.img src="/lovable-uploads/19d84a2d-4f0e-4d66-b943-9cfb8dd709af.png" alt="Intermediate Bharatanatyam students performing expressive dance" className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30" width="400" height="192" loading="lazy" decoding="async" whileHover={{
+                scale: 1.05
+              }} transition={{
+                type: "spring",
+                stiffness: 200
+              }} />
                 <CardTitle className="text-xl font-bold text-yellow-200">🌸 Intermediate Classes</CardTitle>
               </CardHeader>
               <CardContent className="bg-inherit">
@@ -501,22 +466,12 @@ const Index = () => {
 
             <PerformanceCard delay={0.3} className="text-center bg-gradient-to-br from-pink-500 to-rose-600 text-white border-2 border-pink-300 shadow-2xl">
               <CardHeader className="relative bg-slate-950">
-                <motion.img 
-                  src="/lovable-uploads/853fc79e-5fff-4635-9d9d-88bb107c6fae.png" 
-                  alt="Advanced Bharatanatyam students pre-Arangetram performance" 
-                  className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30" 
-                  width="400"
-                  height="192"
-                  loading="lazy"
-                  decoding="async"
-                  whileHover={{
-                    scale: 1.05
-                  }} 
-                  transition={{
-                    type: "spring",
-                    stiffness: 200
-                  }} 
-                />
+                <motion.img src="/lovable-uploads/853fc79e-5fff-4635-9d9d-88bb107c6fae.png" alt="Advanced Bharatanatyam students pre-Arangetram performance" className="w-full h-48 object-cover rounded-lg mb-4 border-2 border-white/30" width="400" height="192" loading="lazy" decoding="async" whileHover={{
+                scale: 1.05
+              }} transition={{
+                type: "spring",
+                stiffness: 200
+              }} />
                 <CardTitle className="text-yellow-200 text-xl font-bold">🏆 Advanced/Pre-Arangetram</CardTitle>
               </CardHeader>
               <CardContent>
@@ -583,9 +538,7 @@ const Index = () => {
               repeatType: "reverse",
               repeatDelay: 1
             }}>
-                <p className="text-2xl font-bold text-purple-900">
-                  🎉 2026 will be our 10th year! 🎊
-                </p>
+                <p className="text-2xl font-bold text-purple-900">🎉 2026 is our 10th year! 🎊</p>
               </motion.div>
             </div>
           </motion.div>
@@ -626,13 +579,7 @@ const Index = () => {
           </motion.div>
           
           <div className="aspect-video max-w-4xl mx-auto">
-            <iframe 
-              src="https://www.youtube.com/embed/videoseries?list=UUjHetu8d3HAn6D3NViNLNjA" 
-              title="Nrithyamanasa Performance Videos" 
-              className="w-full h-full rounded-lg shadow-lg" 
-              loading="lazy"
-              allowFullScreen
-            ></iframe>
+            <iframe src="https://www.youtube.com/embed/videoseries?list=UUjHetu8d3HAn6D3NViNLNjA" title="Nrithyamanasa Performance Videos" className="w-full h-full rounded-lg shadow-lg" loading="lazy" allowFullScreen></iframe>
           </div>
         </div>
       </section>
@@ -842,20 +789,12 @@ const Index = () => {
                     <Mail className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Email Us</h3>
-                  <a 
-                    href="mailto:manasanrithya@gmail.com"
-                    className="text-amber-100 text-sm sm:text-base break-words px-2 md:break-all md:px-0 hover:text-white transition-colors inline-block"
-                  >
+                  <a href="mailto:manasanrithya@gmail.com" className="text-amber-100 text-sm sm:text-base break-words px-2 md:break-all md:px-0 hover:text-white transition-colors inline-block">
                     manasanrithya@gmail.com
                   </a>
                 </div>
                 
-                <a 
-                  href="https://clients.mindbodyonline.com/classic/ws?studioid=546293&stype=43&prodid=100041"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-center block hover:scale-105 transition-transform"
-                >
+                <a href="https://clients.mindbodyonline.com/classic/ws?studioid=546293&stype=43&prodid=100041" target="_blank" rel="noopener noreferrer" className="text-center block hover:scale-105 transition-transform">
                   <div className="w-20 h-20 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center">
                     <Users className="h-8 w-8 text-white" />
                   </div>
@@ -869,15 +808,7 @@ const Index = () => {
             
             <div className="text-center">
               <div className="w-60 h-60 sm:w-80 sm:h-80 mx-auto mb-6 overflow-hidden rounded-full border-4 border-white/20">
-                <img 
-                  src="/images/get-in-touch.jpg" 
-                  alt="Contact Nrithyamanasa for Bharatanatyam classes in Bay Area" 
-                  className="w-full h-full object-cover" 
-                  width="320"
-                  height="320"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <img src="/images/get-in-touch.jpg" alt="Contact Nrithyamanasa for Bharatanatyam classes in Bay Area" className="w-full h-full object-cover" width="320" height="320" loading="lazy" decoding="async" />
               </div>
               <p className="text-amber-100 max-w-md mx-auto text-sm sm:text-base px-2 sm:px-4 break-words">
                 If you are interested in learning Bharatanatyam and live in the Bay Area, please visit us for a consultation. We have classes tailored to suit you.
