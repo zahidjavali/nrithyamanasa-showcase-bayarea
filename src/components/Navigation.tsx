@@ -114,8 +114,13 @@ export const Navigation = ({ isMobileMenuOpen, toggleMobileMenu, setIsMobileMenu
               </Link>
             )}
             
-            <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105 relative group">
-              CONTACT
+            <a 
+              href="https://clients.mindbodyonline.com/classic/ws?studioid=546293&stype=43&prodid=100041" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105 relative group"
+            >
+              REGISTER
               <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 scale-x-0 group-hover:scale-x-100 transition-transform"></div>
             </a>
           </div>
@@ -205,24 +210,15 @@ export const Navigation = ({ isMobileMenuOpen, toggleMobileMenu, setIsMobileMenu
                   </Link>
                 )}
                 
-                <button 
+                <a 
+                  href="https://clients.mindbodyonline.com/classic/ws?studioid=546293&stype=43&prodid=100041"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full text-left px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsMobileMenuOpen(false);
-                    setTimeout(() => {
-                      const contactSection = document.getElementById('contact');
-                      if (contactSection) {
-                        contactSection.scrollIntoView({
-                          behavior: 'smooth',
-                          block: 'start'
-                        });
-                      }
-                    }, 300);
-                  }}
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  CONTACT
-                </button>
+                  REGISTER
+                </a>
               </div>
             </motion.div>
           )}
