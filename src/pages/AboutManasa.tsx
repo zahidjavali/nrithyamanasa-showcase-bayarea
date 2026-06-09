@@ -102,13 +102,39 @@ const AboutManasa = () => {
         <meta name="description" content="Learn about Manasa Nagaraj, the master instructor behind Nrithyamanasa Academy. Discover her journey, achievements, and dedication to preserving classical Bharatanatyam tradition." />
         <meta property="og:title" content="About Manasa Nagaraj - Master Bharatanatyam Instructor | Nrithyamanasa" />
         <meta property="og:description" content="Learn about Manasa Nagaraj, the master instructor behind Nrithyamanasa Academy. Discover her journey, achievements, and dedication to preserving classical Bharatanatyam tradition." />
-        <meta property="og:image" content="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" />
-        <meta property="og:url" content="https://manasanagaraj.netlify.app/about-manasa" />
+        <meta property="og:image" content="https://manasanagaraj.com/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" />
+        <meta property="og:url" content="https://manasanagaraj.com/about-manasa" />
+        <meta property="og:type" content="profile" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About Manasa Nagaraj - Master Bharatanatyam Instructor" />
         <meta name="twitter:description" content="Learn about Manasa Nagaraj, the master instructor behind Nrithyamanasa Academy." />
-        <meta name="twitter:image" content="/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" />
-        <link rel="canonical" href="https://manasanagaraj.netlify.app/about-manasa" />
+        <meta name="twitter:image" content="https://manasanagaraj.com/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png" />
+        <link rel="canonical" href="https://manasanagaraj.com/about-manasa" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Manasa Nagaraj",
+          "jobTitle": "Bharatanatyam Master Instructor & Artistic Director",
+          "url": "https://manasanagaraj.com/about-manasa",
+          "image": "https://manasanagaraj.com/lovable-uploads/4a94da77-9a3e-4002-94e9-75db84e6c8ce.png",
+          "worksFor": {
+            "@type": "DanceSchool",
+            "name": "Nrithyamanasa Performing Arts Center",
+            "url": "https://manasanagaraj.com"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1078 Monroe St",
+            "addressLocality": "Santa Clara",
+            "addressRegion": "CA",
+            "postalCode": "95050",
+            "addressCountry": "US"
+          },
+          "sameAs": [
+            "https://www.facebook.com/nrithyamanasa/",
+            "https://www.instagram.com/nrithyamanasa/"
+          ]
+        })}</script>
       </Helmet>
 
       {/* Navigation */}
