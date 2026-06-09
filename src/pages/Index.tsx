@@ -114,13 +114,14 @@ const Index = () => {
         <meta name="description" content="Learn classical Indian dance Bharatanatyam with master instructor Manasa Nagaraj at Santa Clara's premier dance academy. Classes for all levels from beginner to advanced." />
         <meta property="og:title" content="Nrithyamanasa - Premier Bharatanatyam Academy in Santa Clara" />
         <meta property="og:description" content="Learn classical Indian dance Bharatanatyam with master instructor Manasa Nagaraj at Santa Clara's premier dance academy. Classes for all levels from beginner to advanced." />
-        <meta property="og:image" content="/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png" />
-        <meta property="og:url" content="https://manasanagaraj.netlify.app/" />
+        <meta property="og:image" content="https://manasanagaraj.com/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png" />
+        <meta property="og:url" content="https://manasanagaraj.com/" />
+        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Nrithyamanasa - Premier Bharatanatyam Academy in Santa Clara" />
         <meta name="twitter:description" content="Learn classical Indian dance Bharatanatyam with master instructor Manasa Nagaraj at Santa Clara's premier dance academy." />
-        <meta name="twitter:image" content="/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png" />
-        <link rel="canonical" href="https://manasanagaraj.netlify.app/" />
+        <meta name="twitter:image" content="https://manasanagaraj.com/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png" />
+        <link rel="canonical" href="https://manasanagaraj.com/" />
       </Helmet>
       <script type="application/ld+json" dangerouslySetInnerHTML={{
       __html: JSON.stringify(faqSchema)

@@ -41,13 +41,14 @@ const PressGallery = () => {
         <meta name="description" content="Explore media coverage and press articles about Nrithyamanasa Academy and Manasa Nagaraj's Bharatanatyam performances in newspapers and publications." />
         <meta property="og:title" content="Press Gallery & Media Coverage | Nrithyamanasa Academy" />
         <meta property="og:description" content="Explore media coverage and press articles about Nrithyamanasa Academy and Manasa Nagaraj's Bharatanatyam performances." />
-        <meta property="og:image" content="https://manasanagaraj.com/wp-content/uploads/2019/04/5D4_7134.jpg" />
-        <meta property="og:url" content="https://manasanagaraj.netlify.app/press-gallery" />
+        <meta property="og:image" content="https://manasanagaraj.com/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png" />
+        <meta property="og:url" content="https://manasanagaraj.com/press-gallery" />
+        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Press Gallery & Media Coverage | Nrithyamanasa Academy" />
         <meta name="twitter:description" content="Explore media coverage and press articles about Nrithyamanasa Academy." />
-        <meta name="twitter:image" content="https://manasanagaraj.com/wp-content/uploads/2019/04/5D4_7134.jpg" />
-        <link rel="canonical" href="https://manasanagaraj.netlify.app/press-gallery" />
+        <meta name="twitter:image" content="https://manasanagaraj.com/lovable-uploads/3b57576e-62d1-40fc-820e-30b6d5fb1026.png" />
+        <link rel="canonical" href="https://manasanagaraj.com/press-gallery" />
       </Helmet>
       {/* Navigation */}
       <Navigation 
