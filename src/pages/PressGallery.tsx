@@ -19,19 +19,19 @@ const PressGallery = () => {
   };
 
   const pressImages = [
-    "/images/press-gallery/dance-like-swan-prajavani-e1448583120986.png",
-    "/images/press-gallery/DH-1.png",
-    "/images/press-gallery/hindu-1-e1448582811410.jpg",
-    "/images/press-gallery/hindu2-2-e1448582889114.png",
-    "/images/press-gallery/hindu-2-e1448582838742.jpg",
-    "/images/press-gallery/IE-e1448583067987.png",
-    "/images/press-gallery/Kp-1.png",
-    "/images/press-gallery/mysoremitra1.png",
-    "/images/press-gallery/nritya-prathibe-e1448583165333.png",
-    "/images/press-gallery/prajanudi.png",
-    "/images/press-gallery/SOM-PAllaotsava-photo.png",
-    "/images/press-gallery/som-pallotsava-1-e1448582932181.png",
-    "/images/press-gallery/SOM-Rangapravesha-e1448582992873.png"
+    "/images/press-gallery/dance-like-swan-prajavani-e1448583120986.webp",
+    "/images/press-gallery/DH-1.webp",
+    "/images/press-gallery/hindu-1-e1448582811410.webp",
+    "/images/press-gallery/hindu2-2-e1448582889114.webp",
+    "/images/press-gallery/hindu-2-e1448582838742.webp",
+    "/images/press-gallery/IE-e1448583067987.webp",
+    "/images/press-gallery/Kp-1.webp",
+    "/images/press-gallery/mysoremitra1.webp",
+    "/images/press-gallery/nritya-prathibe-e1448583165333.webp",
+    "/images/press-gallery/prajanudi.webp",
+    "/images/press-gallery/SOM-PAllaotsava-photo.webp",
+    "/images/press-gallery/som-pallotsava-1-e1448582932181.webp",
+    "/images/press-gallery/SOM-Rangapravesha-e1448582992873.webp"
   ];
 
   return (
