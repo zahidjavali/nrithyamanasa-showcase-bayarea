@@ -276,7 +276,7 @@ const Index = () => {
           }} className="order-2 lg:order-1 w-full max-w-full overflow-hidden">
               <PerformanceCard className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-6 sm:p-8 w-full max-w-full">
                  <div className="text-white w-full max-w-full overflow-hidden">
-                   <motion.h3 className="text-2xl sm:text-3xl font-bold mb-6 text-black bg-gradient-to-r from-yellow-300 to-amber-300 bg-clip-text text-transparent break-words" whileHover={{
+                   <motion.h3 className="text-xl sm:text-3xl font-bold mb-6 text-black bg-gradient-to-r from-yellow-300 to-amber-300 bg-clip-text text-transparent break-words" whileHover={{
                   scale: 1.02
                 }}>
                      🎭 Master Instructor & Artist
