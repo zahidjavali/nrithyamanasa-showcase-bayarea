@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#1F1315] text-[#FDF8F0] py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           <div className="sm:col-span-2 md:col-span-1">
