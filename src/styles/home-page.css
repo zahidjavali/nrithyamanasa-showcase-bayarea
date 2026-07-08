@@ -5,8 +5,8 @@
   background-image: none !important;
 }
 
-/* Neutralize gradient backgrounds on section elements inside homepage */
-.home-page > section {
+/* Neutralize gradient backgrounds on section elements inside homepage (skip the video hero) */
+.home-page > section:not(:first-of-type) {
   background-image: none !important;
 }
 
