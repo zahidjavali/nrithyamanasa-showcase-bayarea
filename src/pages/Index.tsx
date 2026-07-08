@@ -13,6 +13,7 @@ import { ConfettiEffect, FloatingIcons, TheaterCurtains, RedCarpet, StageSpotlig
 import { PerformanceCard, ThemedButton } from "@/components/PerformanceCard";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
+import "@/styles/home-page.css";
 const Index = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   useEffect(() => {
