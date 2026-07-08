@@ -99,9 +99,11 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  body {
+  html, body {
     @apply bg-background text-foreground;
     font-display: swap;
+    overflow-x: hidden;
+    max-width: 100vw;
   }
   
   /* Optimize font loading */
