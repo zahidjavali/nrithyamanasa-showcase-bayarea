@@ -262,38 +262,38 @@ const Index = () => {
             </div>
           </motion.div>
           
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full max-w-full px-4 md:px-0">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full max-w-full px-0 md:px-0">
             <motion.div initial={{
             opacity: 0,
-            x: -50
+            y: 30
           }} whileInView={{
             opacity: 1,
-            x: 0
+            y: 0
           }} transition={{
             duration: 0.8
           }} viewport={{
             once: true
-          }} className="order-2 lg:order-1 w-full max-w-full overflow-hidden">
-              <PerformanceCard className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-6 sm:p-8 w-full max-w-full">
+          }} className="order-2 lg:order-1 w-full min-w-0 max-w-full overflow-hidden">
+              <PerformanceCard hoverScale={1} className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-4 sm:p-8 w-full min-w-0 max-w-full">
                  <div className="text-white w-full max-w-full overflow-hidden">
-                   <motion.h3 className="text-xl sm:text-3xl font-bold mb-6 text-black bg-gradient-to-r from-yellow-300 to-amber-300 bg-clip-text text-transparent break-words" whileHover={{
+                   <motion.h3 className="text-lg sm:text-3xl font-bold mb-5 sm:mb-6 text-black bg-gradient-to-r from-yellow-300 to-amber-300 bg-clip-text text-transparent break-words leading-snug" whileHover={{
                   scale: 1.02
                 }}>
                      🎭 Master Instructor & Artist
                    </motion.h3>
                    
                    <div className="space-y-6 w-full max-w-full">
-                     <p className="text-lg leading-relaxed text-gray-900 bg-white/90 p-4 rounded-lg break-words word-wrap-break-word">
+                     <p className="text-base sm:text-lg leading-relaxed text-gray-900 bg-white/90 p-4 rounded-lg break-words [overflow-wrap:anywhere]">
                        With <span className="font-bold text-purple-600">decades of experience</span> in classical dance and wellness, Manasa brings exceptional skills to her students. Her commitment to preserving traditional <span className="text-amber-600 font-semibold">Bharatanatyam</span> while making it accessible to modern students has made her one of the most respected instructors in the Bay Area.
                      </p>
                      
-                     <motion.div className="flex items-center justify-center sm:justify-start space-x-4 p-4 bg-white/90 rounded-xl border border-purple-300" whileHover={{
+                     <motion.div className="flex flex-col min-[360px]:flex-row items-center justify-center sm:justify-start gap-3 min-[360px]:gap-4 p-4 bg-white/90 rounded-xl border border-purple-300" whileHover={{
                     scale: 1.05
                   }} transition={{
                     type: "spring",
                     stiffness: 200
                   }}>
-                       <div className="flex items-center space-x-1">
+                       <div className="flex items-center space-x-1 shrink-0">
                          {[...Array(5)].map((_, i) => <motion.div key={i} initial={{
                         scale: 0,
                         rotate: -180
@@ -310,7 +310,7 @@ const Index = () => {
                              <Star className="h-6 w-6 fill-yellow-400 text-yellow-400 drop-shadow-lg" />
                            </motion.div>)}
                        </div>
-                       <span className="text-purple-700 font-bold">Highly Rated Instructor</span>
+                       <span className="text-purple-700 font-bold text-center sm:text-left leading-snug">Highly Rated Instructor</span>
                      </motion.div>
                     
                     <motion.div className="pt-4">
@@ -325,10 +325,10 @@ const Index = () => {
             
             <motion.div className="text-center order-1 lg:order-2 w-full max-w-full px-4 md:px-0" initial={{
             opacity: 0,
-            x: 50
+            y: 30
           }} whileInView={{
             opacity: 1,
-            x: 0
+            y: 0
           }} transition={{
             duration: 0.8
           }} viewport={{
