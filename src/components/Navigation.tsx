@@ -114,6 +114,22 @@ export const Navigation = ({ isMobileMenuOpen, toggleMobileMenu, setIsMobileMenu
               </Link>
             )}
             
+            <a
+              href="/#faq"
+              className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105 relative group"
+            >
+              FAQ
+              <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 scale-x-0 group-hover:scale-x-100 transition-transform"></div>
+            </a>
+
+            <a
+              href="/#contact"
+              className="text-gray-700 hover:text-purple-600 transition-all duration-300 text-sm lg:text-base hover:scale-105 relative group"
+            >
+              CONTACT
+              <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 scale-x-0 group-hover:scale-x-100 transition-transform"></div>
+            </a>
+
             <a 
               href="https://clients.mindbodyonline.com/classic/ws?studioid=546293&stype=43&prodid=100041" 
               target="_blank"
@@ -210,6 +226,22 @@ export const Navigation = ({ isMobileMenuOpen, toggleMobileMenu, setIsMobileMenu
                   </Link>
                 )}
                 
+                <a
+                  href="/#faq"
+                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  FAQ
+                </a>
+
+                <a
+                  href="/#contact"
+                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  CONTACT
+                </a>
+
                 <a 
                   href="https://clients.mindbodyonline.com/classic/ws?studioid=546293&stype=43&prodid=100041"
                   target="_blank"

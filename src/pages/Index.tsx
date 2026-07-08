@@ -26,28 +26,104 @@ const Index = () => {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "What is Bharatanatyam?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Bharatanatyam is a classical dance form from South India that evolved over centuries in temples and royal courts. It uses beautiful body movements, hand gestures, and facial expressions to tell stories."
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Bharatanatyam?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bharatanatyam is a classical dance form from South India that evolved over centuries in temples and royal courts. It uses beautiful body movements, hand gestures, and facial expressions to tell stories and express emotions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long and how many times a week are the classes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Classes are one hour long and held once or twice a week based on what students prefer. Please check our Classes page for the schedule."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the minimum age to start learning Bharatanatyam?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The best age to start is 5 years and above. We teach children using fun and easy methods to help them learn the rhythms, music, and movements of Bharatanatyam."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should students wear for classes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Girls should wear a dance practice sari or salwar kameez. Boys should wear a dhoti or kurta pyjama. All students should have their waist firmly tied. Hair should be tied back neatly in a bun or plait. No dance costume, jewelry, or ankle bells should be worn."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does each level take different time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each level progresses based on the student's ability, class participation, and regular practice at home. Each level builds on what you learned before, so it's very important to master each level completely before moving to the next."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I register?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Click on the Signup | Register link to create an account and pay the registration fee. After your first class, we will set up monthly autopay that charges on the same date each month."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I cancel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You need to give us 30 days written notice to stop autopay. Please email us at manasanrithya@gmail.com with 'membership cancellation' in the subject line. We will send you a confirmation email within 7 business days. If you want to pause classes, we charge $15 per month as hold charges."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer 1 class or 2 per week?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer 2 classes per week, but students can choose 1 or 2 classes based on their schedule."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are classes held during summer and winter breaks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, classes continue during summer and winter breaks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer trial classes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, students need to register and pay the $50 registration fee first. This fee cannot be refunded. Monthly autopay starts only after the first class. If you don't like the first class, autopay will not start."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I miss a class?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There are no makeup classes for missed classes. If the teacher misses a class, then we will provide a makeup class."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the student rules and expectations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All students should attend classes regularly. Please arrive on time for warm-up exercises to avoid injury. Students should show respect to the teacher and follow instructions. Follow the dress code — students not in proper dress cannot participate. Be friendly and welcoming to other students in the class. Give your 100% effort, energy, and keep a positive attitude in every class."
+        }
       }
-    }, {
-      "@type": "Question",
-      "name": "What is the minimum age to start learning Bharatanatyam?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The best age to start is 5 years and above. We teach children using fun and easy methods to help them learn the rhythms, music, and movements of Bharatanatyam."
-      }
-    }, {
-      "@type": "Question",
-      "name": "How long and how many times a week are the classes?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Classes are one hour long and held once or twice a week based on what students prefer. Please check our Classes page for the schedule."
-      }
-    }]
+    ]
   };
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -586,7 +662,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="faq" className="py-16 px-4 sm:px-6 lg:px-8 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
@@ -748,7 +824,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-600 to-amber-600 text-white">
+      <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-600 to-amber-600 text-white scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
