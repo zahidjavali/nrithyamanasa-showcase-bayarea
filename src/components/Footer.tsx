@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#1F1315] text-[#FDF8F0] py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           <div className="sm:col-span-2 md:col-span-1">
@@ -18,25 +18,25 @@ export const Footer = () => {
                 loading="lazy"
               />
             </div>
-            <p className="text-gray-400 text-sm sm:text-base">
+            <p className="text-[#D4AF37] text-sm sm:text-base">
               Bay Area's premier Bharatanatyam academy, nurturing classical dance traditions since inception. As a proud affiliate of SAMPADA University, we offer students the opportunity to pursue formal dance examinations and certifications, ensuring authentic training rooted in traditional methodology while providing recognized academic credentials.
             </p>
           </div>
           
           <div>
             <h3 className="font-semibold mb-4 text-sm sm:text-base">Quick Links</h3>
-            <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-              <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link to="/about-manasa" className="hover:text-white transition-colors">About Manasa</Link></li>
-              <li><Link to="/performances" className="hover:text-white transition-colors">Performances</Link></li>
-              <li><Link to="/press-gallery" className="hover:text-white transition-colors">Press Gallery</Link></li>
-              <li><a href="/#contact" className="hover:text-white transition-colors">Contact</a></li>
+            <ul className="space-y-2 text-[#D4AF37] text-sm sm:text-base">
+              <li><Link to="/" className="hover:text-[#C1272D] transition-colors">Home</Link></li>
+              <li><Link to="/about-manasa" className="hover:text-[#C1272D] transition-colors">About Manasa</Link></li>
+              <li><Link to="/performances" className="hover:text-[#C1272D] transition-colors">Performances</Link></li>
+              <li><Link to="/press-gallery" className="hover:text-[#C1272D] transition-colors">Press Gallery</Link></li>
+              <li><a href="/#contact" className="hover:text-[#C1272D] transition-colors">Contact</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-semibold mb-4 text-sm sm:text-base">Programs</h3>
-            <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
+            <ul className="space-y-2 text-[#D4AF37] text-sm sm:text-base">
               <li>Beginner Classes</li>
               <li>Intermediate Training</li>
               <li>Advanced/Pre-Arangetram</li>
@@ -50,7 +50,7 @@ export const Footer = () => {
                 href="https://www.facebook.com/nrithyamanasa/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-[#D4AF37] hover:text-[#C1272D] transition-colors"
                 aria-label="Visit our Facebook page"
               >
                 <Facebook className="h-5 w-5 sm:h-6 sm:w-6" />
@@ -59,7 +59,7 @@ export const Footer = () => {
                 href="https://www.instagram.com/nrithyamanasa/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-[#D4AF37] hover:text-[#C1272D] transition-colors"
                 aria-label="Visit our Instagram page"
               >
                 <Instagram className="h-5 w-5 sm:h-6 sm:w-6" />
@@ -68,21 +68,21 @@ export const Footer = () => {
                 href="https://www.youtube.com/channel/UCjHetu8d3HAn6D3NViNLNjA/videos" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-[#D4AF37] hover:text-[#C1272D] transition-colors"
                 aria-label="Visit our YouTube channel"
               >
                 <Youtube className="h-5 w-5 sm:h-6 sm:w-6" />
               </a>
             </div>
-            <div className="space-y-2 text-gray-400 text-sm">
+            <div className="space-y-2 text-[#D4AF37] text-sm">
               <p>1078 Monroe St, Santa Clara, CA 95050</p>
               <p>
-                <a href="tel:8588804577" className="hover:text-white transition-colors">
+                <a href="tel:8588804577" className="hover:text-[#C1272D] transition-colors">
                   858 880 4577
                 </a>
               </p>
               <p>
-                <a href="mailto:manasanrithya@gmail.com" className="hover:text-white transition-colors">
+                <a href="mailto:manasanrithya@gmail.com" className="hover:text-[#C1272D] transition-colors">
                   manasanrithya@gmail.com
                 </a>
               </p>
@@ -90,9 +90,9 @@ export const Footer = () => {
           </div>
         </div>
         
-        <Separator className="my-6 sm:my-8 bg-gray-800" />
+        <Separator className="my-6 sm:my-8 bg-[#3a2224]" />
         
-        <div className="text-center text-gray-400 text-sm sm:text-base space-y-2">
+        <div className="text-center text-[#D4AF37] text-sm sm:text-base space-y-2">
           <p>&copy; 2026 Nrithyamanasa Performing Arts Center. All rights reserved.</p>
           <p>
             Content & Design by{" "}
@@ -100,7 +100,7 @@ export const Footer = () => {
               href="https://writewing.in/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-amber-400 hover:text-amber-300 transition-colors underline"
+              className="text-[#D4AF37] hover:text-[#C1272D] transition-colors underline"
             >
               Write Wing Media
             </a>

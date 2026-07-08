@@ -13,6 +13,7 @@ import { ConfettiEffect, FloatingIcons, TheaterCurtains, RedCarpet, StageSpotlig
 import { PerformanceCard, ThemedButton } from "@/components/PerformanceCard";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
+import "@/styles/home-page.css";
 const Index = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   useEffect(() => {
@@ -184,7 +185,7 @@ const Index = () => {
       "item": "/press-gallery"
     }]
   };
-  return <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-amber-50 relative overflow-hidden">
+  return <div className="home-page min-h-screen relative overflow-hidden">
       <Helmet>
         <title>Nrithyamanasa - Premier Bharatanatyam Academy in Santa Clara</title>
         <meta name="description" content="Learn classical Indian dance Bharatanatyam with master instructor Manasa Nagaraj at Santa Clara's premier dance academy. Classes for all levels from beginner to advanced." />

@@ -1,0 +1,107 @@
+/* Homepage-only color overrides. Scoped to `.home-page` wrapper so other routes stay untouched. */
+
+.home-page {
+  background: #FDF8F0 !important;
+  background-image: none !important;
+}
+
+/* Neutralize gradient backgrounds on section elements inside homepage (skip the video hero) */
+.home-page > section:not(:first-of-type) {
+  background-image: none !important;
+}
+
+/* === About section (#about) : maroon block, ivory text, gold accents === */
+.home-page section#about {
+  background-color: #6B2C2C !important;
+  color: #FDF8F0 !important;
+}
+.home-page section#about .text-gray-200,
+.home-page section#about .text-pink-300,
+.home-page section#about .text-pink-200,
+.home-page section#about .text-white {
+  color: #FDF8F0 !important;
+}
+.home-page section#about .text-black,
+.home-page section#about .bg-clip-text,
+.home-page section#about .text-transparent {
+  color: #D4AF37 !important;
+  -webkit-text-fill-color: #D4AF37 !important;
+  background-image: none !important;
+}
+.home-page section#about a {
+  color: #D4AF37 !important;
+}
+.home-page section#about a:hover {
+  color: #C1272D !important;
+}
+
+/* === SAMPADA section (3rd) : warm cream backdrop (inner card retains its dark styling) === */
+.home-page > section:nth-of-type(3) {
+  background-color: #F5EBD6 !important;
+}
+
+/* === Classes (#classes) : ivory, charcoal text, gold headings === */
+.home-page section#classes {
+  background-color: #FDF8F0 !important;
+}
+.home-page section#classes .text-gray-700 { color: #1F1315 !important; }
+.home-page section#classes .bg-clip-text,
+.home-page section#classes .text-transparent {
+  color: #6B2C2C !important;
+  -webkit-text-fill-color: #6B2C2C !important;
+  background-image: none !important;
+}
+
+/* === Class Schedule (4th section) : warm cream backdrop, teal card === */
+.home-page > section:nth-of-type(5) {
+  background-color: #F5EBD6 !important;
+}
+.home-page > section:nth-of-type(5) .bg-gradient-to-br {
+  background-image: none !important;
+  background-color: #0B4F4F !important;
+}
+.home-page > section:nth-of-type(5) .text-yellow-200,
+.home-page > section:nth-of-type(5) .text-yellow-100 {
+  color: #D4AF37 !important;
+}
+
+/* === Showcase (#showcase) : ivory, charcoal text, maroon heading === */
+.home-page section#showcase {
+  background-color: #FDF8F0 !important;
+}
+.home-page section#showcase .text-gray-700 { color: #1F1315 !important; }
+.home-page section#showcase .bg-clip-text,
+.home-page section#showcase .text-transparent {
+  color: #6B2C2C !important;
+  -webkit-text-fill-color: #6B2C2C !important;
+  background-image: none !important;
+}
+
+/* === FAQ (#faq) : ivory === */
+.home-page section#faq {
+  background-color: #FDF8F0 !important;
+}
+
+/* === Contact / CTA band (#contact) : full-bleed teal, ivory text, gold button === */
+.home-page section#contact {
+  background-color: #0B4F4F !important;
+  color: #FDF8F0 !important;
+}
+.home-page section#contact .text-white,
+.home-page section#contact .text-gray-100,
+.home-page section#contact .text-gray-200 {
+  color: #FDF8F0 !important;
+}
+.home-page section#contact button,
+.home-page section#contact .bg-gradient-to-r {
+  background-image: none !important;
+  background-color: #D4AF37 !important;
+  color: #1F1315 !important;
+}
+
+/* === Trailing sections (8th and 9th, no id) : warm cream === */
+.home-page > section:nth-of-type(9),
+.home-page > section:nth-of-type(10) {
+  background-color: #F5EBD6 !important;
+  color: #1F1315 !important;
+}
