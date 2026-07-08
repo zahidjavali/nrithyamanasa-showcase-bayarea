@@ -36,21 +36,21 @@
 }
 
 /* === SAMPADA section (2nd section, no id) : warm cream, charcoal text === */
-.home-page > section:nth-of-type(2) {
+.home-page > section:nth-of-type(3) {
   background-color: #F5EBD6 !important;
   color: #1F1315 !important;
 }
-.home-page > section:nth-of-type(2) .text-gray-50,
-.home-page > section:nth-of-type(2) .text-yellow-200,
-.home-page > section:nth-of-type(2) .text-amber-700,
-.home-page > section:nth-of-type(2) .text-orange-600,
-.home-page > section:nth-of-type(2) .text-purple-700,
-.home-page > section:nth-of-type(2) .text-green-700,
-.home-page > section:nth-of-type(2) .text-blue-700,
-.home-page > section:nth-of-type(2) [class*="text-[#"] {
+.home-page > section:nth-of-type(3) .text-gray-50,
+.home-page > section:nth-of-type(3) .text-yellow-200,
+.home-page > section:nth-of-type(3) .text-amber-700,
+.home-page > section:nth-of-type(3) .text-orange-600,
+.home-page > section:nth-of-type(3) .text-purple-700,
+.home-page > section:nth-of-type(3) .text-green-700,
+.home-page > section:nth-of-type(3) .text-blue-700,
+.home-page > section:nth-of-type(3) [class*="text-[#"] {
   color: #6B2C2C !important;
 }
-.home-page > section:nth-of-type(2) .font-bold {
+.home-page > section:nth-of-type(3) .font-bold {
   color: #6B2C2C !important;
 }
 
@@ -67,15 +67,15 @@
 }
 
 /* === Class Schedule (4th section) : warm cream backdrop, teal card === */
-.home-page > section:nth-of-type(4) {
+.home-page > section:nth-of-type(5) {
   background-color: #F5EBD6 !important;
 }
-.home-page > section:nth-of-type(4) .bg-gradient-to-br {
+.home-page > section:nth-of-type(5) .bg-gradient-to-br {
   background-image: none !important;
   background-color: #0B4F4F !important;
 }
-.home-page > section:nth-of-type(4) .text-yellow-200,
-.home-page > section:nth-of-type(4) .text-yellow-100 {
+.home-page > section:nth-of-type(5) .text-yellow-200,
+.home-page > section:nth-of-type(5) .text-yellow-100 {
   color: #D4AF37 !important;
 }
 
@@ -114,8 +114,8 @@
 }
 
 /* === Trailing sections (8th and 9th, no id) : warm cream === */
-.home-page > section:nth-of-type(8),
-.home-page > section:nth-of-type(9) {
+.home-page > section:nth-of-type(10),
+.home-page > section:nth-of-type(10) {
   background-color: #F5EBD6 !important;
   color: #1F1315 !important;
 }
