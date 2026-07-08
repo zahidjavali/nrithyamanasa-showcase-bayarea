@@ -105,3 +105,84 @@
   background-color: #F5EBD6 !important;
   color: #1F1315 !important;
 }
+
+/* ============================================================
+   Additional palette refinements
+   ============================================================ */
+
+/* Replace the amber-950 (#451A03) backdrop behind every PerformanceCard
+   on the homepage with the deeper maroon #6B0F1A. This is the color that
+   peeks through as the visible card background on SAMPADA, Press Reviews,
+   and Testimonials cards. */
+.home-page .bg-amber-950 {
+  background-color: #6B0F1A !important;
+}
+
+/* About section (#about): dim the decorative pink/purple/rose blur blobs
+   to gold at 15% opacity so the maroon backdrop stays clean. */
+.home-page section#about > div.absolute.inset-0 > div {
+  background-image: none !important;
+  background-color: rgba(212, 175, 55, 0.15) !important;
+}
+
+/* SAMPADA inner card (section 3): gold border + ivory body + gold accents. */
+.home-page > section:nth-of-type(3) .relative.overflow-hidden > .relative.z-10 {
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  border-radius: 1rem;
+}
+.home-page > section:nth-of-type(3) p,
+.home-page > section:nth-of-type(3) .text-gray-50,
+.home-page > section:nth-of-type(3) .text-white {
+  color: #FDF8F0 !important;
+}
+.home-page > section:nth-of-type(3) h2,
+.home-page > section:nth-of-type(3) .text-yellow-200,
+.home-page > section:nth-of-type(3) .text-yellow-100,
+.home-page > section:nth-of-type(3) .text-amber-700,
+.home-page > section:nth-of-type(3) .text-orange-600,
+.home-page > section:nth-of-type(3) .text-purple-700,
+.home-page > section:nth-of-type(3) .text-green-700,
+.home-page > section:nth-of-type(3) .text-blue-700,
+.home-page > section:nth-of-type(3) [class*="text-[#e"] ,
+.home-page > section:nth-of-type(3) [class*="text-[#E"] {
+  color: #D4AF37 !important;
+}
+
+/* Classes section (#classes) — Beginner / Intermediate / Advanced cards:
+   change the near-black CardHeader backdrops to dark maroon #2B0A0A
+   and add a 1px top border in gold. Also override the card gradient
+   backgrounds so the whole card reads as dark maroon. */
+.home-page section#classes .bg-\[\#0a0005\],
+.home-page section#classes .bg-\[\#0e0d0d\],
+.home-page section#classes .bg-slate-950 {
+  background-color: #2B0A0A !important;
+  border-top: 1px solid #D4AF37 !important;
+}
+.home-page section#classes .grid > * .bg-gradient-to-br {
+  background-image: none !important;
+  background-color: #2B0A0A !important;
+}
+.home-page section#classes .grid > * .bg-inherit {
+  background-color: #2B0A0A !important;
+}
+
+/* Press Reviews (section 9) & Testimonials (section 10) cards:
+   maroon fill, gold 30% border, ivory body copy, gold highlighted names. */
+.home-page > section:nth-of-type(9) .bg-gradient-to-br,
+.home-page > section:nth-of-type(10) .bg-gradient-to-br {
+  background-image: none !important;
+  background-color: #6B0F1A !important;
+  border-color: rgba(212, 175, 55, 0.3) !important;
+  border-width: 1px !important;
+}
+.home-page > section:nth-of-type(9) p,
+.home-page > section:nth-of-type(10) p {
+  color: #FDF8F0 !important;
+}
+.home-page > section:nth-of-type(9) .text-white,
+.home-page > section:nth-of-type(9) [class*="font-bold"],
+.home-page > section:nth-of-type(10) .text-white,
+.home-page > section:nth-of-type(10) [class*="font-bold"] {
+  color: #D4AF37 !important;
+}
+
