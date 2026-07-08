@@ -35,23 +35,9 @@
   color: #C1272D !important;
 }
 
-/* === SAMPADA section (2nd section, no id) : warm cream, charcoal text === */
+/* === SAMPADA section (3rd) : warm cream backdrop (inner card retains its dark styling) === */
 .home-page > section:nth-of-type(3) {
   background-color: #F5EBD6 !important;
-  color: #1F1315 !important;
-}
-.home-page > section:nth-of-type(3) .text-gray-50,
-.home-page > section:nth-of-type(3) .text-yellow-200,
-.home-page > section:nth-of-type(3) .text-amber-700,
-.home-page > section:nth-of-type(3) .text-orange-600,
-.home-page > section:nth-of-type(3) .text-purple-700,
-.home-page > section:nth-of-type(3) .text-green-700,
-.home-page > section:nth-of-type(3) .text-blue-700,
-.home-page > section:nth-of-type(3) [class*="text-[#"] {
-  color: #6B2C2C !important;
-}
-.home-page > section:nth-of-type(3) .font-bold {
-  color: #6B2C2C !important;
 }
 
 /* === Classes (#classes) : ivory, charcoal text, gold headings === */
